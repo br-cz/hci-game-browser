@@ -65,5 +65,12 @@
         </div>
       </div>
     </nav>
+
+    <!-- the div element that gets selected in accessDB.js -->
+    <div id="accessDB">Div</div>
+
+    <!-- these scripts get called sequentially so make sure the database.js is called first to initialize db -->
+    <script src="./js/database.js"></script>
+    <script src="./js/accessDB.js"></script>
   </body>
 </html>
