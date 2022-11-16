@@ -72,7 +72,7 @@ function setDb() {
     },
   ];
 
-  const adventureID = [
+  const adventureDB = [
     {
       title: 'EARTH DEFENSE FORCE 5',
       publisher: 'D3 PUBLISHER',
