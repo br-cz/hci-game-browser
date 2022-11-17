@@ -37,6 +37,20 @@ for (var i = 0; i < recent.length; i++) {
       divEnd +
       divEnd +
       divEnd;
-    // document.querySelector('.carousel-inner').innerHTML += 'poopoo';
+
+    // EXAMPLE LAYOUT WE CREATE ABOVE
+    //   <div class="carousel-item">
+    //   <div class="card">
+    //     <div class="img-wrapper">
+    //       <img src="./images/bg-1.jpg" class="d-block w-100" alt="..." />
+    //     </div>
+    //     <div class="card-body">
+    //       <h5 class="card-title">Game 3</h5>
+    //       <a href="#" class="btn btn-primary"
+    //         ><i class="fa-solid fa-play"></i
+    //       ></a>
+    //     </div>
+    //   </div>
+    // </div>
   }
 }

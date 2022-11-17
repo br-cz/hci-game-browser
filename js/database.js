@@ -22,7 +22,7 @@ function setDb() {
       genre: 'Action',
       description:
         'The udder is a single mass hanging beneath the animal, consisting of pairs of mammary glands with protruding teats. In cattle and camels, there are normally two pairs, in sheep, goats and deer, there is one pair, and in some animals, there are many pairs.',
-      image: './images/image.jpg',
+      image: './images/battlerite.png',
       ratings: 73,
       price: 85,
       sale: 0,
@@ -54,7 +54,7 @@ function setDb() {
       genre: 'Action',
       description:
         'The udder is a single mass hanging beneath the animal, consisting of pairs of mammary glands with protruding teats. In cattle and camels, there are normally two pairs, in sheep, goats and deer, there is one pair, and in some animals, there are many pairs.',
-      image: './images/image.jpg',
+      image: './images/deadbydaylight.jpeg',
       ratings: 80,
       price: 70,
       sale: 25,
@@ -70,7 +70,7 @@ function setDb() {
       genre: 'Action',
       description:
         'The udder is a single mass hanging beneath the animal, consisting of pairs of mammary glands with protruding teats. In cattle and camels, there are normally two pairs, in sheep, goats and deer, there is one pair, and in some animals, there are many pairs.',
-      image: './images/image.jpg',
+      image: './images/dishonoreddeathoutsider.jpg',
       ratings: 98,
       price: 40,
       sale: 0,
@@ -89,7 +89,7 @@ function setDb() {
       genre: 'Adventure',
       description:
         'The udder is a single mass hanging beneath the animal, consisting of pairs of mammary glands with protruding teats. In cattle and camels, there are normally two pairs, in sheep, goats and deer, there is one pair, and in some animals, there are many pairs.',
-      image: './images/image.jpg',
+      image: './images/earthdefence5.jpg',
       ratings: 38,
       price: 60,
       sale: 0,
@@ -105,7 +105,7 @@ function setDb() {
       genre: 'Adventure',
       description:
         'The udder is a single mass hanging beneath the animal, consisting of pairs of mammary glands with protruding teats. In cattle and camels, there are normally two pairs, in sheep, goats and deer, there is one pair, and in some animals, there are many pairs.',
-      image: './images/image.jpg',
+      image: './images/factorio.jpg',
       ratings: 58,
       price: 40,
       sale: 0,
@@ -121,7 +121,7 @@ function setDb() {
       genre: 'Adventure',
       description:
         'The udder is a single mass hanging beneath the animal, consisting of pairs of mammary glands with protruding teats. In cattle and camels, there are normally two pairs, in sheep, goats and deer, there is one pair, and in some animals, there are many pairs.',
-      image: './images/image.jpg',
+      image: './images/friday13thgame.jpeg',
       ratings: 92,
       price: 40,
       sale: 50,
@@ -137,7 +137,7 @@ function setDb() {
       genre: 'Adventure',
       description:
         'The udder is a single mass hanging beneath the animal, consisting of pairs of mammary glands with protruding teats. In cattle and camels, there are normally two pairs, in sheep, goats and deer, there is one pair, and in some animals, there are many pairs.',
-      image: './images/image.jpg',
+      image: './images/guiltygearxrd.jpg',
       ratings: 57,
       price: 75,
       sale: 0,
@@ -153,7 +153,7 @@ function setDb() {
       genre: 'Adventure',
       description:
         'The udder is a single mass hanging beneath the animal, consisting of pairs of mammary glands with protruding teats. In cattle and camels, there are normally two pairs, in sheep, goats and deer, there is one pair, and in some animals, there are many pairs.',
-      image: './images/image.jpg',
+      image: './images/hitman.jpg',
       ratings: 70,
       price: 75,
       sale: 0,
