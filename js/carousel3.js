@@ -13,8 +13,8 @@ if (window.matchMedia('(min-width: 768px)').matches) {
   var scrollPositionThree = 0;
   const movement = 600;
 
-  console.log(cardWidth);
-  console.log(carouselWidthThree);
+  // console.log(cardWidth);
+  // console.log(carouselWidthThree);
 
   $('#carouselExampleControlsThree .carousel-control-next').on(
     'click',
@@ -32,8 +32,8 @@ if (window.matchMedia('(min-width: 768px)').matches) {
           movement
         );
       }
-      console.log('scroll poss:', scrollPositionThree);
-      console.log('cond', carouselWidthThree - cardWidth * 5);
+      // console.log('scroll poss:', scrollPositionThree);
+      // console.log('cond', carouselWidthThree - cardWidth * 5);
     }
   );
   $('#carouselExampleControlsThree .carousel-control-prev').on(

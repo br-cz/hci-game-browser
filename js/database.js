@@ -6,13 +6,15 @@ function setDb() {
       genre: 'Action',
       description:
         'The udder is a single thicc mass hanging beneath the animal, consisting of pairs of mammary glands with protruding teats. In cattle and camels, there are normally two pairs, in sheep, goats and deer, there is one pair, and in some animals, there are many pairs.',
-      image: './images/image.jpg',
+      image: './images/plaguetale.jpeg',
       ratings: 69,
       price: 80,
       sale: 0,
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: 1,
+      pinned: false,
     },
     {
       title: 'Battlerite',
@@ -27,6 +29,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'BlazBlue: Cross Tag Battle',
@@ -34,13 +38,15 @@ function setDb() {
       genre: 'Action',
       description:
         'The udder is a single mass hanging beneath the animal, consisting of pairs of mammary glands with protruding teats. In cattle and camels, there are normally two pairs, in sheep, goats and deer, there is one pair, and in some animals, there are many pairs.',
-      image: './images/image.jpg',
+      image: './images/blazblue.jpg',
       ratings: 55,
       price: 90,
       sale: 75,
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: 2,
+      pinned: false,
     },
     {
       title: 'Dead by Daylight',
@@ -55,6 +61,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Dishonored®: Death of the Outsider™',
@@ -69,6 +77,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
   ];
 
@@ -86,6 +96,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Factorio',
@@ -100,6 +112,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Friday the 13th: The Game',
@@ -114,6 +128,8 @@ function setDb() {
       owned: 'TRUE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'GUILTY GEAR Xrd -REVELATOR-',
@@ -128,6 +144,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'HITMAN™',
@@ -142,6 +160,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
   ];
 
@@ -159,6 +179,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Injustice™ 2',
@@ -173,6 +195,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Killing Floor 2',
@@ -187,6 +211,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Mortal Kombat 11',
@@ -201,6 +227,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Portal™',
@@ -215,6 +243,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
   ];
 
@@ -232,6 +262,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Star Wars: Battlefront 2 (Classic, 2005)',
@@ -246,6 +278,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'The Surge 2',
@@ -260,6 +294,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'WARRIORS OROCHI 4',
@@ -274,6 +310,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Assassin’s Creed® III Remastered',
@@ -288,6 +326,8 @@ function setDb() {
       owned: 'TRUE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
   ];
 
@@ -305,6 +345,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Assassin’s Creed® IV Black Flag™',
@@ -319,6 +361,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Assassin’s Creed® Odyssey',
@@ -333,6 +377,8 @@ function setDb() {
       owned: 'TRUE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Assassin’s Creed® Origins',
@@ -347,6 +393,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Assassin’s Creed® Origins',
@@ -361,6 +409,8 @@ function setDb() {
       owned: 'TRUE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
   ];
 
@@ -378,6 +428,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Assassin’s Creed®: Syndicate',
@@ -392,6 +444,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Chess',
@@ -406,6 +460,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Batman™: Arkham Asylum Game of the Year Edition',
@@ -420,6 +476,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Batman™: Arkham City - Game of the Year Edition',
@@ -434,6 +492,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
   ];
 
@@ -451,6 +511,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Batman™: Arkham Origins',
@@ -465,6 +527,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'For Honor™',
@@ -479,6 +543,8 @@ function setDb() {
       owned: 'TRUE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'For Honor™',
@@ -493,6 +559,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Generation Zero',
@@ -507,6 +575,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
   ];
 
@@ -524,6 +594,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Mafia III',
@@ -538,6 +610,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Sekiro™: Shadows Die Twice',
@@ -552,6 +626,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Shenmue III',
@@ -566,6 +642,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Sniper Elite 3',
@@ -580,6 +658,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
   ];
 
@@ -597,6 +677,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Sonic Forces',
@@ -611,6 +693,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Strange Brigade',
@@ -625,6 +709,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'The Evil Within 2',
@@ -639,6 +725,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Tom Clancy’s Ghost Recon Breakpoint',
@@ -653,6 +741,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
   ];
 
@@ -670,6 +760,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: "Tom Clancy's Ghost Recon® Wildlands",
@@ -684,6 +776,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Watch_Dogs® 2',
@@ -698,6 +792,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Watch_Dogs™',
@@ -712,6 +808,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
     {
       title: 'Clicker Heroes 2',
@@ -726,6 +824,8 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
+      playedRank: -1,
+      pinned: false,
     },
   ];
 
