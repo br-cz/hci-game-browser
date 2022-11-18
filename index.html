@@ -28,6 +28,12 @@
 
     <!-- Custom colors -->
     <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- For stacked cards -->
+    <link rel="stylesheet" href="./css/stackedStyle.css" />
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <!-- Full navbar code -->
@@ -66,11 +72,112 @@
       </div>
     </nav>
 
-    <!-- the div element that gets selected in accessDB.js -->
-    <div id="accessDB">Div</div>
+    <!-- Carousel Code-->
+    <h4 id="top">Recently Played</h4>
+    <div
+      id="carouselExampleControlsOne"
+      class="carousel"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner"></div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControlsOne"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControlsOne"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
-    <!-- these scripts get called sequentially so make sure the database.js is called first to initialize db -->
+    <!-- Carousel Code-->
+    <h4>Pinned</h4>
+    <div
+      id="carouselExampleControlsTwo"
+      class="carousel"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner"></div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControlsTwo"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControlsTwo"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Carousel Code-->
+    <h4>Categories</h4>
+    <div
+      id="carouselExampleControlsThree"
+      class="carousel"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <div class="container" id="action-container"></div>
+        </div>
+        <div class="carousel-item">
+          <div class="container" id="adventure-container"></div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControlsThree"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControlsThree"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- the div element that gets selected in accessDB.js -->
+    <!-- <div id="accessDB">Div</div> -->
+
+    <!-- these 2 scripts get called sequentially so make sure the database.js is called first to initialize db -->
     <script src="./js/database.js"></script>
-    <script src="./js/accessDB.js"></script>
+    <!-- <script src="./js/accessDB.js"></script> -->
+
+    <script src="./js/carousel.js"></script>
+    <script src="./js/carousel2.js"></script>
+    <script src="./js/carousel3.js"></script>
+
+    <script src="./js/loadRecent.js"></script>
+    <script src="./js/loadPinned.js"></script>
+    <script src="./js/loadCategories.js"></script>
+
+    <script src="./js/rotateStacked.js"></script>
   </body>
 </html>
