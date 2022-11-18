@@ -1,24 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Library</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Bootstrap CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript Bundle with Popper -->
     <script
-      src="https://kit.fontawesome.com/1c2c2462bf.js"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Font-Awesome, allows for user and settings logos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <!-- Custom colors -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- For stacked cards -->
+    <link rel="stylesheet" href="./css/stackedStyle.css" />
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
-    <h1>Testing</h1>
+    <!-- Full navbar code -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div><a class="navbar-brand" href="index.html">Group 15</a></div>
+          <ul class="navbar-nav me-auto order-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Library</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="store.html">Course</a>
+            </li>
+          </ul>
+          <form class="d-flex ms-auto">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search Library"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-primary" type="submit" id="search">
+              Search
+            </button>
+          </form>
+          <div class="ms-4">
+            <a href="#"> <i class="fa-sharp fa-lg fa-solid fa-user"></i> </a>
+          </div>
+          <div class="ms-4">
+            <a href="#"><i class="fa-solid fa-lg fa-gear"></i> </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Carousel Code-->
+    <h4 id="top">Recently Played</h4>
+    <div
+      id="carouselExampleControlsOne"
+      class="carousel"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner"></div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControlsOne"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControlsOne"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Carousel Code-->
+    <h4>Pinned</h4>
+    <div
+      id="carouselExampleControlsTwo"
+      class="carousel"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner"></div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControlsTwo"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControlsTwo"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Carousel Code-->
+    <h4>Categories</h4>
+    <div
+      id="carouselExampleControlsThree"
+      class="carousel"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <div class="container" id="action-container"></div>
+        </div>
+        <div class="carousel-item">
+          <div class="container" id="adventure-container"></div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControlsThree"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControlsThree"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
 
     <!-- the div element that gets selected in accessDB.js -->
-    <div></div>
+    <!-- <div id="accessDB">Div</div> -->
 
-    <!-- these scripts get called sequentially so make sure the database.js is called first to initialize db -->
+    <!-- these 2 scripts get called sequentially so make sure the database.js is called first to initialize db -->
     <script src="./js/database.js"></script>
-    <script src="./js/accessDB.js"></script>
+    <!-- <script src="./js/accessDB.js"></script> -->
+
+    <script src="./js/carousel.js"></script>
+    <script src="./js/carousel2.js"></script>
+    <script src="./js/carousel3.js"></script>
+
+    <script src="./js/loadRecent.js"></script>
+    <script src="./js/loadPinned.js"></script>
+    <script src="./js/loadCategories.js"></script>
+
+    <script src="./js/rotateStacked.js"></script>
   </body>
 </html>
