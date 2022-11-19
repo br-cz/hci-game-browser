@@ -96,7 +96,7 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
-      playedRank: -1,
+      playedRank: 3,
       isPinned: false,
     },
     {
@@ -128,7 +128,7 @@ function setDb() {
       owned: 'TRUE',
       wishlist: false,
       cart: false,
-      playedRank: -1,
+      playedRank: 4,
       isPinned: false,
     },
     {
@@ -161,7 +161,7 @@ function setDb() {
       wishlist: false,
       cart: false,
       playedRank: -1,
-      isPinned: false,
+      isPinned: true,
     },
   ];
 
@@ -244,7 +244,7 @@ function setDb() {
       wishlist: false,
       cart: false,
       playedRank: -1,
-      isPinned: false,
+      isPinned: true,
     },
   ];
 
@@ -295,7 +295,7 @@ function setDb() {
       wishlist: false,
       cart: false,
       playedRank: -1,
-      isPinned: false,
+      isPinned: true,
     },
     {
       title: 'WARRIORS OROCHI 4',
@@ -378,7 +378,7 @@ function setDb() {
       wishlist: false,
       cart: false,
       playedRank: -1,
-      isPinned: false,
+      isPinned: true,
     },
     {
       title: 'Assassin’s Creed® Origins',
@@ -445,7 +445,7 @@ function setDb() {
       wishlist: false,
       cart: false,
       playedRank: -1,
-      isPinned: false,
+      isPinned: true,
     },
     {
       title: 'Chess',
@@ -594,7 +594,7 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
-      playedRank: -1,
+      playedRank: 5,
       isPinned: false,
     },
     {
@@ -677,7 +677,7 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
-      playedRank: -1,
+      playedRank: 6,
       isPinned: false,
     },
     {
@@ -709,7 +709,7 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
-      playedRank: -1,
+      playedRank: 7,
       isPinned: false,
     },
     {
@@ -741,7 +741,7 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
-      playedRank: -1,
+      playedRank: 8,
       isPinned: false,
     },
   ];
@@ -760,7 +760,7 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
-      playedRank: -1,
+      playedRank: 9,
       isPinned: false,
     },
     {
@@ -792,7 +792,7 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
-      playedRank: -1,
+      playedRank: 10,
       isPinned: false,
     },
     {

@@ -6,21 +6,25 @@ if (window.matchMedia('(min-width: 768px)').matches) {
     interval: false,
   });
 
-  var carouselWidthTwo = $('#carouselExampleControlsTwo .carousel-inner')[0]
-    .scrollWidth;
-  //   var cardWidth = $('.carousel-item').width();
-  var cardWidth = $('.card').width();
+  var cardWidthTwo = $('.carousel-item').width();
+  // var cardWidthTwo = $('.card').width();
+  var carouselWidthTwo =
+    ($('#carouselExampleControlsTwo .carousel-inner')[0].childElementCount -
+      4) *
+    cardWidthTwo;
+  // var carouselWidthTwo = $('#carouselExampleControlsTwo .carousel-inner')[0]
+  //   .scrollWidth;
   var scrollPositionTwo = 0;
   const movement = 600;
 
-  // console.log(cardWidth);
-  // console.log(carouselWidthTwo);
+  console.log('card width two', cardWidthTwo);
+  console.log('carousel width two', carouselWidthTwo);
 
   $('#carouselExampleControlsTwo .carousel-control-next').on(
     'click',
     function () {
-      if (scrollPositionTwo < carouselWidthTwo - cardWidth * 5) {
-        scrollPositionTwo += cardWidth * 1.04;
+      if (scrollPositionTwo < carouselWidthTwo) {
+        scrollPositionTwo += cardWidthTwo;
         $('#carouselExampleControlsTwo .carousel-inner').animate(
           { scrollLeft: scrollPositionTwo },
           movement
@@ -32,15 +36,15 @@ if (window.matchMedia('(min-width: 768px)').matches) {
           movement
         );
       }
-      // console.log('scroll poss:', scrollPositionTwo);
-      // console.log('cond', carouselWidthTwo - cardWidth * 5);
+      console.log('scroll poss:', scrollPositionTwo);
+      console.log('cond', carouselWidthTwo);
     }
   );
   $('#carouselExampleControlsTwo .carousel-control-prev').on(
     'click',
     function () {
       if (scrollPositionTwo > 0) {
-        scrollPositionTwo -= cardWidth;
+        scrollPositionTwo -= cardWidthTwo;
         $('#carouselExampleControlsTwo .carousel-inner').animate(
           { scrollLeft: scrollPositionTwo },
           movement

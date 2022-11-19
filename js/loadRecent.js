@@ -1,11 +1,39 @@
 const recent = [];
+var recentLength = 0;
 
 var actionGames = JSON.parse(localStorage.getItem('actionDB'));
+var adventureGames = JSON.parse(localStorage.getItem('adventureDB'));
+var familyGames = JSON.parse(localStorage.getItem('familyDB'));
+var shooterGames = JSON.parse(localStorage.getItem('shooterDB'));
+var rpgGames = JSON.parse(localStorage.getItem('rpgDB'));
+var strategyGames = JSON.parse(localStorage.getItem('strategyDB'));
+var sportsGames = JSON.parse(localStorage.getItem('sportsDB'));
+var racingGames = JSON.parse(localStorage.getItem('racingDB'));
+var fightingGames = JSON.parse(localStorage.getItem('fightingDB'));
+var simulatorGames = JSON.parse(localStorage.getItem('simulatorDB'));
 
-for (var i = 0; i < actionGames.length; i++) {
-  rank = actionGames[i].playedRank;
-  if (rank != -1) {
-    recent[rank] = actionGames[i];
+const games = [
+  actionGames,
+  adventureGames,
+  familyGames,
+  shooterGames,
+  rpgGames,
+  strategyGames,
+  sportsGames,
+  racingGames,
+  fightingGames,
+  simulatorGames,
+];
+
+for (var i = 0; i < games.length; i++) {
+  const category = games[i];
+
+  for (var j = 0; j < category.length; j++) {
+    rank = category[j].playedRank;
+    if (rank != -1) {
+      recent[rank] = category[j];
+      recentLength++;
+    }
   }
 }
 
