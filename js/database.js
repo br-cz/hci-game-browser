@@ -96,7 +96,7 @@ function setDb() {
       owned: 'FALSE',
       wishlist: false,
       cart: false,
-      playedRank: -1,
+      playedRank: 3,
       isPinned: false,
     },
     {
@@ -128,7 +128,7 @@ function setDb() {
       owned: 'TRUE',
       wishlist: false,
       cart: false,
-      playedRank: -1,
+      playedRank: 4,
       isPinned: false,
     },
     {
