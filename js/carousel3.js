@@ -6,21 +6,25 @@ if (window.matchMedia('(min-width: 768px)').matches) {
     interval: false,
   });
 
-  var carouselWidthThree = $('#carouselExampleControlsThree .carousel-inner')[0]
-    .scrollWidth;
-  //   var cardWidth = $('.carousel-item').width();
-  var cardWidth = $('.card').width();
+  var cardWidthThree = $('.carousel-item').width();
+  // var cardWidthTwo = $('.card').width();
+  var carouselWidthThree =
+    ($('#carouselExampleControlsTwo .carousel-inner')[0].childElementCount -
+      4) *
+    cardWidthThree;
+  // var carouselWidthTwo = $('#carouselExampleControlsTwo .carousel-inner')[0]
+  //   .scrollWidth;
   var scrollPositionThree = 0;
   const movement = 600;
 
-  // console.log(cardWidth);
+  // console.log(cardWidthThree);
   // console.log(carouselWidthThree);
 
   $('#carouselExampleControlsThree .carousel-control-next').on(
     'click',
     function () {
-      if (scrollPositionThree < carouselWidthTwo - cardWidth * 5) {
-        scrollPositionThree += cardWidth * 1.04;
+      if (scrollPositionThree < carouselWidthTwo + cardWidthThree) {
+        scrollPositionThree += cardWidthThree * 1.04;
         $('#carouselExampleControlsThree .carousel-inner').animate(
           { scrollLeft: scrollPositionThree },
           movement
@@ -33,14 +37,14 @@ if (window.matchMedia('(min-width: 768px)').matches) {
         );
       }
       // console.log('scroll poss:', scrollPositionThree);
-      // console.log('cond', carouselWidthThree - cardWidth * 5);
+      // console.log('cond', carouselWidthThree - cardWidthThree * 5);
     }
   );
   $('#carouselExampleControlsThree .carousel-control-prev').on(
     'click',
     function () {
       if (scrollPositionThree > 0) {
-        scrollPositionThree -= cardWidth;
+        scrollPositionThree -= cardWidthThree;
         $('#carouselExampleControlsThree .carousel-inner').animate(
           { scrollLeft: scrollPositionThree },
           movement
