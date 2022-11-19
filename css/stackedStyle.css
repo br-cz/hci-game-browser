@@ -6,6 +6,14 @@
   height: 250px;
 }
 
+#category-label {
+  transform-origin: center;
+
+  padding-top: 1.5em;
+  margin-left: 10%;
+  font-weight: 900;
+}
+
 .stacked-card {
   position: absolute;
   top: 0;

@@ -1,12 +1,26 @@
-var actionGames = JSON.parse(localStorage.getItem('actionDB'));
-var adventureGames = JSON.parse(localStorage.getItem('adventureDB'));
+// var actionGames = JSON.parse(localStorage.getItem('actionDB'));
+// var adventureGames = JSON.parse(localStorage.getItem('adventureDB'));
 
 for (var i = 0; i < actionGames.length; i++) {
   createContainer(actionGames[i], '#action-container');
 }
 
-for (var i = 0; i < adventureGames.length; i++) {
-  createContainer(adventureGames[i], '#adventure-container');
+containerTags = [
+  '#action-container',
+  '#adventure-container',
+  '#family-container',
+  '#shooter-container',
+  '#rpg-container',
+  '#strategy-container',
+  '#sports-container',
+  '#racing-container',
+  '#fighting-container',
+  '#simulator-container',
+];
+for (var i = 0; i < games.length; i++) {
+  for (var j = 0; j < games[i].length; j++) {
+    createContainer(games[i][j], containerTags[i]);
+  }
 }
 
 function createContainer(game, container) {

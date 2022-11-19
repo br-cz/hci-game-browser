@@ -6,13 +6,11 @@ if (window.matchMedia('(min-width: 768px)').matches) {
     interval: false,
   });
   var cardWidthOne = $('.carousel-item').width();
-  // var cardWidthTwo = $('.card').width();
   var carouselWidthOne =
     ($('#carouselExampleControlsOne .carousel-inner')[0].childElementCount -
       4) *
     cardWidthOne;
-  // var carouselWidthTwo = $('#carouselExampleControlsTwo .carousel-inner')[0]
-  //   .scrollWidth;
+
   var scrollPositionOne = 0;
   const movement = 600;
 
