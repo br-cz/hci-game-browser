@@ -61,6 +61,11 @@ h4 {
     display: flex;
     justify-content: space-around;
   }
+
+  .stacked-card .btn-primary {
+    margin-left: 90%;
+    margin-top: -5%;
+  }
 }
 .card .img-wrapper {
   max-width: 100%;
