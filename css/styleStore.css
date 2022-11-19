@@ -9,6 +9,11 @@
 h4#top {
   padding-top: 1em;
 } */
+
+.active {
+  color: #f00;
+}
+
 h4 {
   padding-top: 1em;
   padding-left: 1em;
@@ -16,6 +21,11 @@ h4 {
 
 .btn {
   width: 121px;
+}
+
+.btn:focus {
+  background-color: black;
+  color: white;
 }
 .carousel-inner {
   padding-left: 2em;
