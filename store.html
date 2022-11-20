@@ -70,7 +70,22 @@
     </nav>
 
     <!-- Carousel Code-->
-    <h4>Categories</h4>
+    <h4>Categories
+      <div class="sort-dropdown">
+        <span class="btn btn-light btn-lg clicked" onClick="testClick()">Sort by...</span>
+        <div class="sort-options">
+          <!-- <a href="#" onclick="sortBySale()">Default</a> -->
+          <a href="#" onclick="sortByName()">Name</a>
+          <a href="#" onclick="sortByPrice()">Price</a>
+          <a href="#" onclick="sortBySale()">Discount</a>
+          <a href="#" onclick="sortByRatings()">Average User Rating</a>
+        </div>
+      </div>
+    </h4>
+    
+    <!-- Sort button -->
+    
+    
     <div
       id="carouselExampleControlsOne"
       class="carousel"
@@ -123,7 +138,8 @@
           >
         </div>
       </div>
-
+      
+      
       <div class="gallery"></div>
 
       <!-- <button

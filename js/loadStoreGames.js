@@ -39,18 +39,11 @@ const games = [
         // console.log(category[j]);
         if(!category[j].owned)
         {
-          if(category[j].sale > 0)
-          {
-            currCategory.unshift(category[j]);
-          }
-          else
-          {
-            currCategory.push(category[j]);
-          }
+          currCategory.push(category[j]);
         }
       }
     }
-
+    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
@@ -67,16 +60,10 @@ const games = [
     for (var j = 0; j < category.length; j++) {
       if(!category[j].owned)
       {
-        if(category[j].sale > 0)
-        {
-          currCategory.unshift(category[j]);
-        }
-        else
-        {
-          currCategory.push(category[j]);
-        }
+        currCategory.unshift(category[j]);
       }
     }
+    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
@@ -90,15 +77,12 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(category[j].sale > 0)
+      if(!category[j].owned)
       {
         currCategory.unshift(category[j]);
       }
-      else
-      {
-        currCategory.push(category[j]);
-      }
     }
+    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
@@ -112,15 +96,12 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(category[j].sale > 0)
+      if(!category[j].owned)
       {
         currCategory.unshift(category[j]);
       }
-      else
-      {
-        currCategory.push(category[j]);
-      }
     }
+    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
@@ -134,15 +115,12 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(category[j].sale > 0)
+      if(!category[j].owned)
       {
         currCategory.unshift(category[j]);
       }
-      else
-      {
-        currCategory.push(category[j]);
-      }
     }
+    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
@@ -156,15 +134,12 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(category[j].sale > 0)
+      if(!category[j].owned)
       {
         currCategory.unshift(category[j]);
       }
-      else
-      {
-        currCategory.push(category[j]);
-      }
     }
+    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
@@ -178,15 +153,12 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(category[j].sale > 0)
+      if(!category[j].owned)
       {
         currCategory.unshift(category[j]);
       }
-      else
-      {
-        currCategory.push(category[j]);
-      }
     }
+    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
@@ -200,15 +172,12 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(category[j].sale > 0)
+      if(!category[j].owned)
       {
         currCategory.unshift(category[j]);
       }
-      else
-      {
-        currCategory.push(category[j]);
-      }
     }
+    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
@@ -222,15 +191,12 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(category[j].sale > 0)
+      if(!category[j].owned)
       {
         currCategory.unshift(category[j]);
       }
-      else
-      {
-        currCategory.push(category[j]);
-      }
     }
+    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
@@ -244,15 +210,12 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(category[j].sale > 0)
+      if(!category[j].owned)
       {
         currCategory.unshift(category[j]);
       }
-      else
-      {
-        currCategory.push(category[j]);
-      }
     }
+    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
@@ -266,15 +229,12 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(category[j].sale > 0)
+      if(!category[j].owned)
       {
         currCategory.unshift(category[j]);
       }
-      else
-      {
-        currCategory.push(category[j]);
-      }
     }
+    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
@@ -296,12 +256,12 @@ function loadGames() {
     if(sale > 0)
     {
       salePrice = ((100 - sale)/100) * price;
-      cardPrice = '<p class="card-price-number"><s>$' + price + '</s> -' + sale +'%</p>'
-                + '<p class="card-sale-price">$' + salePrice + '</p>';
+      cardPrice = '<p class="card-price-number"><s>$' + price.toFixed(2) + '</s> -' + sale +'%</p>'
+                + '<p class="card-sale-price">$' + salePrice.toFixed(2) + '</p>';
     }
     else
     {
-      cardPrice = '<p class="card-price-number">$' + price + '</p>';
+      cardPrice = '<p class="card-price-number">$' + price.toFixed(2) + '</p>';
     }
     const aBtn = '<a href="#" class="btn btn-success">';
     const iClass = '<i class="fa-solid fa-cart-shopping"></i>';
@@ -334,6 +294,112 @@ function loadGames() {
     //     </a>
     //   </div>
     // </div>;
+  }
+}
+
+function sortBySale()
+{
+  /*
+  currCategory.sort(compareName);
+  currCategory.sort(comparePrice);
+  currCategory.sort(compareSale); 
+  currCategory.sort(compareRatings);
+  */
+  currCategory.sort(compareSale);
+  document.querySelector('.gallery').innerHTML = "";
+  loadGames();
+}
+
+function sortByName()
+{
+  /*
+  currCategory.sort(compareName);
+  currCategory.sort(comparePrice);
+  currCategory.sort(compareSale); 
+  currCategory.sort(compareRatings);
+  */
+  currCategory.sort(compareName);
+  document.querySelector('.gallery').innerHTML = "";
+  loadGames();
+}
+
+function sortByPrice()
+{
+  /*
+  currCategory.sort(compareName);
+  currCategory.sort(comparePrice);
+  currCategory.sort(compareSale); 
+  currCategory.sort(compareRatings);
+  */
+  currCategory.sort(comparePrice);
+  document.querySelector('.gallery').innerHTML = "";
+  loadGames();
+}
+
+function sortByRatings()
+{
+  /*
+  currCategory.sort(compareName);
+  currCategory.sort(comparePrice);
+  currCategory.sort(compareSale); 
+  */
+  currCategory.sort(compareRatings);
+  document.querySelector('.gallery').innerHTML = "";
+  loadGames();
+}
+
+function compareName(a, b)
+{
+  return a.title.localeCompare(b.title);
+}
+
+function comparePrice(a, b)
+{
+  salePriceA = (1 - (a.sale/100)) * a.price;
+  salePriceB = (1 - (b.sale/100)) * b.price;
+  if(salePriceA < salePriceB)
+  {
+    return -1;
+  }
+  else if(salePriceA > salePriceB)
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
+}
+
+function compareSale(a, b)
+{
+  if(a.sale > b.sale)
+  {
+    return -1;
+  }
+  else if(a.sale < b.sale)
+  {
+    return 1;
+  }
+  else
+  {
+    return comparePrice(a, b);
+  }
+}
+
+function compareRatings(a, b)
+{
+  if(a.ratings > b.ratings)
+  {
+    return -1;
+  }
+  else if(a.ratings < b.ratings)
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
   }
 }
 
