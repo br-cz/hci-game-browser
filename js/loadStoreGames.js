@@ -37,7 +37,17 @@ const games = [
 
       for (var j = 0; j < category.length; j++) {
         // console.log(category[j]);
-        currCategory.push(category[j]);
+        if(!category[j].owned)
+        {
+          if(category[j].sale > 0)
+          {
+            currCategory.unshift(category[j]);
+          }
+          else
+          {
+            currCategory.push(category[j]);
+          }
+        }
       }
     }
 
@@ -55,7 +65,17 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      currCategory.push(category[j]);
+      if(!category[j].owned)
+      {
+        if(category[j].sale > 0)
+        {
+          currCategory.unshift(category[j]);
+        }
+        else
+        {
+          currCategory.push(category[j]);
+        }
+      }
     }
     loadGames();
   });
@@ -70,7 +90,14 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      currCategory.push(category[j]);
+      if(category[j].sale > 0)
+      {
+        currCategory.unshift(category[j]);
+      }
+      else
+      {
+        currCategory.push(category[j]);
+      }
     }
     loadGames();
   });
@@ -85,7 +112,14 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      currCategory.push(category[j]);
+      if(category[j].sale > 0)
+      {
+        currCategory.unshift(category[j]);
+      }
+      else
+      {
+        currCategory.push(category[j]);
+      }
     }
     loadGames();
   });
@@ -100,7 +134,14 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      currCategory.push(category[j]);
+      if(category[j].sale > 0)
+      {
+        currCategory.unshift(category[j]);
+      }
+      else
+      {
+        currCategory.push(category[j]);
+      }
     }
     loadGames();
   });
@@ -115,7 +156,14 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      currCategory.push(category[j]);
+      if(category[j].sale > 0)
+      {
+        currCategory.unshift(category[j]);
+      }
+      else
+      {
+        currCategory.push(category[j]);
+      }
     }
     loadGames();
   });
@@ -130,7 +178,14 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      currCategory.push(category[j]);
+      if(category[j].sale > 0)
+      {
+        currCategory.unshift(category[j]);
+      }
+      else
+      {
+        currCategory.push(category[j]);
+      }
     }
     loadGames();
   });
@@ -145,7 +200,14 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      currCategory.push(category[j]);
+      if(category[j].sale > 0)
+      {
+        currCategory.unshift(category[j]);
+      }
+      else
+      {
+        currCategory.push(category[j]);
+      }
     }
     loadGames();
   });
@@ -160,7 +222,14 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      currCategory.push(category[j]);
+      if(category[j].sale > 0)
+      {
+        currCategory.unshift(category[j]);
+      }
+      else
+      {
+        currCategory.push(category[j]);
+      }
     }
     loadGames();
   });
@@ -175,7 +244,14 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      currCategory.push(category[j]);
+      if(category[j].sale > 0)
+      {
+        currCategory.unshift(category[j]);
+      }
+      else
+      {
+        currCategory.push(category[j]);
+      }
     }
     loadGames();
   });
@@ -190,7 +266,14 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      currCategory.push(category[j]);
+      if(category[j].sale > 0)
+      {
+        currCategory.unshift(category[j]);
+      }
+      else
+      {
+        currCategory.push(category[j]);
+      }
     }
     loadGames();
   });
@@ -200,12 +283,26 @@ function loadGames() {
   for (var i = 0; i < currCategory.length; i++) {
     title = currCategory[i].title;
     image = currCategory[i].image;
+    price = currCategory[i].price;
+    sale = currCategory[i].sale;
+    
     const card = '<div class="card">';
     const imgWrapper = '<div class="img-wrapper">';
     const imgSrc = '<img src="' + image + '" class="d-block w-100"/>';
     const divEnd = '</div>';
     const cardBody = '<div class="card-body">';
     const cardTitle = '<h5 class="card-title">' + title + '</h5>';
+    cardPrice = '';
+    if(sale > 0)
+    {
+      salePrice = ((100 - sale)/100) * price;
+      cardPrice = '<p class="card-price-number"><s>$' + price + '</s> -' + sale +'%</p>'
+                + '<p class="card-sale-price">$' + salePrice + '</p>';
+    }
+    else
+    {
+      cardPrice = '<p class="card-price-number">$' + price + '</p>';
+    }
     const aBtn = '<a href="#" class="btn btn-success">';
     const iClass = '<i class="fa-solid fa-cart-shopping"></i>';
     const aEND = '</a>';
@@ -216,6 +313,7 @@ function loadGames() {
       divEnd +
       cardBody +
       cardTitle +
+      cardPrice +
       aBtn +
       iClass +
       aEND +
