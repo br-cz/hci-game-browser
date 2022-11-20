@@ -17,8 +17,8 @@ if (window.matchMedia('(min-width: 768px)').matches) {
   var scrollPositionTwo = 0;
   const movement = 600;
 
-  console.log('card width two', cardWidthTwo);
-  console.log('carousel width two', carouselWidthTwo);
+  // console.log('card width two', cardWidthTwo);
+  // console.log('carousel width two', carouselWidthTwo);
 
   $('#carouselExampleControlsTwo .carousel-control-next').on(
     'click',
