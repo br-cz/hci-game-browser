@@ -43,7 +43,7 @@
           <div><a class="navbar-brand" href="index.html">Group 15</a></div>
           <ul class="navbar-nav me-auto order-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
+              <a class="nav-link active" aria-current="page" href="index.html" id="lib"
                 >Library</a
               >
             </li>
@@ -51,7 +51,7 @@
               <a class="nav-link" href="store.html">Store</a>
             </li>
           </ul>
-          <form class="d-flex ms-auto">
+          <!-- <form class="d-flex ms-auto" id="form-search" value="2">
             <input
               class="form-control me-2"
               type="search"
@@ -61,7 +61,27 @@
             <button class="btn btn-outline-primary" type="submit" id="search">
               Search
             </button>
-          </form>
+          </form> -->
+
+          <div class="input-group" id="input-group">
+            <div class="form-outline ms-auto">
+              <input
+                id="search-input"
+                type="search"
+                id="form1"
+                class="form-control"
+                placeholder="Search Library"
+              />
+            </div>
+            <button
+              id="search-button"
+              type="button"
+              class="btn btn-primary h-25"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+
           <div class="ms-4">
             <a href="#"> <i class="fa-sharp fa-lg fa-solid fa-user"></i> </a>
           </div>
@@ -101,7 +121,7 @@
     </div>
 
     <!-- Carousel Code-->
-    <h4>Pinned</h4>
+    <h4 id="Pinned">Pinned</h4>
     <div
       id="carouselExampleControlsTwo"
       class="carousel"
@@ -129,7 +149,7 @@
     </div>
 
     <!-- Carousel Code-->
-    <h4>Categories</h4>
+    <h4 id="Categories">Categories</h4>
     <div
       id="carouselExampleControlsThree"
       class="carousel"
@@ -197,6 +217,8 @@
       </button>
     </div>
 
+    <div class="gallery"</div>
+
     <!-- the div element that gets selected in accessDB.js -->
     <!-- <div id="accessDB">Div</div> -->
 
@@ -213,5 +235,7 @@
     <script src="./js/carousel.js"></script>
     <script src="./js/carousel2.js"></script>
     <script src="./js/carousel3.js"></script>
+
+    <script src="./js/search.js"></script>
   </body>
 </html>

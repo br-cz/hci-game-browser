@@ -14,8 +14,8 @@ if (window.matchMedia('(min-width: 768px)').matches) {
   var scrollPositionOne = 0;
   const movement = 600;
 
-  console.log('card width one', cardWidthOne);
-  console.log('carousel width one', carouselWidthOne);
+  // console.log('card width one', cardWidthOne);
+  // console.log('carousel width one', carouselWidthOne);
   // console.log(carouselWidthOne - cardWidthOne);
 
   // console.log($('#carouselExampleControlsOne .carousel-inner')[0]);
