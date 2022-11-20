@@ -43,22 +43,35 @@
               <a class="nav-link" href="index.html">Library</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="store.html"
+              <a
+                class="nav-link active"
+                aria-current="page"
+                id="sto"
+                href="store.html"
                 >Store</a
               >
             </li>
           </ul>
-          <form class="d-flex ms-auto">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search Library"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-primary" type="submit" id="search">
-              Search
+
+          <div class="input-group" id="input-group">
+            <div class="form-outline ms-auto">
+              <input
+                id="search-input"
+                type="search"
+                id="form1"
+                class="form-control"
+                placeholder="Search Store"
+              />
+            </div>
+            <button
+              id="search-button"
+              type="button"
+              class="btn btn-primary h-25"
+            >
+              <i class="fas fa-search"></i>
             </button>
-          </form>
+          </div>
+
           <div class="ms-4">
             <a href="#"> <i class="fa-sharp fa-lg fa-solid fa-user"></i> </a>
           </div>
@@ -70,7 +83,9 @@
     </nav>
 
     <!-- Carousel Code-->
-    <h4>Categories
+    
+    <h4 id="top">Categories
+       <!-- Sort button -->
       <div class="sort-dropdown">
         <span class="btn btn-light btn-lg clicked">Sort by...</span>
         <div class="sort-options">
@@ -82,10 +97,6 @@
         </div>
       </div>
     </h4>
-    
-    <!-- Sort button -->
-    
-    
     <div
       id="carouselExampleControlsOne"
       class="carousel"
@@ -161,9 +172,11 @@
         <span class="visually-hidden">Next</span>
       </button> -->
     </div>
+    <div class="gallery"></div>
 
-    <script src="./js/database.js"></script>
+    
 
+    <script src="./js/search.js"></script>
     <script src="./js/loadStoreGames.js"></script>
     <script>
       $(document).ready(function () {

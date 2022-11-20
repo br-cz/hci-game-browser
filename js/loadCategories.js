@@ -37,6 +37,9 @@ function createContainer(game, container) {
   const h3Title = '<h3>' + game.title + '</h3>';
   const next = '<div class="next">';
   const iClass = '<i class="fas fa-arrow-right"></i>';
+  const aBtn = '<a href="#" class="btn btn-primary">';
+  const iPlayClass = '<i class="fa-solid fa-play"></i>';
+  const aEND = '</a>';
 
   document.querySelector(container).innerHTML +=
     stackedCard +
@@ -45,6 +48,9 @@ function createContainer(game, container) {
     divEnd +
     detail +
     h3Title +
+    aBtn +
+    iPlayClass +
+    aEND +
     divEnd +
     next +
     iClass +
