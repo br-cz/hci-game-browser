@@ -33,19 +33,38 @@ searchButton.addEventListener('click', (event) => {
   //reset prev search results
   document.querySelector('.gallery').innerHTML = '';
   document.querySelector('#carouselExampleControlsOne').innerHTML = '';
-  document.querySelector('#carouselExampleControlsTwo').innerHTML = '';
-  document.querySelector('#carouselExampleControlsThree').innerHTML = '';
-  document.querySelector('#Pinned').innerHTML = '';
-  document.querySelector('#Categories').innerHTML = '';
 
-  document.getElementById('lib').classList.remove('active');
+  const carTwo = document.querySelector('#carouselExampleControlsTwo');
+  if (carTwo) {
+    carTwo.innerHTML = '';
+  }
+  const carThree = document.querySelector('#carouselExampleControlsThree');
+  if (carThree) {
+    carThree.innerHTML = '';
+  }
+  const pin = document.querySelector('#Pinned');
+  if (pin) {
+    pin.innerHTML = '';
+  }
 
+  const cate = document.querySelector('#Categories');
+  if (cate) {
+    cate.innerHTML = '';
+  }
+
+  const lib = document.getElementById('lib');
+  if (lib) {
+    lib.classList.remove('active');
+  }
+  const sto = document.getElementById('sto');
+  if (sto) {
+    sto.classList.remove('active');
+  }
   searchResults = [];
 
   // Get the search terms from the input field
   var inputValue = localStorage.getItem('search');
-
-  console.log(inputValue);
+  // console.log(inputValue);
 
   document.getElementById('top').innerHTML =
     'Search results for "' + inputValue + '"';
@@ -77,7 +96,7 @@ searchButton.addEventListener('click', (event) => {
     }
   }
 
-  //loadGames();
+  //loadSearches();
   event.preventDefault();
 });
 
@@ -88,18 +107,39 @@ searchInput.addEventListener('keyup', (event) => {
     //reset prev search results
     document.querySelector('.gallery').innerHTML = '';
     document.querySelector('#carouselExampleControlsOne').innerHTML = '';
-    document.querySelector('#carouselExampleControlsTwo').innerHTML = '';
-    document.querySelector('#carouselExampleControlsThree').innerHTML = '';
-    document.querySelector('#Pinned').innerHTML = '';
-    document.querySelector('#Categories').innerHTML = '';
 
-    document.getElementById('lib').classList.remove('active');
+    const carTwo = document.querySelector('#carouselExampleControlsTwo');
+    if (carTwo) {
+      carTwo.innerHTML = '';
+    }
+    const carThree = document.querySelector('#carouselExampleControlsThree');
+    if (carThree) {
+      carThree.innerHTML = '';
+    }
+    const pin = document.querySelector('#Pinned');
+    if (pin) {
+      pin.innerHTML = '';
+    }
+
+    const cate = document.querySelector('#Categories');
+    if (cate) {
+      cate.innerHTML = '';
+    }
+
+    const lib = document.getElementById('lib');
+    if (lib) {
+      lib.classList.remove('active');
+    }
+    const sto = document.getElementById('sto');
+    if (sto) {
+      sto.classList.remove('active');
+    }
 
     searchResults = [];
 
     // Get the search terms from the input field
     var inputValue = localStorage.getItem('search');
-    console.log(inputValue);
+    // console.log(inputValue);
 
     document.getElementById('top').innerHTML =
       'Search results for "' + inputValue + '"';
@@ -131,12 +171,12 @@ searchInput.addEventListener('keyup', (event) => {
       }
     }
 
-    loadGames();
+    loadSearches();
     event.preventDefault();
   }
 });
 
-function loadGames() {
+function loadSearches() {
   for (var i = 0; i < searchResults.length; i++) {
     console.log(searchResults[i]);
     title = searchResults[i].title;
