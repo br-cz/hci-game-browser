@@ -28,7 +28,7 @@ for (var i = 0; i < games.length; i++) {
   const category = games[i];
 
   for (var j = 0; j < category.length; j++) {
-    if (category[j].isPinned) {
+    if (category[j].isPinned && category[j].owned) {
       pinned.push(category[j]);
     }
   }

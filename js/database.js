@@ -14,7 +14,7 @@ function setDb() {
       wishlist: false,
       cart: false,
       playedRank: -1,
-      isPinned: true,
+      isPinned: false,
     },
     {
       title: 'Battlerite',
@@ -129,7 +129,7 @@ function setDb() {
       wishlist: false,
       cart: false,
       playedRank: 3,
-      isPinned: false,
+      isPinned: true,
     },
     {
       title: 'GUILTY GEAR Xrd -REVELATOR-',
@@ -161,7 +161,7 @@ function setDb() {
       wishlist: false,
       cart: false,
       playedRank: -1,
-      isPinned: true,
+      isPinned: false,
     },
   ];
 
@@ -378,7 +378,7 @@ function setDb() {
       wishlist: false,
       cart: false,
       playedRank: -1,
-      isPinned: true,
+      isPinned: false,
     },
     {
       title: 'Assassin’s Creed® Origins',
@@ -445,7 +445,7 @@ function setDb() {
       wishlist: false,
       cart: false,
       playedRank: -1,
-      isPinned: true,
+      isPinned: false,
     },
     {
       title: 'Chess',
