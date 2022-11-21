@@ -87,6 +87,7 @@ searchButton.addEventListener('click', (event) => {
 
       for (var j = 0; j < category.length; j++) {
         if (
+          category[j].owned &&
           category[j].title.match(inputValueRegex) &&
           notDuplicate(category[j].title)
         ) {
@@ -162,6 +163,7 @@ searchInput.addEventListener('keyup', (event) => {
 
         for (var j = 0; j < category.length; j++) {
           if (
+            category[j].owned &&
             category[j].title.match(inputValueRegex) &&
             notDuplicate(category[j].title)
           ) {
@@ -187,8 +189,8 @@ function loadSearches() {
     const divEnd = '</div>';
     const cardBody = '<div class="card-body">';
     const cardTitle = '<h5 class="card-title">' + title + '</h5>';
-    const aBtn = '<a href="#" class="btn btn-success">';
-    const iClass = '<i class="fa-solid fa-cart-shopping"></i>';
+    const aBtn = '<a href="#" class="btn btn-primary">';
+    const iPlayClass = '<i class="fa-solid fa-play"></i>';
     const aEND = '</a>';
     document.querySelector('.gallery').innerHTML +=
       card +
@@ -198,7 +200,7 @@ function loadSearches() {
       cardBody +
       cardTitle +
       aBtn +
-      iClass +
+      iPlayClass +
       aEND +
       divEnd +
       divEnd;
