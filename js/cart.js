@@ -38,7 +38,8 @@ function cartPurchase()
     changeValue(cartTitles[i], 'owned', true);
   }
   cartTitles = [];
-  storeReloadDatabase();
+  window.location.reload();
+  //storeReloadDatabase();
 }
 
 function loadCart()

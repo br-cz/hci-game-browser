@@ -434,7 +434,7 @@ function manageClicked(currentBtnID) {
   $(currentBtnID).addClass('clicked');
 }
 
-
+/*
 function storeReloadDatabase()
 {
   games[0] = JSON.parse(localStorage.getItem('actionDB'));
@@ -447,5 +447,52 @@ function storeReloadDatabase()
   games[7] = JSON.parse(localStorage.getItem('racingDB'));
   games[8] = JSON.parse(localStorage.getItem('fightingDB'));
   games[9] = JSON.parse(localStorage.getItem('simulatorDB'));
+  
+  if(currentSection === 'all')
+  {
+    document.getElementById('store-all').click();
+  }
+  else if(currentSection === 'action')
+  {
+    document.getElementById('store-action').click();
+  }
+  else if(currentSection === 'adventure')
+  {
+    document.getElementById('store-adventure').click();
+  }
+  else if(currentSection === 'family')
+  {
+    document.getElementById('store-family').click();
+  }
+  else if(currentSection === 'shooter')
+  {
+    document.getElementById('store-shooter').click();
+  }
+  else if(currentSection === 'rpg')
+  {
+    document.getElementById('store-rpg').click();
+  }
+  else if(currentSection === 'strategy')
+  {
+    document.getElementById('store-strategy').click();
+  }
+  else if(currentSection === 'sports')
+  {
+    document.getElementById('store-sports').click();
+  }
+  else if(currentSection === 'racing')
+  {
+    document.getElementById('store-racing').click();
+  }
+  else if(currentSection === 'fighting')
+  {
+    document.getElementById('store-fighting').click();
+  }
+  else if(currentSection === 'simulator')
+  {
+    document.getElementById('store-simulator').click();
+  }
+  
   window.location.reload();
 }
+*/
