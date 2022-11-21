@@ -1,9 +1,11 @@
 // var actionGames = JSON.parse(localStorage.getItem('actionDB'));
 // var adventureGames = JSON.parse(localStorage.getItem('adventureDB'));
 
+/*
 for (var i = 0; i < actionGames.length; i++) {
   createContainer(actionGames[i], '#action-container');
 }
+*/
 
 containerTags = [
   '#action-container',
@@ -19,7 +21,10 @@ containerTags = [
 ];
 for (var i = 0; i < games.length; i++) {
   for (var j = 0; j < games[i].length; j++) {
-    createContainer(games[i][j], containerTags[i]);
+    if(true) //(games[i][j].owned) to check if the game is owned, whene there is only 1 card in a category it doesn't display properly
+    {
+      createContainer(games[i][j], containerTags[i]);
+    }
   }
 }
 

@@ -323,7 +323,7 @@ function setDb() {
       ratings: 31,
       price: 50,
       sale: 50,
-      owned: 'TRUE',
+      owned: true,
       wishlist: false,
       cart: false,
       playedRank: -1,
@@ -374,7 +374,7 @@ function setDb() {
       ratings: 96,
       price: 50,
       sale: 0,
-      owned: 'TRUE',
+      owned: true,
       wishlist: false,
       cart: false,
       playedRank: -1,
@@ -406,7 +406,7 @@ function setDb() {
       ratings: 56,
       price: 70,
       sale: 0,
-      owned: 'TRUE',
+      owned: true,
       wishlist: false,
       cart: false,
       playedRank: -1,
@@ -540,7 +540,7 @@ function setDb() {
       ratings: 52,
       price: 30,
       sale: 0,
-      owned: 'TRUE',
+      owned: true,
       wishlist: false,
       cart: false,
       playedRank: -1,
@@ -832,15 +832,60 @@ function setDb() {
   //Creates an "xDB" item in localStorage containing the games of x genre.
   //We utilize localStorage because this allows the team global access and control to the game database
   //in a simple and easy manner.
-  localStorage.setItem('actionDB', JSON.stringify(actionDB));
-  localStorage.setItem('adventureDB', JSON.stringify(adventureDB));
-  localStorage.setItem('familyDB', JSON.stringify(familyDB));
-  localStorage.setItem('shooterDB', JSON.stringify(shooterDB));
-  localStorage.setItem('rpgDB', JSON.stringify(rpgDB));
-  localStorage.setItem('strategyDB', JSON.stringify(strategyDB));
-  localStorage.setItem('sportsDB', JSON.stringify(sportsDB));
-  localStorage.setItem('racingDB', JSON.stringify(racingDB));
-  localStorage.setItem('fightingDB', JSON.stringify(fightingDB));
-  localStorage.setItem('simulatorDB', JSON.stringify(simulatorDB));
+  if(JSON.parse(localStorage.getItem('actionDB')) == null)
+  {
+    localStorage.setItem('actionDB', JSON.stringify(actionDB));
+  }
+  if(JSON.parse(localStorage.getItem('adventureDB')) == null)
+  {
+    localStorage.setItem('adventureDB', JSON.stringify(adventureDB));
+  }
+  if(JSON.parse(localStorage.getItem('familyDB')) == null)
+  {
+    localStorage.setItem('familyDB', JSON.stringify(familyDB));
+  }
+  if(JSON.parse(localStorage.getItem('shooterDB')) == null)
+  {
+    localStorage.setItem('shooterDB', JSON.stringify(shooterDB));
+  }
+  if(JSON.parse(localStorage.getItem('rpgDB')) == null)
+  {
+    localStorage.setItem('rpgDB', JSON.stringify(rpgDB));
+  }
+  if(JSON.parse(localStorage.getItem('strategyDB')) == null)
+  {
+    localStorage.setItem('strategyDB', JSON.stringify(strategyDB));
+  }
+  if(JSON.parse(localStorage.getItem('sportsDB')) == null)
+  {
+    localStorage.setItem('sportsDB', JSON.stringify(sportsDB));
+  }
+  if(JSON.parse(localStorage.getItem('racingDB')) == null)
+  {
+    localStorage.setItem('racingDB', JSON.stringify(racingDB));
+  }
+  if(JSON.parse(localStorage.getItem('fightingDB')) == null)
+  {
+    localStorage.setItem('fightingDB', JSON.stringify(fightingDB));
+  }
+  if(JSON.parse(localStorage.getItem('simulatorDB')) == null)
+  {
+    localStorage.setItem('simulatorDB', JSON.stringify(simulatorDB));
+  }
 }
+//clearDB(); //comment back in and refresh the library page to restart database
 setDb();
+
+function clearDB()
+{
+  localStorage.setItem('actionDB', null);
+  localStorage.setItem('adventureDB', null);
+  localStorage.setItem('familyDB', null);
+  localStorage.setItem('shooterDB', null);
+  localStorage.setItem('rpgDB', null);
+  localStorage.setItem('strategyDB', null);
+  localStorage.setItem('sportsDB', null);
+  localStorage.setItem('racingDB', null);
+  localStorage.setItem('fightingDB', null);
+  localStorage.setItem('simulatorDB', null);
+}
