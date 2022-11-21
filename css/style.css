@@ -35,6 +35,7 @@ h4 {
 #search-button,
 .form-outline {
   height: 10px;
+  background-color: grey;
 }
 
 .gallery {

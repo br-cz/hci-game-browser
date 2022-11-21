@@ -14,6 +14,10 @@ h4#top {
   color: #f00;
 }
 
+#search-button {
+  background-color: grey;
+}
+
 h4 {
   padding-top: 1em;
   padding-left: 1em;
