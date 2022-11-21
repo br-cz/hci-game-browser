@@ -104,3 +104,54 @@ h4 {
     height: 17em;
   }
 }
+
+.card-sale-price {
+  color:darkgreen
+}
+
+/*
+.sort-btn
+{
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  border: none;
+}
+*/
+
+.sort-dropdown
+{
+  position: relative;
+  display: inline;
+  left: 10px;
+}
+
+.sort-options
+{
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 170px;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.sort-options a
+{
+  color: black;
+  padding-left: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+}
+
+.sort-dropdown:hover .sort-options 
+{
+  display: block;
+}
+
+.sort-options a:hover
+{
+  background-color: #ddd;
+}
