@@ -30,7 +30,7 @@ for (var i = 0; i < games.length; i++) {
 
   for (var j = 0; j < category.length; j++) {
     rank = category[j].playedRank;
-    console.log(category[j]);
+    //console.log(category[j]);
     if (rank != -1 && category[j].owned) {
       recent[rank] = category[j];
       recentLength++;
@@ -43,7 +43,8 @@ for (var i = 0; i < recent.length; i++) {
     title = recent[i].title;
     image = recent[i].image;
     const carouselItem = '<div class="carousel-item">';
-    const card = '<div class="card">';
+    const passTitle = "'" + title.replaceAll("'") + "'";
+    const card = '<div class="card" onclick="openBoughtGame('+ passTitle  +')">';
     const imgWrapper = '<div class="img-wrapper">';
     const imgSrc = '<img src="' + image + '" class="d-block w-100"/>';
     const divEnd = '</div>';
