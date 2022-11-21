@@ -29,6 +29,8 @@
     <!-- Custom colors -->
     <link rel="stylesheet" href="./css/styleStore.css" />
 
+    <link rel="stylesheet" href="./css/popup.css" />
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
@@ -73,7 +75,7 @@
           </div>
 
           <div class="ms-4">
-            <a href="#"> <i class="fa-sharp fa-lg fa-solid fa-user"></i> </a>
+            <a id="myBtn"> <i class="fa-sharp fa-lg fa-solid fa-user"></i> </a>
           </div>
           <div class="ms-4">
             <a href="#"><i class="fa-solid fa-lg fa-gear"></i> </a>
@@ -81,6 +83,55 @@
         </div>
       </div>
     </nav>
+
+    <!-- User Profile -->
+    <div id="myModal" class="Modal is-hidden is-visuallyHidden">
+      <!-- Modal content -->
+      <div class="Modal-content">
+        <span id="closeModal" class="Close">&times;</span>
+        <div class="popup-card">
+          <img
+            src="./images/averagehcistudent.jpeg"
+            alt="Chad"
+            style="width: 100%"
+          />
+          <h2>Average HCI Student</h2>
+          <p class="popup-title">CEO & Founder, Udder Group</p>
+          <p>University of Manitoba</p>
+          <a
+            href="https://www.github.com/gigachad"
+            target="_blank"
+            id="popup-logo"
+            ><i class="fa-brands fa-github fa-2x"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/giga-chad-869b74214/"
+            target="_blank"
+            id="popup-logo"
+            ><i class="fa-brands fa-linkedin fa-2x"></i
+          ></a>
+          <a
+            href="https://twitter.com/realgigachad1?lang=en"
+            target="_blank"
+            id="popup-logo"
+            ><i class="fa-brands fa-twitter fa-2x"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/people/Giga-Chad/100079644490764/"
+            target="_blank"
+            id="popup-logo"
+            ><i class="fa-brands fa-facebook fa-2x"></i
+          ></a>
+          <button
+            type="button"
+            class="btn btn-outline-danger"
+            onclick="alert('Not allowed to log out >:)')"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- Carousel Code-->
 
@@ -189,5 +240,7 @@
         all.click();
       });
     </script>
+
+    <script src="./js/popup.js"></script>
   </body>
 </html>
