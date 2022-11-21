@@ -22,6 +22,16 @@ h4 {
   padding-bottom: 5em;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: black !important;
+}
+
+#carouselExampleControlsThree .carousel-control-prev,
+#carouselExampleControlsThree .carousel-control-next {
+  z-index: 11;
+}
+
 #search-button,
 .form-outline {
   height: 10px;
