@@ -41,10 +41,12 @@ function openBoughtGame(title) {
                             currentGame.description +
                             '</textarea>';
 
-    document.querySelector('.popup').innerHTML +=
+    document.querySelector('.popup').innerHTML =
         '<div id="overlay_exit_button" onclick="closeOverlay()">' +
         '<button class="buttonCircle">x</button> </div> </div>' + 
-        
+        '<div class="overlay_pin_button" onclick="pinGame()">' +
+        '<button class="buttonPin">' +
+        '<i class="fa-solid fa-map-pin"></i></button></div>' +
         gameTitle + 
         gameImage +
         buttonRow +
