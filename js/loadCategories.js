@@ -1,13 +1,13 @@
 // var actionGames = JSON.parse(localStorage.getItem('actionDB'));
 // var adventureGames = JSON.parse(localStorage.getItem('adventureDB'));
 
-
 for (var i = 0; i < 5; i++) {
   for (var j = 0; j < 5; j++) {
     if (games[i][j].owned) {
       createContainer(games[i][j], '#all-container');
     }
   }
+}
 
 /*
 for (var i = 0; i < actionGames.length; i++) {
@@ -29,13 +29,8 @@ containerTags = [
   '#simulator-container',
 ];
 for (var i = 0; i < games.length; i++) {
-
-  for (var j = 0; j < games[j].length; j++) {
-
-
   for (var j = 0; j < games[i].length; j++) {
-    if(games[i][j].owned)
-    {
+    if (games[i][j].owned) {
       createContainer(games[i][j], containerTags[i]);
     }
   }

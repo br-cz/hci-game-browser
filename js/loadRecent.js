@@ -30,6 +30,7 @@ for (var i = 0; i < games.length; i++) {
 
   for (var j = 0; j < category.length; j++) {
     rank = category[j].playedRank;
+    console.log(category[j]);
     if (rank != -1 && category[j].owned) {
       recent[rank] = category[j];
       recentLength++;

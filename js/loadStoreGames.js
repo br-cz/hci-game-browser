@@ -36,21 +36,22 @@ const games = [
       // console.log(category);
 
       for (var j = 0; j < category.length; j++) {
-        // console.log(category[j]);
-        if(!category[j].owned)
-        {
+        console.log(category[j]);
+        console.log(!category[j].owned);
+        if (!category[j].owned) {
+          console.log('enter');
           currCategory.push(category[j]);
         }
       }
     }
-    currCategory.sort(compareSale);
+
     loadGames();
   });
 }.call(this));
 
 (function () {
   $('#store-action').click(function () {
-    const category = games[0];
+    const category = actionGames;
 
     manageClicked('#store-action');
 
@@ -58,18 +59,16 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(!category[j].owned)
-      {
-        currCategory.unshift(category[j]);
+      if (!category[j].owned) {
+        currCategory.push(category[j]);
       }
     }
-    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
 (function () {
   $('#store-adventure').click(function () {
-    const category = games[1];
+    const category = adventureGames;
 
     manageClicked('#store-adventure');
 
@@ -77,18 +76,16 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(!category[j].owned)
-      {
-        currCategory.unshift(category[j]);
+      if (!category[j].owned) {
+        currCategory.push(category[j]);
       }
     }
-    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
 (function () {
   $('#store-family').click(function () {
-    const category = games[2];
+    const category = familyGames;
 
     manageClicked('#store-family');
 
@@ -96,18 +93,16 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(!category[j].owned)
-      {
-        currCategory.unshift(category[j]);
+      if (!category[j].owned) {
+        currCategory.push(category[j]);
       }
     }
-    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
 (function () {
   $('#store-shooter').click(function () {
-    const category = games[3];
+    const category = shooterGames;
 
     manageClicked('#store-shooter');
 
@@ -115,18 +110,16 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(!category[j].owned)
-      {
-        currCategory.unshift(category[j]);
+      if (!category[j].owned) {
+        currCategory.push(category[j]);
       }
     }
-    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
 (function () {
   $('#store-rpg').click(function () {
-    const category = games[4];
+    const category = rpgGames;
 
     manageClicked('#store-rpg');
 
@@ -134,18 +127,16 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(!category[j].owned)
-      {
-        currCategory.unshift(category[j]);
+      if (!category[j].owned) {
+        currCategory.push(category[j]);
       }
     }
-    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
 (function () {
   $('#store-strategy').click(function () {
-    const category = games[5];
+    const category = strategyGames;
 
     manageClicked('#store-strategy');
 
@@ -153,18 +144,16 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(!category[j].owned)
-      {
-        currCategory.unshift(category[j]);
+      if (!category[j].owned) {
+        currCategory.push(category[j]);
       }
     }
-    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
 (function () {
   $('#store-sports').click(function () {
-    const category = games[6];
+    const category = sportsGames;
 
     manageClicked('#store-sports');
 
@@ -172,18 +161,16 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(!category[j].owned)
-      {
-        currCategory.unshift(category[j]);
+      if (!category[j].owned) {
+        currCategory.push(category[j]);
       }
     }
-    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
 (function () {
   $('#store-racing').click(function () {
-    const category = games[7];
+    const category = racingGames;
 
     manageClicked('#store-racing');
 
@@ -191,18 +178,16 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(!category[j].owned)
-      {
-        currCategory.unshift(category[j]);
+      if (!category[j].owned) {
+        currCategory.push(category[j]);
       }
     }
-    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
 (function () {
   $('#store-fighting').click(function () {
-    const category = games[8];
+    const category = fightingGames;
 
     manageClicked('#store-fighting');
 
@@ -210,18 +195,16 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(!category[j].owned)
-      {
-        currCategory.unshift(category[j]);
+      if (!category[j].owned) {
+        currCategory.push(category[j]);
       }
     }
-    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
 (function () {
   $('#store-simulator').click(function () {
-    const category = games[9];
+    const category = simulatorGames;
 
     manageClicked('#store-simulator');
 
@@ -229,12 +212,10 @@ const games = [
     document.querySelector('.gallery').innerHTML = '';
 
     for (var j = 0; j < category.length; j++) {
-      if(!category[j].owned)
-      {
-        currCategory.unshift(category[j]);
+      if (!category[j].owned) {
+        currCategory.push(category[j]);
       }
     }
-    currCategory.sort(compareSale);
     loadGames();
   });
 }.call(this));
@@ -245,7 +226,7 @@ function loadGames() {
     image = currCategory[i].image;
     price = currCategory[i].price;
     sale = currCategory[i].sale;
-    
+
     const card = '<div class="card">';
     //const card = '<div class="card" onclick="addToCart(\'' + title +'\')">'; //for testing cart function
     const imgWrapper = '<div class="img-wrapper">';
@@ -255,14 +236,18 @@ function loadGames() {
     const cardTitle = '<h5 class="card-title">' + title + '</h5>';
     cardPrice = '';
     //Adrian: I don't know how to format this better
-    if(sale > 0)
-    {
-      salePrice = ((100 - sale)/100) * price;
-      cardPrice = '<p class="card-price-number"><s>$' + price.toFixed(2) + '</s> -' + sale +'%</p>'
-                + '<p class="card-sale-price">$' + salePrice.toFixed(2) + '</p>';
-    }
-    else
-    {
+    if (sale > 0) {
+      salePrice = ((100 - sale) / 100) * price;
+      cardPrice =
+        '<p class="card-price-number"><s>$' +
+        price.toFixed(2) +
+        '</s> -' +
+        sale +
+        '%</p>' +
+        '<p class="card-sale-price">$' +
+        salePrice.toFixed(2) +
+        '</p>';
+    } else {
       cardPrice = '<p class="card-price-number">$' + price.toFixed(2) + '</p>';
     }
     const aBtn = '<a href="#" class="btn btn-success">';
@@ -299,8 +284,7 @@ function loadGames() {
   }
 }
 
-function sortBySale()
-{
+function sortBySale() {
   /*
   currCategory.sort(compareName);
   currCategory.sort(comparePrice);
@@ -308,12 +292,11 @@ function sortBySale()
   currCategory.sort(compareRatings);
   */
   currCategory.sort(compareSale);
-  document.querySelector('.gallery').innerHTML = "";
+  document.querySelector('.gallery').innerHTML = '';
   loadGames();
 }
 
-function sortByName()
-{
+function sortByName() {
   /*
   currCategory.sort(compareName);
   currCategory.sort(comparePrice);
@@ -321,12 +304,11 @@ function sortByName()
   currCategory.sort(compareRatings);
   */
   currCategory.sort(compareName);
-  document.querySelector('.gallery').innerHTML = "";
+  document.querySelector('.gallery').innerHTML = '';
   loadGames();
 }
 
-function sortByPrice()
-{
+function sortByPrice() {
   /*
   currCategory.sort(compareName);
   currCategory.sort(comparePrice);
@@ -334,77 +316,56 @@ function sortByPrice()
   currCategory.sort(compareRatings);
   */
   currCategory.sort(comparePrice);
-  document.querySelector('.gallery').innerHTML = "";
+  document.querySelector('.gallery').innerHTML = '';
   loadGames();
 }
 
-function sortByRatings()
-{
+function sortByRatings() {
   /*
   currCategory.sort(compareName);
   currCategory.sort(comparePrice);
   currCategory.sort(compareSale); 
   */
   currCategory.sort(compareRatings);
-  document.querySelector('.gallery').innerHTML = "";
+  document.querySelector('.gallery').innerHTML = '';
   loadGames();
 }
 
-function compareName(a, b)
-{
+function compareName(a, b) {
   return a.title.localeCompare(b.title);
 }
 
-function comparePrice(a, b)
-{
-  salePriceA = (1 - (a.sale/100)) * a.price;
-  salePriceB = (1 - (b.sale/100)) * b.price;
-  if(salePriceA < salePriceB)
-  {
+function comparePrice(a, b) {
+  salePriceA = (1 - a.sale / 100) * a.price;
+  salePriceB = (1 - b.sale / 100) * b.price;
+  if (salePriceA < salePriceB) {
     return -1;
-  }
-  else if(salePriceA > salePriceB)
-  {
+  } else if (salePriceA > salePriceB) {
     return 1;
-  }
-  else
-  {
+  } else {
     return 0;
   }
 }
 
-function compareSale(a, b)
-{
-  if(a.sale > b.sale)
-  {
+function compareSale(a, b) {
+  if (a.sale > b.sale) {
     return -1;
-  }
-  else if(a.sale < b.sale)
-  {
+  } else if (a.sale < b.sale) {
     return 1;
-  }
-  else
-  {
+  } else {
     return comparePrice(a, b);
   }
 }
 
-function compareRatings(a, b)
-{
-  if(a.ratings > b.ratings)
-  {
+function compareRatings(a, b) {
+  if (a.ratings > b.ratings) {
     return -1;
-  }
-  else if(a.ratings < b.ratings)
-  {
+  } else if (a.ratings < b.ratings) {
     return 1;
-  }
-  else
-  {
+  } else {
     return 0;
   }
 }
-
 function manageClicked(currentBtnID) {
   btnIDs = [
     '#store-all',
@@ -433,66 +394,3 @@ function manageClicked(currentBtnID) {
 
   $(currentBtnID).addClass('clicked');
 }
-
-/*
-function storeReloadDatabase()
-{
-  games[0] = JSON.parse(localStorage.getItem('actionDB'));
-  games[1] = JSON.parse(localStorage.getItem('adventureDB'));
-  games[2] = JSON.parse(localStorage.getItem('familyDB'));
-  games[3] = JSON.parse(localStorage.getItem('shooterDB'));
-  games[4] = JSON.parse(localStorage.getItem('rpgDB'));
-  games[5] = JSON.parse(localStorage.getItem('strategyDB'));
-  games[6] = JSON.parse(localStorage.getItem('sportsDB'));
-  games[7] = JSON.parse(localStorage.getItem('racingDB'));
-  games[8] = JSON.parse(localStorage.getItem('fightingDB'));
-  games[9] = JSON.parse(localStorage.getItem('simulatorDB'));
-  
-  if(currentSection === 'all')
-  {
-    document.getElementById('store-all').click();
-  }
-  else if(currentSection === 'action')
-  {
-    document.getElementById('store-action').click();
-  }
-  else if(currentSection === 'adventure')
-  {
-    document.getElementById('store-adventure').click();
-  }
-  else if(currentSection === 'family')
-  {
-    document.getElementById('store-family').click();
-  }
-  else if(currentSection === 'shooter')
-  {
-    document.getElementById('store-shooter').click();
-  }
-  else if(currentSection === 'rpg')
-  {
-    document.getElementById('store-rpg').click();
-  }
-  else if(currentSection === 'strategy')
-  {
-    document.getElementById('store-strategy').click();
-  }
-  else if(currentSection === 'sports')
-  {
-    document.getElementById('store-sports').click();
-  }
-  else if(currentSection === 'racing')
-  {
-    document.getElementById('store-racing').click();
-  }
-  else if(currentSection === 'fighting')
-  {
-    document.getElementById('store-fighting').click();
-  }
-  else if(currentSection === 'simulator')
-  {
-    document.getElementById('store-simulator').click();
-  }
-  
-  window.location.reload();
-}
-*/
