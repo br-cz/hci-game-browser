@@ -1,9 +1,9 @@
 // var actionGames = JSON.parse(localStorage.getItem('actionDB'));
 // var adventureGames = JSON.parse(localStorage.getItem('adventureDB'));
 
-for (var i = 0; i < actionGames.length; i++) {
-  createContainer(actionGames[i], '#action-container');
-}
+// for (var i = 0; i < actionGames.length; i++) {
+//   createContainer(actionGames[i], '#action-container');
+// }
 
 containerTags = [
   '#action-container',
@@ -18,20 +18,25 @@ containerTags = [
   '#simulator-container',
 ];
 for (var i = 0; i < games.length; i++) {
-  for (var j = 0; j < games[i].length; j++) {
-    createContainer(games[i][j], containerTags[i]);
+  for (var j = 0; j < games[j].length; j++) {
+    // console.log(games[i][j].title + ' is owned? ' + games[i][j].owned);
+    if (games[i][j].owned) {
+      console.log(games[i][j].title + ' is owned? ' + games[i][j].owned);
+
+      createContainer(games[i][j], containerTags[i]);
+    }
   }
 }
 
 function createContainer(game, container) {
-  const stackedCard = '<div data-stacked-card="4" class="stacked-card">';
+  const stackedCard = '<div data-stacked-card="1" class="stacked-card">';
   const image = '<div class="image">';
   const imageSrc = '<img src="' + game.image + ' " alt="image" />';
   const divEnd = '</div>';
   const detail = '<div class="detail">';
   const h3Title = '<h3>' + game.title + '</h3>';
   const next = '<div class="next">';
-  const iClass = '<i class="fas fa-arrow-right"></i>';
+  const iClass = '<i class="fas fa-arrow-up"></i>';
   const aBtn = '<a href="#" class="btn btn-primary">';
   const iPlayClass = '<i class="fa-solid fa-play"></i>';
   const aEND = '</a>';

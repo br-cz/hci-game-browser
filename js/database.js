@@ -58,7 +58,7 @@ function setDb() {
       ratings: 80,
       price: 70,
       sale: 25,
-      owned: false,
+      owned: true,
       wishlist: false,
       cart: false,
       playedRank: -1,
