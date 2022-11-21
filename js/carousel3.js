@@ -22,8 +22,8 @@ if (window.matchMedia('(min-width: 768px)').matches) {
   $('#carouselExampleControlsThree .carousel-control-next').on(
     'click',
     function () {
-      if (scrollPositionThree < carouselWidthThree + cardWidthThree) {
-        scrollPositionThree += cardWidthThree * 1.04;
+      if (scrollPositionThree < carouselWidthThree) {
+        scrollPositionThree += cardWidthThree;
         $('#carouselExampleControlsThree .carousel-inner').animate(
           { scrollLeft: scrollPositionThree },
           movement

@@ -1,9 +1,15 @@
 .fa-gear {
   color: white;
 }
+.fa-gear:hover {
+  color: grey;
+}
 
 .fa-user {
   color: white;
+}
+.fa-user:hover {
+  color: grey;
 }
 
 h4#top {
