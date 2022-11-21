@@ -247,6 +247,7 @@ function loadGames() {
     sale = currCategory[i].sale;
     
     const card = '<div class="card">';
+    //const card = '<div class="card" onclick="addToCart(\'' + title +'\')">'; //for testing cart function
     const imgWrapper = '<div class="img-wrapper">';
     const imgSrc = '<img src="' + image + '" class="d-block w-100"/>';
     const divEnd = '</div>';
@@ -431,3 +432,20 @@ function manageClicked(currentBtnID) {
 
   $(currentBtnID).addClass('clicked');
 }
+
+/*
+function storeReloadDatabase()
+{
+  console.log("reloading store database");
+  games[0] = JSON.parse(localStorage.getItem('actionDB'));
+  games[1] = JSON.parse(localStorage.getItem('adventureDB'));
+  games[2] = JSON.parse(localStorage.getItem('familyDB'));
+  games[3] = JSON.parse(localStorage.getItem('shooterDB'));
+  games[4] = JSON.parse(localStorage.getItem('rpgDB'));
+  games[5] = JSON.parse(localStorage.getItem('strategyDB'));
+  games[6] = JSON.parse(localStorage.getItem('sportsDB'));
+  games[7] = JSON.parse(localStorage.getItem('racingDB'));
+  games[8] = JSON.parse(localStorage.getItem('fightingDB'));
+  games[9] = JSON.parse(localStorage.getItem('simulatorDB'));
+}
+*/
