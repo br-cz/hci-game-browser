@@ -5,6 +5,10 @@
   color: grey;
 }
 
+.unpinned {
+  color: grey;
+}
+
 .fa-user {
   color: white;
 }
