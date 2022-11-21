@@ -50,7 +50,7 @@ const games = [
 
 (function () {
   $('#store-action').click(function () {
-    const category = actionGames;
+    const category = games[0];
 
     manageClicked('#store-action');
 
@@ -69,7 +69,7 @@ const games = [
 }.call(this));
 (function () {
   $('#store-adventure').click(function () {
-    const category = adventureGames;
+    const category = games[1];
 
     manageClicked('#store-adventure');
 
@@ -88,7 +88,7 @@ const games = [
 }.call(this));
 (function () {
   $('#store-family').click(function () {
-    const category = familyGames;
+    const category = games[2];
 
     manageClicked('#store-family');
 
@@ -107,7 +107,7 @@ const games = [
 }.call(this));
 (function () {
   $('#store-shooter').click(function () {
-    const category = shooterGames;
+    const category = games[3];
 
     manageClicked('#store-shooter');
 
@@ -126,7 +126,7 @@ const games = [
 }.call(this));
 (function () {
   $('#store-rpg').click(function () {
-    const category = rpgGames;
+    const category = games[4];
 
     manageClicked('#store-rpg');
 
@@ -145,7 +145,7 @@ const games = [
 }.call(this));
 (function () {
   $('#store-strategy').click(function () {
-    const category = strategyGames;
+    const category = games[5];
 
     manageClicked('#store-strategy');
 
@@ -164,7 +164,7 @@ const games = [
 }.call(this));
 (function () {
   $('#store-sports').click(function () {
-    const category = sportsGames;
+    const category = games[6];
 
     manageClicked('#store-sports');
 
@@ -183,7 +183,7 @@ const games = [
 }.call(this));
 (function () {
   $('#store-racing').click(function () {
-    const category = racingGames;
+    const category = games[7];
 
     manageClicked('#store-racing');
 
@@ -202,7 +202,7 @@ const games = [
 }.call(this));
 (function () {
   $('#store-fighting').click(function () {
-    const category = fightingGames;
+    const category = games[8];
 
     manageClicked('#store-fighting');
 
@@ -221,7 +221,7 @@ const games = [
 }.call(this));
 (function () {
   $('#store-simulator').click(function () {
-    const category = simulatorGames;
+    const category = games[9];
 
     manageClicked('#store-simulator');
 
@@ -254,6 +254,7 @@ function loadGames() {
     const cardBody = '<div class="card-body">';
     const cardTitle = '<h5 class="card-title">' + title + '</h5>';
     cardPrice = '';
+    //Adrian: I don't know how to format this better
     if(sale > 0)
     {
       salePrice = ((100 - sale)/100) * price;
@@ -433,10 +434,9 @@ function manageClicked(currentBtnID) {
   $(currentBtnID).addClass('clicked');
 }
 
-/*
+
 function storeReloadDatabase()
 {
-  console.log("reloading store database");
   games[0] = JSON.parse(localStorage.getItem('actionDB'));
   games[1] = JSON.parse(localStorage.getItem('adventureDB'));
   games[2] = JSON.parse(localStorage.getItem('familyDB'));
@@ -447,5 +447,5 @@ function storeReloadDatabase()
   games[7] = JSON.parse(localStorage.getItem('racingDB'));
   games[8] = JSON.parse(localStorage.getItem('fightingDB'));
   games[9] = JSON.parse(localStorage.getItem('simulatorDB'));
+  window.location.reload();
 }
-*/

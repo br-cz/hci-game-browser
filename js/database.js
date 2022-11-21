@@ -873,6 +873,7 @@ function setDb() {
     localStorage.setItem('simulatorDB', JSON.stringify(simulatorDB));
   }
 }
+//clearDB(); //comment back in and refresh the library page to restart database
 setDb();
 
 function clearDB()
