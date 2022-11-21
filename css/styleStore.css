@@ -112,6 +112,11 @@ h4 {
 
 .card-sale-price {
   color: darkgreen;
+  word-wrap: normal;
+}
+
+.card-price{
+  word-wrap: normal;
 }
 
 /*
@@ -154,4 +159,9 @@ h4 {
 
 .sort-options a:hover {
   background-color: #ddd;
+}
+
+.cart
+{
+  display: inline;
 }

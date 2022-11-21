@@ -226,9 +226,12 @@ function loadGames() {
     image = currCategory[i].image;
     price = currCategory[i].price;
     sale = currCategory[i].sale;
+    passTitle = title.replaceAll("'","");
+    //console.log(passTitle);
 
     const card = '<div class="card">';
-    //const card = '<div class="card" onclick="addToCart(\'' + title +'\')">'; //for testing cart function
+    //const card = '<div class="card" onclick="addToCart(\'' + passTitle +'\')">'; //for testing cart function
+    
     const imgWrapper = '<div class="img-wrapper">';
     const imgSrc = '<img src="' + image + '" class="d-block w-100"/>';
     const divEnd = '</div>';
@@ -239,18 +242,18 @@ function loadGames() {
     if (sale > 0) {
       salePrice = ((100 - sale) / 100) * price;
       cardPrice =
-        '<p class="card-price-number"><s>$' +
+        '<p class="card-price-number card-price"><s>$' +
         price.toFixed(2) +
         '</s> -' +
         sale +
         '%</p>' +
-        '<p class="card-sale-price">$' +
+        '<p class="card-sale-price card-price">$' +
         salePrice.toFixed(2) +
         '</p>';
     } else {
-      cardPrice = '<p class="card-price-number">$' + price.toFixed(2) + '</p>';
+      cardPrice = '<p class="card-price-number card-price">$' + price.toFixed(2) + '</p>';
     }
-    const aBtn = '<a href="#" class="btn btn-success">';
+    const aBtn = '<a href="#" class="btn btn-success" onclick="addToCart(\'' + passTitle +'\')">';
     const iClass = '<i class="fa-solid fa-cart-shopping"></i>';
     const aEND = '</a>';
     document.querySelector('.gallery').innerHTML +=
