@@ -1,9 +1,15 @@
 .fa-gear {
   color: white;
 }
+.fa-gear:hover {
+  color: grey;
+}
 
 .fa-user {
   color: white;
+}
+.fa-user:hover {
+  color: grey;
 }
 
 h4#top {
@@ -22,9 +28,20 @@ h4 {
   padding-bottom: 5em;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: black !important;
+}
+
+#carouselExampleControlsThree .carousel-control-prev,
+#carouselExampleControlsThree .carousel-control-next {
+  z-index: 11;
+}
+
 #search-button,
 .form-outline {
   height: 10px;
+  background-color: grey;
 }
 
 .gallery {

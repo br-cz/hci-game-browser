@@ -1,9 +1,18 @@
 // var actionGames = JSON.parse(localStorage.getItem('actionDB'));
 // var adventureGames = JSON.parse(localStorage.getItem('adventureDB'));
 
+
+for (var i = 0; i < 5; i++) {
+  for (var j = 0; j < 5; j++) {
+    if (games[i][j].owned) {
+      createContainer(games[i][j], '#all-container');
+    }
+  }
+
 /*
 for (var i = 0; i < actionGames.length; i++) {
   createContainer(actionGames[i], '#action-container');
+
 }
 */
 
@@ -20,8 +29,12 @@ containerTags = [
   '#simulator-container',
 ];
 for (var i = 0; i < games.length; i++) {
+
+  for (var j = 0; j < games[j].length; j++) {
+
+
   for (var j = 0; j < games[i].length; j++) {
-    if(true) //(games[i][j].owned) to check if the game is owned, whene there is only 1 card in a category it doesn't display properly
+    if(games[i][j].owned)
     {
       createContainer(games[i][j], containerTags[i]);
     }
@@ -29,14 +42,14 @@ for (var i = 0; i < games.length; i++) {
 }
 
 function createContainer(game, container) {
-  const stackedCard = '<div data-stacked-card="4" class="stacked-card">';
+  const stackedCard = '<div data-stacked-card="1" class="stacked-card">';
   const image = '<div class="image">';
   const imageSrc = '<img src="' + game.image + ' " alt="image" />';
   const divEnd = '</div>';
   const detail = '<div class="detail">';
   const h3Title = '<h3>' + game.title + '</h3>';
   const next = '<div class="next">';
-  const iClass = '<i class="fas fa-arrow-right"></i>';
+  const iClass = '<i class="fas fa-arrow-up"></i>';
   const aBtn = '<a href="#" class="btn btn-primary">';
   const iPlayClass = '<i class="fa-solid fa-play"></i>';
   const aEND = '</a>';

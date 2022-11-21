@@ -2,6 +2,24 @@
   var rotate, timeline;
 
   rotate = function () {
+    return $('#all-container .stacked-card:first-child')
+      .fadeOut(400, 'swing', function () {
+        return $('#all-container .stacked-card:first-child')
+          .appendTo('#all-container')
+          .hide();
+      })
+      .fadeIn(400, 'swing');
+  };
+
+  $('#all-container .next').click(function () {
+    return rotate();
+  });
+}.call(this));
+
+(function () {
+  var rotate, timeline;
+
+  rotate = function () {
     return $('#action-container .stacked-card:first-child')
       .fadeOut(400, 'swing', function () {
         return $('#action-container .stacked-card:first-child')

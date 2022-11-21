@@ -14,7 +14,7 @@ function setDb() {
       wishlist: false,
       cart: false,
       playedRank: -1,
-      isPinned: true,
+      isPinned: false,
     },
     {
       title: 'Battlerite',
@@ -58,7 +58,7 @@ function setDb() {
       ratings: 80,
       price: 70,
       sale: 25,
-      owned: false,
+      owned: true,
       wishlist: false,
       cart: false,
       playedRank: -1,
@@ -96,7 +96,7 @@ function setDb() {
       owned: false,
       wishlist: false,
       cart: false,
-      playedRank: 3,
+      playedRank: -1,
       isPinned: false,
     },
     {
@@ -128,8 +128,8 @@ function setDb() {
       owned: true,
       wishlist: false,
       cart: false,
-      playedRank: 4,
-      isPinned: false,
+      playedRank: 3,
+      isPinned: true,
     },
     {
       title: 'GUILTY GEAR Xrd -REVELATOR-',
@@ -144,7 +144,7 @@ function setDb() {
       owned: true,
       wishlist: false,
       cart: false,
-      playedRank: -1,
+      playedRank: 4,
       isPinned: false,
     },
     {
@@ -161,7 +161,7 @@ function setDb() {
       wishlist: false,
       cart: false,
       playedRank: -1,
-      isPinned: true,
+      isPinned: false,
     },
   ];
 
@@ -378,7 +378,7 @@ function setDb() {
       wishlist: false,
       cart: false,
       playedRank: -1,
-      isPinned: true,
+      isPinned: false,
     },
     {
       title: 'Assassin’s Creed® Origins',
@@ -445,7 +445,7 @@ function setDb() {
       wishlist: false,
       cart: false,
       playedRank: -1,
-      isPinned: true,
+      isPinned: false,
     },
     {
       title: 'Chess',
@@ -709,7 +709,7 @@ function setDb() {
       owned: false,
       wishlist: false,
       cart: false,
-      playedRank: 7,
+      playedRank: -1,
       isPinned: false,
     },
     {
@@ -741,7 +741,7 @@ function setDb() {
       owned: false,
       wishlist: false,
       cart: false,
-      playedRank: 8,
+      playedRank: -1,
       isPinned: false,
     },
   ];
@@ -760,7 +760,7 @@ function setDb() {
       owned: true,
       wishlist: false,
       cart: false,
-      playedRank: 9,
+      playedRank: 7,
       isPinned: false,
     },
     {
@@ -792,7 +792,7 @@ function setDb() {
       owned: false,
       wishlist: false,
       cart: false,
-      playedRank: 10,
+      playedRank: 8,
       isPinned: false,
     },
     {

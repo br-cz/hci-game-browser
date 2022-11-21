@@ -100,19 +100,19 @@
   opacity: 0.7;
 }
 
-.stacked-card:nth-child(5) {
+/* .stacked-card:nth-child(5) {
   z-index: 6;
   top: -60px;
   transform-origin: top;
   transform: scale(0.6);
   opacity: 0.6;
-}
+} */
 
 .stacked-card:first-child:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   transform: scale(1.05);
 }
 
-.stacked-card:last-child {
+/* .stacked-card:last-child {
   opacity: 0;
-}
+} */
