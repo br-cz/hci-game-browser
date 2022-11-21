@@ -96,7 +96,7 @@ function setDb() {
       owned: false,
       wishlist: false,
       cart: false,
-      playedRank: 3,
+      playedRank: -1,
       isPinned: false,
     },
     {
@@ -128,7 +128,7 @@ function setDb() {
       owned: true,
       wishlist: false,
       cart: false,
-      playedRank: 4,
+      playedRank: 3,
       isPinned: false,
     },
     {
@@ -144,7 +144,7 @@ function setDb() {
       owned: true,
       wishlist: false,
       cart: false,
-      playedRank: -1,
+      playedRank: 4,
       isPinned: false,
     },
     {
@@ -709,7 +709,7 @@ function setDb() {
       owned: false,
       wishlist: false,
       cart: false,
-      playedRank: 7,
+      playedRank: -1,
       isPinned: false,
     },
     {
@@ -741,7 +741,7 @@ function setDb() {
       owned: false,
       wishlist: false,
       cart: false,
-      playedRank: 8,
+      playedRank: -1,
       isPinned: false,
     },
   ];
@@ -760,7 +760,7 @@ function setDb() {
       owned: true,
       wishlist: false,
       cart: false,
-      playedRank: 9,
+      playedRank: 7,
       isPinned: false,
     },
     {
@@ -792,7 +792,7 @@ function setDb() {
       owned: false,
       wishlist: false,
       cart: false,
-      playedRank: 10,
+      playedRank: 8,
       isPinned: false,
     },
     {
