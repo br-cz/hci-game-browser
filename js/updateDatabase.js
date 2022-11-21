@@ -44,7 +44,8 @@ function changeValue(gameTitle, valueName, newValue)
         let valueChanged = false;
         for(let j = 0; j < allGamesUpdate[i].length; j++)
         {
-            if(gameTitle.localeCompare(allGamesUpdate[i][j].title) == 0)
+            titleComparison = allGamesUpdate[i][j].title.replaceAll("'","")
+            if(gameTitle.localeCompare(titleComparison) == 0)
             {
                 allGamesUpdate[i][j][valueName] = newValue;
                 valueChanged = true;
@@ -58,6 +59,22 @@ function changeValue(gameTitle, valueName, newValue)
 
             //console.log("After updating: ");
             //console.log(JSON.parse(localStorage.getItem(categoryNames[i])));
+        }
+    }
+}
+
+function findGame(gameTitle)
+{
+    for(let i = 0; i < allGamesUpdate.length; i++)
+    {
+        for(let j = 0; j < allGamesUpdate[i].length; j++)
+        {
+            titleComparison = allGamesUpdate[i][j].title.replaceAll("'","")
+            if(gameTitle.localeCompare(titleComparison) == 0)
+            {
+                console.log(allGamesUpdate[i][j]);
+                return allGamesUpdate[i][j]
+            }
         }
     }
 }
