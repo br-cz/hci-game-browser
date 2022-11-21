@@ -55,6 +55,10 @@ h4 {
   height: 300px;
 }
 
+.card-body {
+  display: flex;
+}
+
 .card:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   transform: scale(1.05);
@@ -93,8 +97,9 @@ h4 {
   align-items: center;
 }
 .card-title {
-  font-size: 18px;
-  white-space: nowrap;
+  font-size: 15px;
+  /* white-space: nowrap; */
+  word-wrap: normal;
 }
 .card img {
   max-height: 100%;
@@ -106,7 +111,7 @@ h4 {
 }
 
 .card-sale-price {
-  color:darkgreen
+  color: darkgreen;
 }
 
 /*
@@ -119,26 +124,23 @@ h4 {
 }
 */
 
-.sort-dropdown
-{
+.sort-dropdown {
   position: relative;
   display: inline;
   left: 10px;
 }
 
-.sort-options
-{
+.sort-options {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
   min-width: 170px;
   left: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
-.sort-options a
-{
+.sort-options a {
   color: black;
   padding-left: 12px;
   text-decoration: none;
@@ -146,12 +148,10 @@ h4 {
   display: block;
 }
 
-.sort-dropdown:hover .sort-options 
-{
+.sort-dropdown:hover .sort-options {
   display: block;
 }
 
-.sort-options a:hover
-{
+.sort-options a:hover {
   background-color: #ddd;
 }
