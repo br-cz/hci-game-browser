@@ -44,7 +44,8 @@ for (var i = 0; i < pinned.length; i++) {
     title = pinned[i].title;
     image = pinned[i].image;
     const carouselItem = '<div class="carousel-item">';
-    const card = '<div class="card">';
+    const passTitle = "'" + title.replaceAll("'") + "'";
+    const card = '<div class="card" onclick="openBoughtGame('+ passTitle  +')">';
     const imgWrapper = '<div class="img-wrapper">';
     const imgSrc = '<img src="' + image + '" class="d-block w-100"/>';
     const divEnd = '</div>';
