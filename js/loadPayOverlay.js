@@ -2,7 +2,7 @@ var overlay = document.getElementById('payGameOverlay');
 
 function openStoreGame(title) {
   var currentGame = 10;
-  console.log(title);
+  //console.log(title);
   for (var i = 0; i < games.length; i++) {
     for (var j = 0; j < games[i].length; j++) {
       if (games[i][j].title.replaceAll("'") === title) {
@@ -14,7 +14,7 @@ function openStoreGame(title) {
       break;
     }
   }
-  console.log(currentGame);
+  //console.log(currentGame);
 
   overlay.className = 'container-popup .is-visible';
   setTimeout(function () {
@@ -35,9 +35,11 @@ function openStoreGame(title) {
     '" class="d-block w-100"/>' +
     '</div>';
 
+  passTitle = currentGame.title.replaceAll("'","");
+
   const buttonRow =
     '<div id="buttonRowOuter">' +
-    '<div class="buttonRowInner"><button class="playGameButton" >PURCHASE</button></div>' +
+    '<div class="buttonRowInner"><button class="playGameButton" onclick="purchaseSingle(\'' + passTitle + '\')">PURCHASE</button></div>' +
     '</div>';
 
   const gameDescription =
@@ -46,11 +48,12 @@ function openStoreGame(title) {
     currentGame.description +
     '</textarea>';
 
+  salePrice = (1 - (currentGame.sale/100)) * currentGame.price; 
    const priceRow =
     '<div id="buttonRowOuterPrice">' +
-    '<div class="buttonRowPayOverlay"><button class="addCartWishlist" >Add to Cart</button></div>' +
-    '<div class="gamePrice">Price: $' + currentGame.price + '</div>' +
-    '<div class="buttonRowPayOverlay"><button class="addCartWishlist" >Add to Wishlist</button></div>' +
+    '<div class="buttonRowPayOverlay"><button class="addCartWishlist" onclick="addToCart(\'' + passTitle + '\')">Add to Cart</button></div>' +
+    '<div class="gamePrice">Price: $' + salePrice + '</div>' +
+    '<div class="buttonRowPayOverlay"><button class="addCartWishlist">Add to Wishlist</button></div>' +
     '</div>';
 
   var inCart = '';

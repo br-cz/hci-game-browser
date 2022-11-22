@@ -161,7 +161,9 @@ h4 {
   background-color: #ddd;
 }
 
-.cart
+#cart-btn
 {
   display: inline;
+  position: absolute;
+  right: 2.5%;
 }

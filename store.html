@@ -31,6 +31,8 @@
 
     <link rel="stylesheet" href="./css/popup.css" />
 
+    <link rel="stylesheet" href="./css/cart.css" />
+
     <!-- Overlay -->
     <link rel="stylesheet" href="./css/overlay.css" />
 
@@ -143,13 +145,31 @@
       </div>
     </div>
 
+    <div id="cart-page" class="cart cart-modal is-hidden is-visuallyHidden">
+      <div class="cart-modal-content">
+        <h3 class="cart-title">
+          Cart Summary
+        </h3>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+        </div>
+        <div class="purchase-cart-btn" onclick="purchaseCart()">
+          <button>
+            Complete Purchase
+          </button>
+        </div>
+      </div>
+      
+    </div>
+
+
     <!-- Carousel Code-->
 
     <h4 id="top">
       Categories
 
       <!-- Cart and sort button -->
-      <button class="btn btn-light btn-lg cart">Cart</button>
       <div class="sort-dropdown">
         <span class="btn btn-light btn-lg">Sort by...</span>
         <!-- <span class="btn btn-light btn-lg clicked" onclick="cartPurchase()">Sort by...</span>  //For testing cartPurchase along with addToCart-->
@@ -161,6 +181,7 @@
           <a href="#" onclick="sortByRatings()">Average User Rating</a>
         </div>
       </div>
+      <button id="cart-btn"class="btn btn-light btn-lg" onclick="loadCart()">Cart</button>
     </h4>
 
     <div
