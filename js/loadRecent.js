@@ -44,13 +44,17 @@ for (var i = 0; i < recent.length; i++) {
     image = recent[i].image;
     const carouselItem = '<div class="carousel-item">';
     const passTitle = "'" + title.replaceAll("'") + "'";
-    const card = '<div class="card" onclick="openBoughtGame('+ passTitle  +')">';
+    const card =
+      '<div class="card" onclick="openBoughtGame(' + passTitle + ')">';
     const imgWrapper = '<div class="img-wrapper">';
     const imgSrc = '<img src="' + image + '" class="d-block w-100"/>';
     const divEnd = '</div>';
     const cardBody = '<div class="card-body">';
     const cardTitle = '<h5 class="card-title">' + title + '</h5>';
-    const aBtn = '<a href="#" class="btn btn-primary">';
+    const aBtn =
+      '<a href="#" class="btn btn-primary" onclick="playGame(' +
+      passTitle +
+      ')">';
     const iClass = '<i class="fa-solid fa-play"></i>';
     const aEND = '</a>';
     document.querySelector('.carousel-inner').innerHTML +=

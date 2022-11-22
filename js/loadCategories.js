@@ -28,6 +28,7 @@ containerTags = [
   '#fighting-container',
   '#simulator-container',
 ];
+
 for (var i = 0; i < games.length; i++) {
   for (var j = 0; j < games[i].length; j++) {
     if (games[i][j].owned) {
@@ -37,15 +38,24 @@ for (var i = 0; i < games.length; i++) {
 }
 
 function createContainer(game, container) {
-  const stackedCard = '<div data-stacked-card="1" class="stacked-card">';
+  const passTitle = "'" + game.title.replaceAll("'") + "'";
+
+  const stackedCard =
+    '<div data-stacked-card="1" class="stacked-card" onclick="openBoughtGame(' +
+    passTitle +
+    ')">';
   const image = '<div class="image">';
   const imageSrc = '<img src="' + game.image + ' " alt="image" />';
   const divEnd = '</div>';
   const detail = '<div class="detail">';
   const h3Title = '<h3>' + game.title + '</h3>';
-  const next = '<div class="next">';
+  const next =
+    '<div class="next" onclick="event.cancelBubble=true;if(event.stopPropagation) event.stopPropagation();return false;">';
   const iClass = '<i class="fas fa-arrow-up"></i>';
-  const aBtn = '<a href="#" class="btn btn-primary">';
+  const aBtn =
+    '<a href="#" class="btn btn-primary" onclick="playGame(' +
+    passTitle +
+    ')">';
   const iPlayClass = '<i class="fa-solid fa-play"></i>';
   const aEND = '</a>';
 
