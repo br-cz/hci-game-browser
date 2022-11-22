@@ -53,7 +53,9 @@ for (var i = 0; i < pinned.length; i++) {
     const cardBody = '<div class="card-body">';
     const cardTitle = '<h5 class="card-title">' + title + '</h5>';
     const aBtn =
-      '<a href="#" class="btn btn-primary" onclick="alert(\'Now launching the game on a separate window\')">';
+      '<a href="#" class="btn btn-primary" onclick="playGame(' +
+      passTitle +
+      ')">';
     const iClass = '<i class="fa-solid fa-play"></i>';
     const aEND = '</a>';
     document.querySelector(
