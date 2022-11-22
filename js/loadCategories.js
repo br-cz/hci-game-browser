@@ -49,7 +49,8 @@ function createContainer(game, container) {
   const divEnd = '</div>';
   const detail = '<div class="detail">';
   const h3Title = '<h3>' + game.title + '</h3>';
-  const next = '<div class="next">';
+  const next =
+    '<div class="next" onclick="event.cancelBubble=true;if(event.stopPropagation) event.stopPropagation();return false;">';
   const iClass = '<i class="fas fa-arrow-up"></i>';
   const aBtn =
     '<a href="#" class="btn btn-primary" onclick="playGame(' +
