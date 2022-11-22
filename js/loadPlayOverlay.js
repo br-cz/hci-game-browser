@@ -2,6 +2,7 @@ var overlay = document.getElementById('playGameOverlay');
 
 function openBoughtGame(title) {
   var currentGame = 10;
+
   //   console.log(title);
   for (var i = 0; i < games.length; i++) {
     for (var j = 0; j < games[i].length; j++) {
@@ -15,6 +16,7 @@ function openBoughtGame(title) {
     }
   }
   //   console.log(currentGame);
+  const passTitle = "'" + currentGame.title.replaceAll("'") + "'";
 
   overlay.className = 'container-popup .is-visible';
   setTimeout(function () {
@@ -58,7 +60,9 @@ function openBoughtGame(title) {
   document.querySelector('.popup').innerHTML =
     '<div id="overlay_exit_button" onclick="closeOverlay()">' +
     '<button class="buttonCircle">x</button> </div> </div>' +
-    '<div class="overlay_pin_button" onclick="pinGame()">' +
+    '<div class="overlay_pin_button" onclick="pinGame(' +
+    passTitle +
+    ')">' +
     '<button class="buttonPin">' +
     pinned +
     gameTitle +
