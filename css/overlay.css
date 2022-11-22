@@ -23,7 +23,7 @@
   .popup {
     width: 40%;
     height: 90%;
-    background: #cfcfcf;
+    background: #292929;
     position: absolute;
     top: 0;
     right: 0;
@@ -64,12 +64,21 @@
   }
   
   #overlay_title {
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     vertical-align: middle;
     margin-top: 30px;
     font-size: 16px;
     margin-top: -25px;
+  }
+
+  #overlay_title_pay {
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 30px;
+    font-size: 16px;
+    margin-top: 10px;
   }
   
   #overlay_exit_button {
@@ -115,7 +124,16 @@
     height: 60px;
     text-align: center;
     font-size: 20px;
-    background-color: rgb(49, 49, 49);
+    background-color: rgb(29, 29, 29);
+  }
+
+  #buttonRowOuterPrice {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    background-color: rgb(29, 29, 29);
   }
   
   .buttonRowInner {
@@ -133,8 +151,8 @@
     border-radius: 10px;
     text-align: center;
     border: none;
-    color: #000000;
-    background-color: #b6b6b6;
+    color: #ffffff;
+    background-color: #3e55a1;
     font-size: 18px;
     font-weight: bold;
   }
@@ -146,10 +164,21 @@
     border-radius: 10px;
     text-align: center;
     border: none;
-    color: #e1e1e1;
+    color: #ffffff;
     background-color: #4aac4f;
     font-size: 18px;
     font-weight: bold;
+  }
+
+  .gamePrice {
+    display: inline-block;
+    color: #4aac4f;
+    font-weight: bold;
+
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+    margin-bottom: auto;
   }
   
   .scrollabletextbox {
@@ -160,8 +189,8 @@
     display: block;
     text-align: center;
     overflow:scroll;
-    background-color: rgb(41, 41, 41);
-    color: #e1e1e1;
+    background-color: rgb(29, 29, 29);
+    color: #ffffff;
     font-weight: 500;
     overflow-y: auto;
     overflow-x: hidden;
@@ -169,4 +198,43 @@
     outline: none;
     border: 0px solid;
     border-radius: 10px;
+  }
+
+  .scrollabletextbox_pay {
+    width: 650px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    overflow:scroll;
+    background-color: rgb(29, 29, 29);
+    color: #ffffff;
+    font-weight: 500;
+    overflow-y: auto;
+    overflow-x: hidden;
+    resize: none;
+    outline: none;
+    border: 0px solid;
+    border-radius: 10px;
+  }
+
+  .buttonRowPayOverlay {
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 5px;
+    margin-bottom: auto;
+  }
+
+  .addCartWishlist {
+    display:block;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    color: #ffffff;
+    background-color: #3e55a1;
+    font-size: 18px;
+    font-weight: bold;
   }
