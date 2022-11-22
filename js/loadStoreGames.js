@@ -226,10 +226,10 @@ function loadGames() {
     image = currCategory[i].image;
     price = currCategory[i].price;
     sale = currCategory[i].sale;
-    passTitle = title.replaceAll("'","");
+    
     //console.log(passTitle);
-
-    const card = '<div class="card">';
+    const passTitle = "'" + title.replaceAll("'") + "'";
+    const card = '<div class="card" onclick="openStoreGame('+ passTitle  +')">';
     //const card = '<div class="card" onclick="addToCart(\'' + passTitle +'\')">'; //for testing cart function
     
     const imgWrapper = '<div class="img-wrapper">';

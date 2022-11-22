@@ -1,34 +1,86 @@
-//This just uses action games at the moment, change to all games later
+var overlay = document.getElementById('payGameOverlay');
 
-var games = JSON.parse(localStorage.getItem('actionDB'));
+function openStoreGame(title) {
+  var currentGame = 10;
+  console.log(title);
+  for (var i = 0; i < games.length; i++) {
+    for (var j = 0; j < games[i].length; j++) {
+      if (games[i][j].title.replaceAll("'") === title) {
+        currentGame = games[i][j];
+        break;
+      }
+    }
+    if (currentGame != 10) {
+      break;
+    }
+  }
+  console.log(currentGame);
 
-var currentGame = games[0];
+  overlay.className = 'container-popup .is-visible';
+  setTimeout(function () {
+    overlay.className = 'container-popup';
+  }, 5);
 
-title = currentGame.title;
-image = currentGame.image;
-description = currentGame.description;
-ratings = currentGame.ratings;
+  const gameTitle =
+    '<div id="overlay_title_pay">' +
+    '<h1>' +
+    currentGame.title +
+    '</h1>' +
+    '</div>';
 
-const exitButtonId = '<div id="overlay_exit_button">';
-const exitButton = '<button class="buttonCircle">x</button>';
+  const gameImage =
+    '<div class="overlayImageWrapper">' +
+    '<img src="' +
+    currentGame.image +
+    '" class="d-block w-100"/>' +
+    '</div>';
 
-const gameTitle = '<div id="overlay_title">' +
-                    '<h1>' + title + '</h1>' + 
-                    '</div>';
+  const buttonRow =
+    '<div id="buttonRowOuter">' +
+    '<div class="buttonRowInner"><button class="playGameButton" >PURCHASE</button></div>' +
+    '</div>';
 
-const gameImage = '<div class="overlayImageWrapper">' +
-                    '<img src="' + image + '" class="d-block w-100"/>' +
-                    '</div>';
+  const gameDescription =
+    '<textarea class="scrollabletextbox_pay" name="description" readonly>' +
+    'Description:\n\n' +
+    currentGame.description +
+    '</textarea>';
 
-const payButton = '<div id="buttonPay">' +
-                '<div><button class="payButton" >PURCHASE</button></div>' +
-                '</div>';
+   const priceRow =
+    '<div id="buttonRowOuterPrice">' +
+    '<div class="buttonRowPayOverlay"><button class="addCartWishlist" >Add to Cart</button></div>' +
+    '<div class="gamePrice">Price: $' + currentGame.price + '</div>' +
+    '<div class="buttonRowPayOverlay"><button class="addCartWishlist" >Add to Wishlist</button></div>' +
+    '</div>';
 
-const gameDescription = '<textarea class="scrollabletextbox" name="description" readonly>' + "Description:\n\n" +
-                        description +
-                        '</textarea>';
+  var inCart = '';
 
-document.querySelector('.popup').innerHTML +=
-    gameTitle + 
-    gameImage +
-    gameDescription;
+  if (currentGame.cart) {
+    inCart = '<i class="fa-solid fa-cart-shopping"></i></button></div>';
+  } else {
+    inCart = '<i class="fa-solid fa-cart-shopping"></i></button></div>';
+  }
+
+  document.querySelector('.popup').innerHTML =
+    '<div id="overlay_exit_button" onclick="closeOverlay()">' +
+    '<button class="buttonCircle">x</button> </div> </div>' +
+    
+    inCart +
+     gameTitle +
+     gameImage +
+     priceRow + 
+     gameDescription +
+     buttonRow;
+    // buttonRow +
+    // gameDescription;
+
+  window.onclick = function (event) {
+    if (event.target == overlay) {
+      overlay.className = 'container-popup is-hidden is-visuallyHidden';
+    }
+  };
+}
+
+function closeOverlay() {
+  overlay.className = 'container-popup is-hidden is-visuallyHidden';
+}
