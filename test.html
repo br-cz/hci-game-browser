@@ -1,32 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Modal</title>
-    <link href="./css/popup.css" rel="stylesheet" />
-    <script defer src="./js/popup.js"></script>
+    <title>Library</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font-Awesome, allows for user and settings logos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/popupSettings.css" />
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
-    <button data-modal-target="#modal">Open Modal</button>
-    <div class="modal" id="modal">
-      <div class="modal-header">
-        <div class="title">Example Modal</div>
-        <button data-close-button class="close-button">&times;</button>
-      </div>
-      <div class="modal-body">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias
-        ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis
-        quae quia soluta totam doloribus quos nesciunt necessitatibus,
-        consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum
-        voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet
-        assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur
-        sint officiis perferendis atque! Voluptatem maxime eius eum dolorem
-        dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi
-        iure! Eligendi, eius libero. Ex, repellat sapiente!
+    <div class="ms-4">
+      <a id="settingsBtn">
+        <i class="fa-sharp fa-lg fa-solid fa-user"></i>
+      </a>
+    </div>
+
+    <!-- User Settings -->
+    <div id="settingsModal" class="Modal is-hidden is-visuallyHidden">
+      <!-- Modal content -->
+      <div class="Modal-content">
+        <span id="closeSettingsModal" class="Close">&times;</span>
+        <div class="popup-card">
+          <h4>Settings</h4>
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio1"
+              autocomplete="off"
+              checked
+            />
+            <label class="btn btn-outline-primary" for="btnradio1"
+              >Radio 1</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio2"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="btnradio2"
+              >Radio 2</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio3"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="btnradio3"
+              >Radio 3</label
+            >
+          </div>
+          <p id="settings-paragraph">
+            Hi there, unfortunately changing settings is a premium exclusive.
+            You can already buy games for free so why not purchase? I heard
+            Radio 2 contains a free premium membership code :)
+          </p>
+        </div>
       </div>
     </div>
-    <div id="overlay"></div>
+
+    <script src="./js/popupSettings.js"></script>
   </body>
 </html>

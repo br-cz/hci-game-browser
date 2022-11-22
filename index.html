@@ -34,7 +34,6 @@
 
     <link rel="stylesheet" href="./css/popup.css" />
 
-    <!-- Overlay -->
     <link rel="stylesheet" href="./css/overlay.css" />
 
     <!-- jQuery -->
@@ -81,22 +80,29 @@
           </div>
 
           <div class="ms-4">
-            <a id="myBtn">
+            <a id="userBtn">
               <i class="fa-sharp fa-lg fa-solid fa-user"></i>
             </a>
           </div>
           <div class="ms-4">
-            <a href="#"><i class="fa-solid fa-lg fa-gear"></i> </a>
+            <a id="settingsBtn"><i class="fa-solid fa-lg fa-gear"></i> </a>
           </div>
         </div>
       </div>
     </nav>
 
-    <!-- User Profile -->
-    <div id="myModal" class="Modal is-hidden is-visuallyHidden">
-      <!-- Modal content -->
+    <div id="boughtGameOverlay" class="Modal is-hidden is-visuallyHidden">
       <div class="Modal-content">
         <span id="closeModal" class="Close">&times;</span>
+        <div class="popup-card-bought"></div>
+      </div>
+    </div>
+
+    <!-- User Profile -->
+    <div id="userModal" class="Modal is-hidden is-visuallyHidden">
+      <!-- Modal content -->
+      <div class="Modal-content">
+        <span id="closeUserModal" class="Close">&times;</span>
         <div class="popup-card">
           <img
             src="./images/averagehcistudent.jpeg"
@@ -141,12 +147,115 @@
       </div>
     </div>
 
-    <div class="container-popup is-hidden is-visuallyHidden" id="playGameOverlay">
-      <div class="popup">
-        
+    <div
+      class="container-popup is-hidden is-visuallyHidden"
+      id="playGameOverlay"
+    >
+      <div class="popup"></div>
+    </div>
+
+    <!-- User Settings -->
+    <div id="settingsModal" class="Modal is-hidden is-visuallyHidden">
+      <div class="settings-content">
+        <span id="closeSettingsModal" class="Close">&times;</span>
+        <div class="popup-card">
+          <h4>Settings</h4>
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio1"
+              autocomplete="off"
+              checked
+            />
+            <label class="btn btn-outline-primary" for="btnradio1"
+              >Radio 1</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio2"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="btnradio2"
+              >Radio 2</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio3"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="btnradio3"
+              >Radio 3</label
+            >
+          </div>
+          <p id="settings-paragraph">
+            Hi there, unfortunately changing settings is a premium exclusive.
+            You can already buy games for free so why not purchase? I heard
+            Radio 2 contains a free premium membership code :)
+          </p>
+        </div>
       </div>
     </div>
 
+    <!-- User Profile -->
+    <div id="myModal" class="Modal is-hidden is-visuallyHidden">
+      <!-- Modal content -->
+      <div class="Modal-content">
+        <span id="closeModal" class="Close">&times;</span>
+        <div class="popup-card">
+          <img
+            src="./images/averagehcistudent.jpeg"
+            alt="Chad"
+            style="width: 100%"
+          />/
+          <h2>Average HCI Student</h2>
+          <p class="popup-title">CEO & Founder, Udder Group</p>
+          <p>University of Manitoba</p>
+          <a
+            href="https://www.github.com/gigachad"
+            target="_blank"
+            id="popup-logo"
+            ><i class="fa-brands fa-github fa-2x"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/giga-chad-869b74214/"
+            target="_blank"
+            id="popup-logo"
+            ><i class="fa-brands fa-linkedin fa-2x"></i
+          ></a>
+          <a
+            href="https://twitter.com/realgigachad1?lang=en"
+            target="_blank"
+            id="popup-logo"
+            ><i class="fa-brands fa-twitter fa-2x"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/people/Giga-Chad/100079644490764/"
+            target="_blank"
+            id="popup-logo"
+            ><i class="fa-brands fa-facebook fa-2x"></i
+          ></a>
+          <button
+            type="button"
+            class="btn btn-outline-danger"
+            onclick="alert('Not allowed to log out >:)')"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- Carousel Code-->
     <h4 id="top">Recently Played</h4>
@@ -285,9 +394,9 @@
 
     <!-- these 2 scripts get called sequentially so make sure the database.js is called first to initialize db -->
     <script src="./js/database.js"></script>
-    <!-- <script src="./js/accessDB.js"></script> -->
-
     <script src="./js/loadPlayOverlay.js"></script>
+
+    <!-- <script src="./js/accessDB.js"></script> -->
 
     <script src="./js/loadRecent.js"></script>
     <script src="./js/loadPinned.js"></script>
@@ -302,9 +411,6 @@
     <script src="./js/searchLibrary.js"></script>
 
     <script src="./js/popup.js"></script>
-
-    
-
-
+    <script src="./js/popupSettings.js"></script>
   </body>
 </html>
