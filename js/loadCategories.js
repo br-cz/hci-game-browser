@@ -52,7 +52,9 @@ function createContainer(game, container) {
   const next = '<div class="next">';
   const iClass = '<i class="fas fa-arrow-up"></i>';
   const aBtn =
-    '<a href="#" class="btn btn-primary" onclick="alert(\'Now launching the game on a separate window\')">';
+    '<a href="#" class="btn btn-primary" onclick="playGame(' +
+    passTitle +
+    ')">';
   const iPlayClass = '<i class="fa-solid fa-play"></i>';
   const aEND = '</a>';
 

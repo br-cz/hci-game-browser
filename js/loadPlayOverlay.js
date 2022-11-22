@@ -40,7 +40,9 @@ function openBoughtGame(title) {
   const buttonRow =
     '<div id="buttonRowOuter">' +
     '<div class="buttonRowInner"><button class="playSettingsButton" >Settings</button></div>' +
-    '<div class="buttonRowInner"><button class="playGameButton" onclick="alert(\'Now launching the game on a separate window\')">PLAY</button></div>' +
+    '<div class="buttonRowInner"><button class="playGameButton"  onclick="playGame(' +
+    passTitle +
+    ')">PLAY</button></div>' +
     '</div>';
 
   const gameDescription =
