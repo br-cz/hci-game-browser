@@ -21,9 +21,14 @@
     padding: 20px;
     border-radius: 4px;
     max-width: 600px;
-    max-height: 800px;
+    height: 800px;
   }
-
+  
+  .cart-close
+  {
+    display: block;
+    text-align: right;
+  }
 
   .cart-title
   {
@@ -53,9 +58,12 @@
     position: relative;
     width: 500px;
     left: 30px;
-    height: 650px;
+    height: 575px;
     overflow: auto;
     font-size: 15px;
+    border-radius: 5px;
+    outline-style: solid;
+    outline-color: green;
   }
 
   /*
@@ -80,8 +88,8 @@
   {
     position: absolute;
     display: block;
-    width: 250px;
-    left: 0;
+    width: 300px;
+    left: 10px;
     overflow: auto;
     height: 25px;
     white-space: no-wrap;

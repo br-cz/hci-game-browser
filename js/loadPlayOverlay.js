@@ -2,7 +2,8 @@ var overlay = document.getElementById('playGameOverlay');
 
 function openBoughtGame(title) {
   var currentGame = 10;
-  console.log(title);
+
+  //   console.log(title);
   for (var i = 0; i < games.length; i++) {
     for (var j = 0; j < games[i].length; j++) {
       if (games[i][j].title.replaceAll("'") === title) {
@@ -14,7 +15,8 @@ function openBoughtGame(title) {
       break;
     }
   }
-  console.log(currentGame);
+  //   console.log(currentGame);
+  const passTitle = "'" + currentGame.title.replaceAll("'") + "'";
 
   overlay.className = 'container-popup .is-visible';
   setTimeout(function () {
@@ -38,7 +40,9 @@ function openBoughtGame(title) {
   const buttonRow =
     '<div id="buttonRowOuter">' +
     '<div class="buttonRowInner"><button class="playSettingsButton" >Settings</button></div>' +
-    '<div class="buttonRowInner"><button class="playGameButton" >PLAY</button></div>' +
+    '<div class="buttonRowInner"><button class="playGameButton"  onclick="playGame(' +
+    passTitle +
+    ')">PLAY</button></div>' +
     '</div>';
 
   const gameDescription =
@@ -58,7 +62,9 @@ function openBoughtGame(title) {
   document.querySelector('.popup').innerHTML =
     '<div id="overlay_exit_button" onclick="closeOverlay()">' +
     '<button class="buttonCircle">x</button> </div> </div>' +
-    '<div class="overlay_pin_button" onclick="pinGame()">' +
+    '<div class="overlay_pin_button" onclick="pinGame(' +
+    passTitle +
+    ')">' +
     '<button class="buttonPin">' +
     pinned +
     gameTitle +

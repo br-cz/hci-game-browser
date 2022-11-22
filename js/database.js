@@ -626,7 +626,7 @@ function setDb() {
       owned: true,
       wishlist: false,
       cart: false,
-      playedRank: -1,
+      playedRank: 0,
       isPinned: false,
     },
     {
@@ -789,7 +789,7 @@ function setDb() {
       ratings: 41,
       price: 90,
       sale: 0,
-      owned: false,
+      owned: true,
       wishlist: false,
       cart: false,
       playedRank: 8,

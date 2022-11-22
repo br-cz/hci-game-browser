@@ -1,17 +1,17 @@
 // Get the modal
-var modal = document.getElementById('myModal');
-var cartModal = document.getElementById('cart-page');
+var modal = document.getElementById('userModal');
 
 // Get the main container and the body
 // var body = document.getElementsByTagName('body');
 // var container = document.getElementById('myContainer');
 // Get the open button
-var btnOpen = document.getElementById('myBtn');
-var cartBtn = document.getElementById('cart-btn');
+var btnOpen = document.getElementById('userBtn');
 // Get the close button
-var btnClose = document.getElementById('closeModal');
+var btnClose = document.getElementById('closeUserModal');
+
 // Open the modal
 btnOpen.onclick = function () {
+  console.log('click profile');
   modal.className = 'Modal is-visuallyHidden';
   setTimeout(function () {
     // container.className = 'MainContainer is-blurred';
@@ -21,6 +21,7 @@ btnOpen.onclick = function () {
 };
 // Close the modal
 btnClose.onclick = function () {
+  console.log('close');
   modal.className = 'Modal is-hidden is-visuallyHidden';
   //   body.className = '';
   //   container.className = 'MainContainer';
@@ -35,19 +36,6 @@ window.onclick = function (event) {
     // container.className = 'MainContainer';
     // container.parentElement.className = '';
   }
-  else if(event.target == cartModal)
-  {
-    cartModal.className = 'cart-modal is-hidden';
-  }
 };
 
 
-cartBtn.onclick = function () {
-  loadCart();
-  cartModal.className = 'cart-modal is-visuallyHidden';
-  setTimeout(function () {
-    // container.className = 'MainContainer is-blurred';
-    cartModal.className = 'cart-modal';
-  }, 5);
-  //   container.parentElement.className = 'ModalOpen';
-};

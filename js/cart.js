@@ -24,6 +24,39 @@ const allGamesCart = [
   simulatorGames,
 ];
 
+var cartModal = document.getElementById('cart-page');
+var cartBtn = document.getElementById('cart-btn');
+var cartClose = document.getElementById('cart-close-btn');
+
+cartBtn.onclick = function () {
+  loadCart();
+  cartModal.className = 'cart-modal is-visuallyHidden';
+  setTimeout(function () {
+    // container.className = 'MainContainer is-blurred';
+    cartModal.className = 'cart-modal';
+  }, 5);
+  //   container.parentElement.className = 'ModalOpen';
+};
+
+cartClose.onclick = function () {
+  cartModal.className = 'cart-modal is-hidden';
+  btnClose.onclick = function () {
+    console.log('close');
+    modal.className = 'Modal is-hidden is-visuallyHidden';
+    //   body.className = '';
+    //   container.className = 'MainContainer';
+    //   container.parentElement.className = '';
+  };
+};
+
+window.onclick = function (event) {
+  console.log("clicking on window");
+  if(event.target == cartModal)
+  {
+    cartModal.className = 'cart-modal is-hidden';
+  }
+};
+
 /*
 updateCart()
 {
@@ -41,6 +74,12 @@ function addToCart(gameTitle)
     changeValue(gameTitle, 'cart', true);
     console.log("adding to cart:" + gameTitle);
   }
+}
+
+function removeFromCart(gameTitle)
+{
+  changeValue(gameTitle, 'cart', false);
+  loadCart();
 }
 
 function purchaseSingle(gameTitle)
@@ -89,17 +128,17 @@ function loadCart()
         var cartItemClass = '<div class="cart-item">'; 
         var cartItemTitleClass = '<div class="cart-item-title">' + currGame.title + '</div>';
         var cartItemPriceClass = '<div class="cart-item-price">';
-        var cartItemPrice;
-        var removeButton = '<a href="#" class="btn btn-primary"><i class="fa-solid fa-xmark"></i></a>';
+        var cartItemPrice;  
+        var removeButton = '<a href="#" class="btn btn-primary" onclick="removeFromCart(\'' + currGame.title.replaceAll("'","") + '\')"><i class="fa-solid fa-xmark"></i></a>';
         var divEnd = '</div>';
         if(currGame.sale > 0)
         {
           cartItemPrice = '<span><s>$' + currGame.price.toFixed(2) + '</s> -' + currGame.sale + '%</span> '
-          + '<span class="cart-discounted-price">$' + salePrice.toFixed(2) + '</span>';
+          + '<span class="cart-discounted-price">$' + salePrice.toFixed(2) + '  </span>';
         }
         else
         {
-          cartItemPrice = '$' + currGame.price.toFixed(2);
+          cartItemPrice = '$' + currGame.price.toFixed(2) + '  ';
         }
         document.querySelector('.cart-items').innerHTML +=
         cartItemClass +
