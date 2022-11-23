@@ -25,15 +25,21 @@ function addToWish (gameTitle)
 {
     //console.log("Adding" + gameTitle + " to wishlist");
     var currWishItem = findGame(gameTitle)
+    var notifText = document.getElementById('notif-text');// = "";
+    notifText.innerHTML = "";
     if(!currWishItem.wishlist)
     {
         changeValue(gameTitle, 'wishlist', true);
-        window.alert(currWishItem.title + " has been added to the wishlist");
+        //window.alert(currWishItem.title + " has been added to the wishlist");
+        notifText.innerHTML = currWishItem.title + " has been added to the wishlist";
     }
     else
     {
-        window.alert(currWishItem.title + " is already in the wishlist");
+        //window.alert(currWishItem.title + " is already in the wishlist");
+        notifText.innerHTML = currWishItem.title + " is already in the wishlist";
     }
+    notifText.className = "notification show-notif";
+    setTimeout(function(){ notifText.className = "notification"}, 3000);
 }
 
 function removeFromWish(gameTitle)

@@ -62,15 +62,21 @@ function addToCart(gameTitle)
   //console.log("inside addToCart");
   currCartItem = findGame(gameTitle);
   //cartTitles.push(gameTitle);
+  var notifText = document.getElementById('notif-text');// = "";
+  notifText.innerHTML = "";
   if(!currCartItem.cart)
   {
     changeValue(gameTitle, 'cart', true);
-    window.alert(currCartItem.title + " was added to the cart.");
+    //window.alert(currCartItem.title + " was added to the cart.");
+    notifText.innerHTML = currCartItem.title + " was added to the cart.";
   }
   else
   {
-    window.alert(currCartItem.title + " is already in the cart.");
+    //window.alert(currCartItem.title + " is already in the cart.");
+    notifText.innerHTML = currCartItem.title + " is already in the cart.";
   }
+  notifText.className = "notification show-notif";
+  setTimeout(function(){ notifText.className = "notification"}, 3000);
 }
 
 function removeFromCart(gameTitle)

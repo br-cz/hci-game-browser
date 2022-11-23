@@ -1,0 +1,53 @@
+.notification
+{
+    visibility: hidden;
+    position: fixed;
+    margin: auto;
+    background: green;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 250px;
+    text-align: center;
+    z-index: 10000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    border: none;
+    padding: 20px;
+}
+
+.notif-text
+{
+    position: absolute;
+    background: red;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.show-notif {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.6s;
+    animation: fadein 0.5s, fadeout 0.5s 2.6s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;} 
+    to {top: 5%; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 5%; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {top: 5%; opacity: 1;} 
+    to {top: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {top: 5%; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  }
