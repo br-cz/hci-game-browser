@@ -33,6 +33,8 @@
 
     <link rel="stylesheet" href="./css/cart.css" />
 
+    <link rel="stylesheet" href="./css/wish.css" />
+
     <!-- Overlay -->
     <link rel="stylesheet" href="./css/overlay.css" />
 
@@ -168,7 +170,25 @@
           </button>
         </div>
       </div>
-      
+    </div>
+
+    <div id="wish-page" class="wish wish-modal is-hidden is-visuallyHidden">
+      <div class="wish-modal-content">
+          <div class="wish-close">
+            <a href="#" class="btn btn-primary" id="wish-close-btn">
+              <i class="fa-solid fa-xmark"></i>
+            </a>
+          </div>
+        <h3 class="wish-title">
+          Wishlist
+        </h3>
+        <div class="wish-items">
+
+        </div>
+        <div class="wish-total">
+
+        </div>
+      </div>
     </div>
 
 
@@ -189,7 +209,10 @@
           <a href="#" onclick="sortByRatings()">Average User Rating</a>
         </div>
       </div>
-      <button id="cart-btn"class="btn btn-light btn-lg" onclick="loadCart()">Cart</button>
+      <div class="wish-cart">
+        <button id="wish-btn" class="btn btn-light btn-lg">Wishlist</button>
+        <button id="cart-btn" class="btn btn-light btn-lg" onclick="loadCart()">Cart</button>
+      </div>
     </h4>
 
     <div
@@ -274,6 +297,7 @@
     <script src="./js/loadStoreGames.js"></script>
     <script src="./js/updateDatabase.js"></script>
     <script src="./js/cart.js"></script>
+    <script src="./js/wish.js"></script>
     <script>
       $(document).ready(function () {
         all = document.getElementById('store-all');

@@ -1,0 +1,99 @@
+.wish-modal {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-transition: 0.5s;
+    overflow: auto;
+    transition: all 0.3s linear;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.wish-modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border-radius: 4px;
+    max-width: 600px;
+    height: 800px;
+}
+
+.wish-close
+{
+    display: block;
+    text-align: right;
+}
+
+.wish-title
+{
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.purchase-wish-btn
+{
+    display: block;
+    position: relative;
+    top: 10px;
+    text-align: center;
+}
+
+.wish-total
+{
+    display: block;
+    position: relative;
+    text-align: right;
+    font-size: 25px;
+}
+
+.wish-items
+{
+    position: relative;
+    width: 500px;
+    left: 30px;
+    height: 650px;
+    overflow: auto;
+    font-size: 15px;
+    border-radius: 5px;
+    outline-style: solid;
+    outline-color: green;
+}
+
+.wish-item
+{
+    display: block;
+    margin: 20px;
+    width: 90%;
+    height: 50px;
+    border-bottom: dotted;    
+}
+
+.wish-item-title
+{
+    position: absolute;
+    display: block;
+    width: 300px;
+    left: 10px;
+    overflow: auto;
+    height: 25px;
+    white-space: no-wrap;
+}
+
+.wish-item-price
+{
+    position: absolute;
+    display: inline-block;
+    right: 0;
+}
+
+.wish-discounted-price
+{
+    color: darkgreen;
+}

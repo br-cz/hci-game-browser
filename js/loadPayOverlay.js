@@ -52,7 +52,7 @@ function openStoreGame(title) {
    const priceRow =
     '<div id="buttonRowOuterPrice">' +
     '<div class="buttonRowPayOverlay"><button class="addCartWishlist" onclick="addToCart(\'' + passTitle + '\')">Add to Cart</button></div>' +
-    '<div class="gamePrice">Price: $' + salePrice + '</div>' +
+    '<div class="gamePrice">Price: $' + salePrice.toFixed(2) + '</div>' +
     '<div class="buttonRowPayOverlay"><button class="addCartWishlist">Add to Wishlist</button></div>' +
     '</div>';
 

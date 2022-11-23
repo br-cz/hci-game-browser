@@ -39,14 +39,7 @@ cartBtn.onclick = function () {
 };
 
 cartClose.onclick = function () {
-  cartModal.className = 'cart-modal is-hidden';
-  btnClose.onclick = function () {
-    console.log('close');
-    modal.className = 'Modal is-hidden is-visuallyHidden';
-    //   body.className = '';
-    //   container.className = 'MainContainer';
-    //   container.parentElement.className = '';
-  };
+  cartModal.className = 'cart-modal is-hidden is-visuallyHidden';
 };
 
 window.onclick = function (event) {
@@ -72,7 +65,11 @@ function addToCart(gameTitle)
   if(!currCartItem.cart)
   {
     changeValue(gameTitle, 'cart', true);
-    console.log("adding to cart:" + gameTitle);
+    window.alert(currCartItem.title + " was added to the cart.");
+  }
+  else
+  {
+    window.alert(currCartItem.title + " is already in the cart.");
   }
 }
 
@@ -84,14 +81,22 @@ function removeFromCart(gameTitle)
 
 function purchaseSingle(gameTitle)
 {
-  changeValue(gameTitle, 'cart', false);
-  changeValue(gameTitle, 'owned', true);
-  window.location.reload();
+  let currGame = findGame(gameTitle);
+  if(window.confirm("Proceeding with purchase of " + currGame.title))
+  {
+    changeValue(gameTitle, 'cart', false);
+    changeValue(gameTitle, 'owned', true);
+    changeValue(gameTitle, 'wishlist', false);
+    window.location.reload();
+    window.alert("Successfully purchased " + currGame.title);
+  }
 }
 
 function purchaseCart()
 {
-  for(let i = 0; i < allGamesCart.length; i++)
+  if(window.confirm("Proceeding with purchase of all Cart items"))
+  {
+    for(let i = 0; i < allGamesCart.length; i++)
   {
     //console.log(allGamesCart[i][0]);
     for(let j = 0; j < allGamesCart[i].length; j++)
@@ -103,10 +108,13 @@ function purchaseCart()
         //console.log(allGamesCart[i][j].title);
         changeValue(allGamesCart[i][j].title.replaceAll("'",""), 'cart', false);
         changeValue(allGamesCart[i][j].title.replaceAll("'",""), 'owned', true);
+        changeValue(allGamesCart[i][j].title.replaceAll("'",""), 'wishlist', false);
       }
     }
   }
   window.location.reload();
+  window.alert("Successfully purchased all cart Items");
+  }
 }
 
 function loadCart()
