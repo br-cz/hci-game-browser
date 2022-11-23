@@ -183,13 +183,18 @@ function loadSearches() {
     console.log(searchResults[i]);
     title = searchResults[i].title;
     image = searchResults[i].image;
-    const card = '<div class="card">';
+    const passTitle = "'" + title.replaceAll("'") + "'";
+    const card =
+      '<div class="card" onclick="openStoreGame(' + passTitle + ')">';
     const imgWrapper = '<div class="img-wrapper">';
     const imgSrc = '<img src="' + image + '" class="d-block w-100"/>';
     const divEnd = '</div>';
     const cardBody = '<div class="card-body">';
     const cardTitle = '<h5 class="card-title">' + title + '</h5>';
-    const aBtn = '<a href="#" class="btn btn-success">';
+    const aBtn =
+      '<a href="#" class="btn btn-success" onclick="playGame(' +
+      passTitle +
+      ')">';
     const iClass = '<i class="fa-solid fa-cart-shopping"></i>';
     const aEND = '</a>';
     document.querySelector('.gallery').innerHTML +=

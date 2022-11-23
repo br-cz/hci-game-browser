@@ -92,10 +92,11 @@
     </nav>
 
     <!-- Overlay -->
-    <div class="container-popup is-hidden is-visuallyHidden" id="payGameOverlay">
-      <div class="popup">
-
-      </div>
+    <div
+      class="container-popup is-hidden is-visuallyHidden"
+      id="payGameOverlay"
+    >
+      <div class="popup"></div>
     </div>
 
     <!-- User Profile -->
@@ -150,47 +151,32 @@
     <!-- Cart -->
     <div id="cart-page" class="cart cart-modal is-hidden is-visuallyHidden">
       <div class="cart-modal-content">
-          <div class="cart-close">
-            <a href="#" class="btn btn-primary" id="cart-close-btn">
-              <i class="fa-solid fa-xmark"></i>
-            </a>
-          </div>
-        <h3 class="cart-title">
-          Cart Summary
-        </h3>
-        <div class="cart-items">
-
+        <div class="cart-close">
+          <a href="#" class="btn btn-primary" id="cart-close-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </a>
         </div>
-        <div class="cart-total">
-
-        </div>
+        <h3 class="cart-title">Cart Summary</h3>
+        <div class="cart-items"></div>
+        <div class="cart-total"></div>
         <div class="purchase-cart-btn" onclick="purchaseCart()">
-          <button>
-            Complete Purchase
-          </button>
+          <button>Complete Purchase</button>
         </div>
       </div>
     </div>
 
     <div id="wish-page" class="wish wish-modal is-hidden is-visuallyHidden">
       <div class="wish-modal-content">
-          <div class="wish-close">
-            <a href="#" class="btn btn-primary" id="wish-close-btn">
-              <i class="fa-solid fa-xmark"></i>
-            </a>
-          </div>
-        <h3 class="wish-title">
-          Wishlist
-        </h3>
-        <div class="wish-items">
-
+        <div class="wish-close">
+          <a href="#" class="btn btn-primary" id="wish-close-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </a>
         </div>
-        <div class="wish-total">
-
-        </div>
+        <h3 class="wish-title">Wishlist</h3>
+        <div class="wish-items"></div>
+        <div class="wish-total"></div>
       </div>
     </div>
-
 
     <!-- Carousel Code-->
 
@@ -211,7 +197,9 @@
       </div>
       <div class="wish-cart">
         <button id="wish-btn" class="btn btn-light btn-lg">Wishlist</button>
-        <button id="cart-btn" class="btn btn-light btn-lg" onclick="loadCart()">Cart</button>
+        <button id="cart-btn" class="btn btn-light btn-lg" onclick="loadCart()">
+          Cart
+        </button>
       </div>
     </h4>
 
@@ -305,9 +293,13 @@
       });
     </script>
 
-    <script src="./js/popup.js"></script> 
+    <script src="./js/popup.js"></script>
 
     <script src="./js/loadPayOverlay.js"></script>
 
+    <script src="./js/popup.js"></script>
+    <script src="./js/popupSettings.js"></script>
+
+    <script src="./js/playGame.js"></script>
   </body>
 </html>

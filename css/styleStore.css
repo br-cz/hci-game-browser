@@ -115,7 +115,7 @@ h4 {
   word-wrap: normal;
 }
 
-.card-price{
+.card-price {
   word-wrap: normal;
 }
 
@@ -161,8 +161,7 @@ h4 {
   background-color: #ddd;
 }
 
-.wish-cart
-{
+.wish-cart {
   display: inline;
   position: absolute;
   right: 2.5%;

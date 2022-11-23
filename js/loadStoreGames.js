@@ -226,12 +226,13 @@ function loadGames() {
     image = currCategory[i].image;
     price = currCategory[i].price;
     sale = currCategory[i].sale;
-    
+
     //console.log(passTitle);
     const passTitle = "'" + title.replaceAll("'") + "'";
-    const card = '<div class="card" onclick="openStoreGame('+ passTitle  +')">';
+    const card =
+      '<div class="card" onclick="openStoreGame(' + passTitle + ')">';
     //const card = '<div class="card" onclick="addToCart(\'' + passTitle +'\')">'; //for testing cart function
-    
+
     const imgWrapper = '<div class="img-wrapper">';
     const imgSrc = '<img src="' + image + '" class="d-block w-100"/>';
     const divEnd = '</div>';
@@ -251,9 +252,13 @@ function loadGames() {
         salePrice.toFixed(2) +
         '</p>';
     } else {
-      cardPrice = '<p class="card-price-number card-price">$' + price.toFixed(2) + '</p>';
+      cardPrice =
+        '<p class="card-price-number card-price">$' + price.toFixed(2) + '</p>';
     }
-    const aBtn = '<a href="#" class="btn btn-success" onclick="addToCart(' + passTitle +')">';
+    const aBtn =
+      '<a href="#" class="btn btn-success" onclick="addToCart(' +
+      passTitle +
+      ')">';
     const iClass = '<i class="fa-solid fa-cart-shopping"></i>';
     const aEND = '</a>';
     document.querySelector('.gallery').innerHTML +=
