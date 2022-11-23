@@ -36,10 +36,10 @@ const games = [
       // console.log(category);
 
       for (var j = 0; j < category.length; j++) {
-        console.log(category[j]);
-        console.log(!category[j].owned);
+        //console.log(category[j]);
+        //console.log(!category[j].owned);
         if (!category[j].owned) {
-          console.log('enter');
+          //console.log('enter');
           currCategory.push(category[j]);
         }
       }
@@ -253,7 +253,7 @@ function loadGames() {
     } else {
       cardPrice = '<p class="card-price-number card-price">$' + price.toFixed(2) + '</p>';
     }
-    const aBtn = '<a href="#" class="btn btn-success" onclick="addToCart(\'' + passTitle +'\')">';
+    const aBtn = '<a href="#" class="btn btn-success" onclick="addToCart(' + passTitle +')">';
     const iClass = '<i class="fa-solid fa-cart-shopping"></i>';
     const aEND = '</a>';
     document.querySelector('.gallery').innerHTML +=

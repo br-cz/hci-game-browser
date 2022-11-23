@@ -31,6 +31,10 @@
 
     <link rel="stylesheet" href="./css/popup.css" />
 
+    <link rel="stylesheet" href="./css/cart.css" />
+
+    <link rel="stylesheet" href="./css/wish.css" />
+
     <!-- Overlay -->
     <link rel="stylesheet" href="./css/overlay.css" />
 
@@ -143,13 +147,57 @@
       </div>
     </div>
 
+    <!-- Cart -->
+    <div id="cart-page" class="cart cart-modal is-hidden is-visuallyHidden">
+      <div class="cart-modal-content">
+          <div class="cart-close">
+            <a href="#" class="btn btn-primary" id="cart-close-btn">
+              <i class="fa-solid fa-xmark"></i>
+            </a>
+          </div>
+        <h3 class="cart-title">
+          Cart Summary
+        </h3>
+        <div class="cart-items">
+
+        </div>
+        <div class="cart-total">
+
+        </div>
+        <div class="purchase-cart-btn" onclick="purchaseCart()">
+          <button>
+            Complete Purchase
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="wish-page" class="wish wish-modal is-hidden is-visuallyHidden">
+      <div class="wish-modal-content">
+          <div class="wish-close">
+            <a href="#" class="btn btn-primary" id="wish-close-btn">
+              <i class="fa-solid fa-xmark"></i>
+            </a>
+          </div>
+        <h3 class="wish-title">
+          Wishlist
+        </h3>
+        <div class="wish-items">
+
+        </div>
+        <div class="wish-total">
+
+        </div>
+      </div>
+    </div>
+
+
     <!-- Carousel Code-->
 
     <h4 id="top">
       Categories
 
       <!-- Cart and sort button -->
-      <button class="btn btn-light btn-lg cart">Cart</button>
       <div class="sort-dropdown">
         <span class="btn btn-light btn-lg">Sort by...</span>
         <!-- <span class="btn btn-light btn-lg clicked" onclick="cartPurchase()">Sort by...</span>  //For testing cartPurchase along with addToCart-->
@@ -160,6 +208,10 @@
           <a href="#" onclick="sortBySale()">Discount</a>
           <a href="#" onclick="sortByRatings()">Average User Rating</a>
         </div>
+      </div>
+      <div class="wish-cart">
+        <button id="wish-btn" class="btn btn-light btn-lg">Wishlist</button>
+        <button id="cart-btn" class="btn btn-light btn-lg" onclick="loadCart()">Cart</button>
       </div>
     </h4>
 
@@ -245,6 +297,7 @@
     <script src="./js/loadStoreGames.js"></script>
     <script src="./js/updateDatabase.js"></script>
     <script src="./js/cart.js"></script>
+    <script src="./js/wish.js"></script>
     <script>
       $(document).ready(function () {
         all = document.getElementById('store-all');
@@ -252,7 +305,7 @@
       });
     </script>
 
-    <script src="./js/popup.js"></script>
+    <script src="./js/popup.js"></script> 
 
     <script src="./js/loadPayOverlay.js"></script>
 

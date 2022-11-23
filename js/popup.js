@@ -29,6 +29,7 @@ btnClose.onclick = function () {
 };
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
+  console.log("clicking on window");
   if (event.target == modal) {
     modal.className = 'Modal is-hidden';
     // body.className = '';
@@ -36,3 +37,5 @@ window.onclick = function (event) {
     // container.parentElement.className = '';
   }
 };
+
+
