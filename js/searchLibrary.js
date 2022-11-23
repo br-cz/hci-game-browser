@@ -180,16 +180,21 @@ searchInput.addEventListener('keyup', (event) => {
 
 function loadSearches() {
   for (var i = 0; i < searchResults.length; i++) {
-    console.log(searchResults[i]);
+    // console.log(searchResults[i]);
     title = searchResults[i].title;
     image = searchResults[i].image;
-    const card = '<div class="card">';
+    const passTitle = "'" + title.replaceAll("'") + "'";
+    const card =
+      '<div class="card" onclick="openBoughtGame(' + passTitle + ')">';
     const imgWrapper = '<div class="img-wrapper">';
     const imgSrc = '<img src="' + image + '" class="d-block w-100"/>';
     const divEnd = '</div>';
     const cardBody = '<div class="card-body">';
     const cardTitle = '<h5 class="card-title">' + title + '</h5>';
-    const aBtn = '<a href="#" class="btn btn-primary">';
+    const aBtn =
+      '<a href="#" class="btn btn-primary" onclick="playGame(' +
+      passTitle +
+      ')">';
     const iPlayClass = '<i class="fa-solid fa-play"></i>';
     const aEND = '</a>';
     document.querySelector('.gallery').innerHTML +=

@@ -1,3 +1,4 @@
+var newRecent = [];
 function playGame(title) {
   console.log('play game');
   //   console.log(recent[8]);
@@ -16,7 +17,7 @@ function playGame(title) {
       currentGame = actionGames[j];
       currentGame.playedRank = 0;
 
-      //   recent[0] = currentGame;
+      newRecent.push(currentGame);
 
       actionGames[j] = currentGame;
       localStorage.setItem('actionDB', JSON.stringify(actionGames));
@@ -33,7 +34,7 @@ function playGame(title) {
       currentGame = adventureGames[j];
       currentGame.playedRank = 0;
 
-      //   recent[0] = currentGame;
+      newRecent.push(currentGame);
 
       adventureGames[j] = currentGame;
       localStorage.setItem('adventureDB', JSON.stringify(adventureGames));
@@ -50,7 +51,7 @@ function playGame(title) {
       currentGame = familyGames[j];
       currentGame.playedRank = 0;
 
-      //   recent[0] = currentGame;
+      newRecent.push(currentGame);
 
       familyGames[j] = currentGame;
       localStorage.setItem('familyDB', JSON.stringify(familyGames));
@@ -67,7 +68,7 @@ function playGame(title) {
       currentGame = shooterGames[j];
       currentGame.playedRank = 0;
 
-      //   recent[0] = currentGame;
+      newRecent.push(currentGame);
 
       shooterGames[j] = currentGame;
       localStorage.setItem('shooterDB', JSON.stringify(shooterGames));
@@ -84,7 +85,7 @@ function playGame(title) {
       currentGame = rpgGames[j];
       currentGame.playedRank = 0;
 
-      //   recent[0] = currentGame;
+      newRecent.push(currentGame);
 
       rpgGames[j] = currentGame;
       localStorage.setItem('rpgDB', JSON.stringify(rpgGames));
@@ -101,7 +102,7 @@ function playGame(title) {
       currentGame = strategyGames[j];
       currentGame.playedRank = 0;
 
-      //   recent[0] = currentGame;
+      newRecent.push(currentGame);
 
       strategyGames[j] = currentGame;
       localStorage.setItem('strategyDB', JSON.stringify(strategyGames));
@@ -118,7 +119,7 @@ function playGame(title) {
       currentGame = sportsGames[j];
       currentGame.playedRank = 0;
 
-      //   recent[0] = currentGame;
+      newRecent.push(currentGame);
 
       sportsGames[j] = currentGame;
       localStorage.setItem('sportsDB', JSON.stringify(sportsGames));
@@ -135,7 +136,7 @@ function playGame(title) {
       currentGame = racingGames[j];
       currentGame.playedRank = 0;
 
-      //   recent[0] = currentGame;
+      newRecent.push(currentGame);
 
       racingGames[j] = currentGame;
       localStorage.setItem('racingDB', JSON.stringify(racingGames));
@@ -152,7 +153,7 @@ function playGame(title) {
       currentGame = fightingGames[j];
       currentGame.playedRank = 0;
 
-      //   recent[0] = currentGame;
+      newRecent.push(currentGame);
 
       fightingGames[j] = currentGame;
       localStorage.setItem('fightingDB', JSON.stringify(fightingGames));
@@ -169,7 +170,7 @@ function playGame(title) {
       currentGame = simulatorGames[j];
       currentGame.playedRank = 0;
 
-      //   recent[0] = currentGame;
+      newRecent.push(currentGame);
 
       simulatorGames[j] = currentGame;
       localStorage.setItem('simulatorDB', JSON.stringify(simulatorGames));
@@ -184,17 +185,16 @@ function playGame(title) {
 
 function arrangeRecent(maxIndex) {
   console.log('arrange');
-  const newRecent = [];
-  newRecent.push('game');
-  //   console.log(recent[8]);
-  //   console.log(recent[7]);
-  //   console.log(recent[6]);
-  //   console.log(recent[5]);
-  //   console.log(recent[4]);
-  //   console.log(recent[3]);
-  //   console.log(recent[2]);
-  //   console.log(recent[1]);
-  //   console.log(recent[0]);
+  // newRecent.push('game');
+  console.log(recent[8]);
+  console.log(recent[7]);
+  console.log(recent[6]);
+  console.log(recent[5]);
+  console.log(recent[4]);
+  console.log(recent[3]);
+  console.log(recent[2]);
+  console.log(recent[1]);
+  console.log(recent[0]);
 
   for (var i = 0; i < maxIndex; i++) {
     // console.log('enter');
@@ -316,6 +316,7 @@ function arrangeRecent(maxIndex) {
   }
 
   console.log(newRecent);
+  newRecent = [];
 }
 
 function inRecent(title) {

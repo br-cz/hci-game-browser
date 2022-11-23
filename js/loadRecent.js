@@ -38,7 +38,7 @@ for (var i = 0; i < games.length; i++) {
   }
 }
 
-for (var i = 0; i < recent.length; i++) {
+for (var i = 0; i < 10; i++) {
   if (recent[i]) {
     title = recent[i].title;
     image = recent[i].image;
