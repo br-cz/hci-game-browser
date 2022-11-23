@@ -1,5 +1,11 @@
+:root {
+  --bg_color:rgb(50, 50, 50);
+  --light_text_color:rgb(255, 255, 255);
+  --card_bg: rgb(25, 25, 25);
+}
+
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--bg_color);
 }
 
 .fa-gear {
@@ -22,6 +28,21 @@ body {
 
 h4#top {
   padding-top: 1em;
+  color: var(--light_text_color);
+}
+h4#Pinned {
+  padding-top: 1em;
+  color: var(--light_text_color);
+}
+h4#Categories {
+  padding-top: 1em;
+  color: var(--light_text_color);
+}
+h5#category-label {
+  padding-top: 1em;
+  color: var(--light_text_color);
+  text-align: center;
+  margin: auto;
 }
 h4 {
   padding-left: 1em;
@@ -72,6 +93,9 @@ h4 {
   height: 250px; */
   max-width: 100%;
   max-height: 100%;
+  background-color: var(--card_bg);
+  color: var(--light_text_color);
+  border-radius: 20px;
 }
 
 .gallery .card {
@@ -80,7 +104,7 @@ h4 {
 }
 
 .gallery .card .img {
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .card:hover {
@@ -131,10 +155,25 @@ h4 {
 }
 .card img {
   max-height: 100%;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 @media (max-width: 767px) {
   .card .img-wrapper {
     height: 17em;
   }
+}
+
+.navbar {
+  background-color: var(--card_bg);
+}
+
+.navbar-brand {
+  color: var(--light_text_color);
+  font-size: 24px;
+}
+
+.nav-link {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
