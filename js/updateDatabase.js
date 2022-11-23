@@ -73,7 +73,7 @@ function findGame(gameTitle)
             if(gameTitle.replaceAll("'","").localeCompare(titleComparison) == 0)
             {
                 //console.log(allGamesUpdate[i][j]);
-                return allGamesUpdate[i][j]
+                return allGamesUpdate[i][j];
             }
         }
     }

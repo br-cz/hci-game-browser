@@ -53,7 +53,7 @@ function openStoreGame(title) {
     '<div id="buttonRowOuterPrice">' +
     '<div class="buttonRowPayOverlay"><button class="addCartWishlist" onclick="addToCart(\'' + passTitle + '\')">Add to Cart</button></div>' +
     '<div class="gamePrice">Price: $' + salePrice.toFixed(2) + '</div>' +
-    '<div class="buttonRowPayOverlay"><button class="addCartWishlist">Add to Wishlist</button></div>' +
+    '<div class="buttonRowPayOverlay"><button class="addCartWishlist" onclick="addToWish(\'' + passTitle + '\')">Add to Wishlist</button></div>' +
     '</div>';
 
   var inCart = '';
