@@ -156,6 +156,11 @@
     font-size: 18px;
     font-weight: bold;
   }
+
+  .playSettingsButton:hover {
+    color: var(--card_bg);
+    background-color: #5c7ff1;
+  }
   
   .playGameButton {
     display:block;
@@ -168,6 +173,11 @@
     background-color: #4aac4f;
     font-size: 18px;
     font-weight: bold;
+  }
+
+  .playGameButton:hover {
+    color: var(--card_bg);
+    background-color: #8ce770;
   }
 
   .gamePrice {
@@ -229,7 +239,6 @@
 
   .addCartWishlist {
     display:block;
-    height: 30px;
     border-radius: 10px;
     text-align: center;
     border: none;
@@ -237,4 +246,12 @@
     background-color: #3e55a1;
     font-size: 18px;
     font-weight: bold;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .addCartWishlist:hover {
+    background-color: #5c7ff1;
+    color: var(--card_bg);
   }
