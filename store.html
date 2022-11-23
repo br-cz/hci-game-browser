@@ -82,10 +82,12 @@
           </div>
 
           <div class="ms-4">
-            <a id="myBtn"> <i class="fa-sharp fa-lg fa-solid fa-user"></i> </a>
+            <a id="userBtn">
+              <i class="fa-sharp fa-lg fa-solid fa-user"></i>
+            </a>
           </div>
           <div class="ms-4">
-            <a href="#"><i class="fa-solid fa-lg fa-gear"></i> </a>
+            <a id="settingsBtn"><i class="fa-solid fa-lg fa-gear"></i> </a>
           </div>
         </div>
       </div>
@@ -99,17 +101,71 @@
       <div class="popup"></div>
     </div>
 
+    <!-- User Settings -->
+    <div id="settingsModal" class="Modal is-hidden is-visuallyHidden">
+      <div class="settings-content">
+        <span id="closeSettingsModal" class="Close">&times;</span>
+        <div class="popup-card">
+          <h4>Settings</h4>
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio1"
+              autocomplete="off"
+              checked
+            />
+            <label class="btn btn-outline-primary" for="btnradio1"
+              >Radio 1</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio2"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="btnradio2"
+              >Radio 2</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio3"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="btnradio3"
+              >Radio 3</label
+            >
+          </div>
+          <p id="settings-paragraph">
+            Hi there, unfortunately changing settings is a premium exclusive.
+            You can already buy games for free so why not purchase? I heard
+            Radio 2 contains a free premium membership code :)
+          </p>
+        </div>
+      </div>
+    </div>
+
     <!-- User Profile -->
-    <div id="myModal" class="Modal is-hidden is-visuallyHidden">
+    <div id="userModal" class="Modal is-hidden is-visuallyHidden">
       <!-- Modal content -->
       <div class="Modal-content">
-        <span id="closeModal" class="Close">&times;</span>
+        <span id="closeUserModal" class="Close">&times;</span>
         <div class="popup-card">
           <img
             src="./images/averagehcistudent.jpeg"
             alt="Chad"
             style="width: 100%"
-          />
+          />/
           <h2>Average HCI Student</h2>
           <p class="popup-title">CEO & Founder, Udder Group</p>
           <p>University of Manitoba</p>
