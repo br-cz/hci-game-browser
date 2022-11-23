@@ -1,3 +1,12 @@
+:root {
+  --bg_color:rgb(50, 50, 50);
+  --light_text_color:rgb(255, 255, 255);
+  --card_bg: rgb(25, 25, 25);
+  --btn_blue:#3e55a1;
+  --clicked: #52a13e;
+  --exit: #af3939
+}
+
 .cart-modal {
     display: block;
     position: fixed;
@@ -16,10 +25,10 @@
   }
   
   .cart-modal-content {
-    background-color: #fefefe;
+    background-color: var(--bg_color);
     margin: auto;
     padding: 20px;
-    border-radius: 4px;
+    border-radius: 20px;
     max-width: 600px;
     height: 800px;
   }
@@ -30,11 +39,22 @@
     text-align: right;
   }
 
+  #cart-close-btn {
+    background-color: var(--exit);
+    border-radius: 50%;
+    border-width: 0;
+  }
+
+  #cart-close-btn:hover {
+    background-color: #7a2222;
+  }
+
   .cart-title
   {
     display: block;
     position: relative;
     text-align: center;
+    color: var(--light_text_color);
   }
   
   .purchase-cart-btn
@@ -45,12 +65,31 @@
     text-align: center;
   }
 
+  .btn_purchase{
+    background-color: var(--clicked);
+    border-radius: 10px;
+    border-width: 0;
+    padding: 10px;
+    color: var(--light_text_color);
+    font-weight: bold;
+  }
+
+  .btn_purchase:hover{
+    background-color: darkgreen;
+    border-radius: 10px;
+    border-width: 0;
+    padding: 10px;
+    color: var(--light_text_color);
+    font-weight: bold;
+  }
+
   .cart-total
   {
     display: block;
     position: relative;
     text-align: right;
     font-size: 25px;
+    color: var(--light_text_color);
   }
 
   .cart-items
@@ -81,7 +120,8 @@
     margin: 20px;
     width: 90%;
     height: 50px;
-    border-bottom: dotted;    
+    border-bottom: dotted;  
+    color: var(--light_text_color);  
   }
 
   .cart-item-title
@@ -104,5 +144,5 @@
 
   .cart-discounted-price
   {
-    color: darkgreen;
+    color: green;
   }

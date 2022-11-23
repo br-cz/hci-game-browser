@@ -1,3 +1,12 @@
+:root {
+    --bg_color:rgb(50, 50, 50);
+    --light_text_color:rgb(255, 255, 255);
+    --card_bg: rgb(25, 25, 25);
+    --btn_blue:#3e55a1;
+    --clicked: #52a13e;
+    --exit: #af3939
+}
+
 .wish-modal {
     display: block;
     position: fixed;
@@ -16,10 +25,10 @@
 }
 
 .wish-modal-content {
-    background-color: #fefefe;
+    background-color: var(--bg_color);
     margin: auto;
     padding: 20px;
-    border-radius: 4px;
+    border-radius: 20px;
     max-width: 600px;
     height: 800px;
 }
@@ -30,11 +39,24 @@
     text-align: right;
 }
 
+#wish-close-btn {
+    background-color: var(--exit);
+    border-radius: 50%;
+    border-width: 0;
+}
+
+#wish-close-btn:hover {
+    background-color: #7a2222;
+    border-radius: 50%;
+    border-width: 0;
+}
+
 .wish-title
 {
     display: block;
     position: relative;
     text-align: center;
+    color: var(--light_text_color);
 }
 
 .purchase-wish-btn
@@ -73,6 +95,7 @@
     width: 90%;
     height: 50px;
     border-bottom: dotted;    
+    color: var(--light_text_color);  
 }
 
 .wish-item-title
@@ -95,5 +118,5 @@
 
 .wish-discounted-price
 {
-    color: darkgreen;
+    color: green;
 }
