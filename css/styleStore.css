@@ -1,6 +1,9 @@
 .fa-gear {
   color: white;
 }
+.fa-gear:hover {
+  color: grey;
+}
 
 .fa-user {
   color: white;
