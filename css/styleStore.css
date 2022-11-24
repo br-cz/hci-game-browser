@@ -107,6 +107,7 @@ h4 {
 
 .card-body {
   display: flex;
+  overflow: auto;
 }
 
 .card:hover {
@@ -136,6 +137,7 @@ h4 {
   .card-body {
     display: flex;
     justify-content: space-around;
+    align-items: center;
   }
 }
 
@@ -147,9 +149,14 @@ h4 {
   align-items: center;
 }
 .card-title {
-  font-size: 15px;
+  font-size: 14px;
   /* white-space: nowrap; */
   word-wrap: normal;
+}
+
+.card-test
+{
+  background:green;
 }
 .card img {
   max-height: 100%;
@@ -168,6 +175,7 @@ h4 {
 }
 
 .card-price {
+  font-size: 14px;
   word-wrap: normal;
 }
 

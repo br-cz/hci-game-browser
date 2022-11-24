@@ -18,7 +18,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #fff;
+  color: white;
+  background-color: rgb(25, 25, 25);;
   width: 350px;
   height: 250px;
   border-radius: 4px;

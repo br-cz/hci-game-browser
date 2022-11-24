@@ -49,6 +49,7 @@ h4 {
 }
 
 .carousel-inner {
+  min-height: 300px;
   padding-left: 1em;
 }
 
@@ -135,6 +136,7 @@ h4 {
   .card-body {
     display: flex;
     justify-content: space-around;
+    align-items: baseline;
   }
 
   .stacked-card .btn-primary {

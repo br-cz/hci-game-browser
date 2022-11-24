@@ -55,7 +55,7 @@ updateCart()
 
 }
 */
-
+var notifTime;
 function addToCart(gameTitle)
 {
   /*
@@ -82,7 +82,21 @@ function addToCart(gameTitle)
     notifText.innerHTML = currCartItem.title + " is already in the cart.";
   }
   notifText.className = "notification show-notif";
-  setTimeout(function(){ notifText.className = "notification"}, 3000);
+  /*
+  setTimeout(function()
+  { 
+    notifText.className = "notification";
+    console.log("Closing notif " + number++);
+  }, 3000);
+  */
+  clearTimeout(notifTime);
+  notifTime = setTimeout(clearNotif, 3500)
+}
+number = 0;
+function clearNotif()
+{
+  var notifText = document.getElementById('notif-text');
+  notifText.className = "notification";
 }
 
 function removeFromCart(gameTitle)
@@ -102,9 +116,9 @@ function purchaseSinglePrompt(gameTitle)
   const promptText = '<div id="prompt-text">Are you sure you want to purchase ' + currGame.title + '?</div>';
   const btnClass = '<div class="purchase-btns">';
   const confirmClass = '<div class="confirm-purchase">';
-  const confirmBtn = '<a href="#" class="btn btn-primary" id="confirm-purchase" onclick="purchaseSingle(' + passTitle + ')"><i class="fa-solid fa-check"></i></a>';
+  const confirmBtn = '<a href="#" class="btn confirm-btn" id="confirm-purchase" onclick="purchaseSingle(' + passTitle + ')"><i class="fa-solid fa-check"></i></a>';
   const declineClass = '<div class="decline-purchase">';
-  const declineBtn = '<a href="#" class="btn btn-primary" id="confirm-purchase" onclick="closePrompt()"><i class="fa-solid fa-x"></i></a>'
+  const declineBtn = '<a href="#" class="btn decline-btn" id="confirm-purchase" onclick="closePrompt()"><i class="fa-solid fa-x"></i></a>'
   const divEnd = '</div>'
 
   prompt.innerHTML = 
@@ -157,9 +171,9 @@ function purchaseCartPrompt()
   const promptText = '<div id="prompt-text">Are you sure you want to purchase all items in the cart?</div>';
   const btnClass = '<div class="purchase-btns">';
   const confirmClass = '<div class="confirm-purchase">';
-  const confirmBtn = '<a href="#" class="btn btn-primary" id="confirm-purchase" onclick="purchaseCart()"><i class="fa-solid fa-check"></i></a>';
+  const confirmBtn = '<a href="#" class="btn confirm-btn" id="confirm-purchase" onclick="purchaseCart()"><i class="fa-solid fa-check"></i></a>';
   const declineClass = '<div class="decline-purchase">';
-  const declineBtn = '<a href="#" class="btn btn-primary" id="confirm-purchase" onclick="closePrompt()"><i class="fa-solid fa-x"></i></a>'
+  const declineBtn = '<a class="btn decline-btn" id="confirm-purchase" onclick="closePrompt()"><i class="fa-solid fa-x"></i></a>'
   const divEnd = '</div>'
 
   prompt.innerHTML = 
@@ -220,7 +234,7 @@ function loadCart()
         var cartItemTitleClass = '<div class="cart-item-title">' + currGame.title + '</div>';
         var cartItemPriceClass = '<div class="cart-item-price">';
         var cartItemPrice;  
-        var removeButton = '<a href="#" class="btn btn-primary" onclick="removeFromCart(\'' + currGame.title.replaceAll("'","") + '\')"><i class="fa-solid fa-xmark"></i></a>';
+        var removeButton = '<a class="btn decline-btn" onclick="removeFromCart(\'' + currGame.title.replaceAll("'","") + '\')"><i class="fa-solid fa-xmark"></i></a>';
         var divEnd = '</div>';
         if(currGame.sale > 0)
         {

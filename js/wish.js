@@ -20,7 +20,7 @@ window.onclick = function (event) {
         wishModal.className = 'wish-modal is-hidden';
     }
 };
-
+var notifTime;
 function addToWish (gameTitle)
 {
     //console.log("Adding" + gameTitle + " to wishlist");
@@ -39,7 +39,8 @@ function addToWish (gameTitle)
         notifText.innerHTML = currWishItem.title + " is already in the wishlist";
     }
     notifText.className = "notification show-notif";
-    setTimeout(function(){ notifText.className = "notification"}, 3000);
+    //setTimeout(function(){ notifText.className = "notification"}, 3000);
+    notifTime = setTimeout(clearNotif, 3500);
 }
 
 function removeFromWish(gameTitle)
@@ -69,7 +70,7 @@ function loadWish()
                 var cartItemTitleClass = '<div class="wish-item-title">' + currGame.title + '</div>';
                 var cartItemPriceClass = '<div class="wish-item-price">';
                 var cartItemPrice;  
-                var removeButton = '<a href="#" class="btn btn-success" onclick="addToCart(\'' + currGame.title.replaceAll("'","") + '\')"><i class="fa-solid fa-cart-shopping"></i></a>' + '<a href="#" class="btn btn-primary" onclick="removeFromWish(\'' + currGame.title.replaceAll("'","") + '\')"><i class="fa-solid fa-xmark"></i></a>';
+                var removeButton = '<a class="btn confirm-btn" onclick="addToCart(\'' + currGame.title.replaceAll("'","") + '\')"><i class="fa-solid fa-cart-shopping"></i></a>' + '<a href="#" class="btn decline-btn" onclick="removeFromWish(\'' + currGame.title.replaceAll("'","") + '\')"><i class="fa-solid fa-xmark"></i></a>';
                 var divEnd = '</div>';
                 if(currGame.sale > 0)
                 {

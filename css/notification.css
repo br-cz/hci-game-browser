@@ -46,12 +46,4 @@
     to {top: 5%; opacity: 1;}
   }
   
-  @-webkit-keyframes fadeout {
-    from {top: 5%; opacity: 1;} 
-    to {top: 0; opacity: 0;}
-  }
-  
-  @keyframes fadeout {
-    from {top: 5%; opacity: 1;}
-    to {top: 0; opacity: 0;}
-  }
+ 
