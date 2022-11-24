@@ -37,6 +37,8 @@
 
     <link rel="stylesheet" href="./css/notification.css" />
 
+    <link rel="stylesheet" href="./css/prompt.css" />
+
     <!-- Overlay -->
     <link rel="stylesheet" href="./css/overlay.css" />
 
@@ -217,7 +219,7 @@
         <h3 class="cart-title">Cart Summary</h3>
         <div class="cart-items"></div>
         <div class="cart-total"></div>
-        <div class="purchase-cart-btn" onclick="purchaseCart()">
+        <div class="purchase-cart-btn" onclick="purchaseCartPrompt()">
           <button class="btn_purchase">Complete Purchase</button>
         </div>
       </div>
@@ -314,7 +316,25 @@
         </div>
       </div>
 
-      <div class="notification is-hidden is-visuallyHidden" id="notif-text"></div>
+      <div class="notification" id="notif-text"></div>
+
+      <div class="prompt" id="prompt-text">
+        <div id="prompt-text">
+          Are you sure want to purchase Dishonored?
+        </div>
+        <div class="purchase-btns">
+          <div class="confirm-purchase">
+            <a href="#" class="btn btn-primary" id="confirm-purchase">
+              <i class="fa-solid fa-check"></i>
+            </a>
+          </div>
+          <div class="decline-purchase">
+            <a href="#" class="btn btn-primary" id="confirm-purchase">
+              <i class="fa-solid fa-x"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
       <div class="gallery"></div>
 

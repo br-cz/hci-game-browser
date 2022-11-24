@@ -228,7 +228,7 @@ function loadGames() {
     sale = currCategory[i].sale;
 
     //console.log(passTitle);
-    const passTitle = "'" + title.replaceAll("'") + "'";
+    const passTitle = "'" + title.replaceAll("'","") + "'";
     const card =
       '<div class="card" onclick="openStoreGame(' + passTitle + ')">';
     //const card = '<div class="card" onclick="addToCart(\'' + passTitle +'\')">'; //for testing cart function
@@ -256,7 +256,7 @@ function loadGames() {
         '<p class="card-price-number card-price">$' + price.toFixed(2) + '</p>';
     }
     const aBtn =
-      '<a href="#" class="btn btn-success" onclick="addToCart(' +
+      '<a class="btn btn-success" onclick="addToCart(' +
       passTitle +
       ')">';
     const iClass = '<i class="fa-solid fa-cart-shopping"></i>';

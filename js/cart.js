@@ -43,7 +43,6 @@ cartClose.onclick = function () {
 };
 
 window.onclick = function (event) {
-  console.log("clicking on window");
   if(event.target == cartModal)
   {
     cartModal.className = 'cart-modal is-hidden';
@@ -59,8 +58,15 @@ updateCart()
 
 function addToCart(gameTitle)
 {
+  /*
+  if (!e) var e = window.event;
+    e.cancelBubble = true;
+    if (e.stopPropagation) e.stopPropagation();
+    */
+   //console.log(window.event);
+  window.event.stopPropagation();
   //console.log("inside addToCart");
-  currCartItem = findGame(gameTitle);
+  var currCartItem = findGame(gameTitle);
   //cartTitles.push(gameTitle);
   var notifText = document.getElementById('notif-text');// = "";
   notifText.innerHTML = "";
@@ -85,24 +91,97 @@ function removeFromCart(gameTitle)
   loadCart();
 }
 
+function purchaseSinglePrompt(gameTitle)
+{
+  var currGame = findGame(gameTitle);
+  var passTitle = '\'' + currGame.title.replaceAll("'","") + '\'';
+  var prompt = document.getElementById('prompt-text');
+  prompt.className = 'prompt show-prompt'
+  prompt.innerHTML = '';
+  const promptClass = '<div class="prompt" id="prompt-text">';
+  const promptText = '<div id="prompt-text">Are you sure you want to purchase ' + currGame.title + '?</div>';
+  const btnClass = '<div class="purchase-btns">';
+  const confirmClass = '<div class="confirm-purchase">';
+  const confirmBtn = '<a href="#" class="btn btn-primary" id="confirm-purchase" onclick="purchaseSingle(' + passTitle + ')"><i class="fa-solid fa-check"></i></a>';
+  const declineClass = '<div class="decline-purchase">';
+  const declineBtn = '<a href="#" class="btn btn-primary" id="confirm-purchase" onclick="closePrompt()"><i class="fa-solid fa-x"></i></a>'
+  const divEnd = '</div>'
+
+  prompt.innerHTML = 
+                     promptText +
+                     btnClass + 
+                     confirmClass +
+                     confirmBtn +
+                     divEnd +
+                     declineClass +
+                     declineBtn +
+                     divEnd +
+                     divEnd;
+}
+
+/*
+<div class="prompt" id="notif-text">
+  <div id="prompt-text">
+    Are you sure want to purchase Dishonored
+  </div>
+  <div class="purchase-btns">
+    <div class="confirm-purchase">
+      <a href="#" class="btn btn-primary" id="confirm-purchase">
+        <i class="fa-solid fa-check"></i>
+      </a>
+    </div>
+    <div class="decline-purchase">
+      <a href="#" class="btn btn-primary" id="confirm-purchase">
+        <i class="fa-solid fa-x"></i>
+      </a>
+    </div>
+  </div>
+</div>
+*/
+
 function purchaseSingle(gameTitle)
 {
-  let currGame = findGame(gameTitle);
-  if(window.confirm("Proceeding with purchase of " + currGame.title))
-  {
-    changeValue(gameTitle, 'cart', false);
-    changeValue(gameTitle, 'owned', true);
-    changeValue(gameTitle, 'wishlist', false);
-    window.location.reload();
-    window.alert("Successfully purchased " + currGame.title);
-  }
+  var currGame = findGame(gameTitle);
+  changeValue(gameTitle, 'cart', false);
+  changeValue(gameTitle, 'owned', true);
+  changeValue(gameTitle, 'wishlist', false);
+  window.location.reload();
+  //window.alert("Successfully purchased " + currGame.title);
+}
+
+function purchaseCartPrompt()
+{
+  var prompt = document.getElementById('prompt-text');
+  prompt.className = 'prompt show-prompt'
+  prompt.innerHTML = '';
+  const promptText = '<div id="prompt-text">Are you sure you want to purchase all items in the cart?</div>';
+  const btnClass = '<div class="purchase-btns">';
+  const confirmClass = '<div class="confirm-purchase">';
+  const confirmBtn = '<a href="#" class="btn btn-primary" id="confirm-purchase" onclick="purchaseCart()"><i class="fa-solid fa-check"></i></a>';
+  const declineClass = '<div class="decline-purchase">';
+  const declineBtn = '<a href="#" class="btn btn-primary" id="confirm-purchase" onclick="closePrompt()"><i class="fa-solid fa-x"></i></a>'
+  const divEnd = '</div>'
+
+  prompt.innerHTML = 
+                     promptText +
+                     btnClass + 
+                     confirmClass +
+                     confirmBtn +
+                     divEnd +
+                     declineClass +
+                     declineBtn +
+                     divEnd +
+                     divEnd;
+}
+
+function closePrompt()
+{
+  document.getElementById('prompt-text').className = 'prompt';
 }
 
 function purchaseCart()
 {
-  if(window.confirm("Proceeding with purchase of all Cart items"))
-  {
-    for(let i = 0; i < allGamesCart.length; i++)
+  for(let i = 0; i < allGamesCart.length; i++)
   {
     //console.log(allGamesCart[i][0]);
     for(let j = 0; j < allGamesCart[i].length; j++)
@@ -119,13 +198,11 @@ function purchaseCart()
     }
   }
   window.location.reload();
-  window.alert("Successfully purchased all cart Items");
-  }
+  //window.alert("Successfully purchased all cart Items");
 }
 
 function loadCart()
 {
-  console.log("Loading cart");
   var cartTotal = 0;
   document.querySelector('.cart-items').innerHTML = "";
   for(let i = 0; i < allGamesCart.length; i++)
