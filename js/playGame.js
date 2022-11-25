@@ -1,5 +1,6 @@
 var newRecent = [];
 function playGame(title) {
+  window.event.stopPropagation();
   console.log('play game');
   //   console.log(recent[8]);
   //   console.log(recent[7]);

@@ -39,7 +39,7 @@ function openStoreGame(title) {
 
   const buttonRow =
     '<div id="buttonRowOuter">' +
-    '<div class="buttonRowInner"><button class="playGameButton" onclick="purchaseSingle(\'' + passTitle + '\')">PURCHASE</button></div>' +
+    '<div class="buttonRowInner"><button class="playGameButton" onclick="purchaseSinglePrompt(\'' + passTitle + '\')">PURCHASE</button></div>' +
     '</div>';
 
   const gameDescription =

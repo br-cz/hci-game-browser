@@ -67,14 +67,6 @@
     text-align: center;
 }
 
-.wish-total
-{
-    display: block;
-    position: relative;
-    text-align: right;
-    font-size: 25px;
-}
-
 .wish-items
 {
     position: relative;
@@ -91,6 +83,7 @@
 .wish-item
 {
     display: block;
+    position: relative;
     margin: 20px;
     width: 90%;
     height: 50px;
@@ -103,7 +96,8 @@
     position: absolute;
     display: block;
     width: 300px;
-    left: 10px;
+    left: -10px;
+    top: 0px;
     overflow: auto;
     height: 25px;
     white-space: no-wrap;
@@ -113,7 +107,8 @@
 {
     position: absolute;
     display: inline-block;
-    right: 0;
+    right: -15px;
+    top: -5px;
 }
 
 .wish-discounted-price

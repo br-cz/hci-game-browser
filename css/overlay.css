@@ -17,7 +17,7 @@
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.75);
-    z-index: 100;
+    z-index: 101;
   }
   
   .popup {
@@ -31,7 +31,7 @@
     left: 0;
     margin: auto;
     border-radius: 20px;
-    z-index: 101;
+    z-index: 102;
   }
 
   .is-hidden {

@@ -1,0 +1,71 @@
+.prompt
+{
+    visibility: hidden;
+    position: fixed;
+    margin: auto;
+    background: rgb(25, 25, 25);
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 250px;
+    z-index: 10000;
+    outline-style: solid;
+    outline-width: 2px;
+    border-radius: 10px;
+    outline-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    border: none;
+    padding: 20px;
+}
+
+.show-prompt
+{
+    visibility: visible;
+}
+
+#prompt-text
+{
+    display: block;
+    text-align: center;
+}
+
+.purchase-btns
+{
+    display: block;
+    height: 35px;
+}
+
+.confirm-purchase
+{
+    display: inline;
+    position: absolute;
+    left: 2em;
+}
+
+.decline-purchase
+{
+    display: inline;
+    position: absolute;
+    right: 2em;
+}
+
+.confirm-btn
+{
+    background-color: rgba(0, 128, 0, 0.849);
+}
+
+.confirm-btn:hover
+{
+    background-color: rgba(0, 128, 0, 0.541);
+}
+
+.decline-btn
+{
+    background-color: rgba(255, 0, 0, 0.781);
+}
+
+.decline-btn:hover
+{
+    background-color: rgba(255, 0, 0, 0.459);
+}

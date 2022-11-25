@@ -12,9 +12,16 @@ body {
   background-color: var(--bg_color);
 }
 
+.category-top
+{
+  display: inline;
+}
+
 h4#top {
   padding-top: 1em;
+  display: inline-block;
   color: var(--light_text_color);
+  
 }
 
 .fa-gear {
@@ -59,6 +66,9 @@ h4 {
 }
 
 #wish-btn {
+  display: inline;
+  position: relative;
+  right: 1.5em;
   background-color: var(--btn_blue);
 }
 
@@ -68,6 +78,9 @@ h4 {
 }
 
 #cart-btn {
+  display: inline;
+  position: relative;
+  right: 1em;
   background-color: var(--btn_blue);
 }
 
@@ -107,6 +120,7 @@ h4 {
 
 .card-body {
   display: flex;
+  overflow: auto;
 }
 
 .card:hover {
@@ -136,6 +150,7 @@ h4 {
   .card-body {
     display: flex;
     justify-content: space-around;
+    align-items: center;
   }
 }
 
@@ -147,9 +162,14 @@ h4 {
   align-items: center;
 }
 .card-title {
-  font-size: 15px;
+  font-size: 14px;
   /* white-space: nowrap; */
   word-wrap: normal;
+}
+
+.card-test
+{
+  background:green;
 }
 .card img {
   max-height: 100%;
@@ -168,6 +188,7 @@ h4 {
 }
 
 .card-price {
+  font-size: 14px;
   word-wrap: normal;
 }
 
@@ -217,9 +238,11 @@ h4 {
 }
 
 .wish-cart {
-  display: inline;
-  position: absolute;
-  right: 2.5%;
+  display:inline;
+  position: sticky;
+  top: 1.5em;
+  left: 100%;
+  z-index: 9998;
 }
 
 .navbar {
