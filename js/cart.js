@@ -123,8 +123,8 @@ function purchaseSinglePrompt(gameTitle)
   const confirmClass = '<div class="confirm-purchase">';
   const confirmBtn = '<a href="#" class="btn confirm-btn" id="confirm-purchase" onclick="purchaseSingle(' + passTitle + ')"><i class="fa-solid fa-check"></i></a>';
   const declineClass = '<div class="decline-purchase">';
-  const declineBtn = '<a href="#" class="btn decline-btn" id="confirm-purchase" onclick="closePrompt()"><i class="fa-solid fa-x"></i></a>'
-  const divEnd = '</div>'
+  const declineBtn = '<a href="#" class="btn decline-btn" id="confirm-purchase" onclick="closePrompt()"><i class="fa-solid fa-x"></i></a>';
+  const divEnd = '</div>';
 
   prompt.innerHTML = 
                      promptText +
@@ -223,6 +223,7 @@ function purchaseCart()
 function loadCart()
 {
   var cartTotal = 0;
+  var cartItems = [];
   document.querySelector('.cart-items').innerHTML = "";
   for(let i = 0; i < allGamesCart.length; i++)
   {
@@ -230,8 +231,11 @@ function loadCart()
     {
       //console.log(allGamesCart[i][j].title);
       var currGame = findGame(allGamesCart[i][j].title); 
+      
       if(currGame.cart)
       {
+        cartItems.push(currGame);
+        /*
         var salePrice = (1 - (currGame.sale/100)) * currGame.price;
         cartTotal += salePrice;
 
@@ -241,6 +245,7 @@ function loadCart()
         var cartItemPrice;  
         var removeButton = '<a class="btn decline-btn" onclick="removeFromCart(\'' + currGame.title.replaceAll("'","") + '\')"><i class="fa-solid fa-xmark"></i></a>';
         var divEnd = '</div>';
+        var libLine = '<div class="cart-line-wrapper"><div class="cart-line"></div></div>';
         if(currGame.sale > 0)
         {
           cartItemPrice = '<span><s>$' + currGame.price.toFixed(2) + '</s> -' + currGame.sale + '%</span> '
@@ -257,9 +262,48 @@ function loadCart()
         cartItemPrice +
         removeButton +
         divEnd +
-        divEnd;
+        divEnd +
+        libLine;
+        */
       }
     }
+  }
+  console.log(cartItems);
+  for(let i = 0; i < cartItems.length; i++)
+  {
+    var salePrice = (1 - (cartItems[i].sale/100)) * cartItems[i].price;
+    cartTotal += salePrice;
+    let passTitle = '\'' + cartItems[i] + '\'';
+    var cartItemClass = '<div class="cart-item">'; 
+    var cartItemTitleClass = '<div class="cart-item-title">' + cartItems[i].title + '</div>';
+    var cartItemPriceClass = '<div class="cart-item-price">';
+    var cartItemPrice;  
+    var removeButton = '<a class="btn decline-btn" onclick="removeFromCart(\'' + cartItems[i].title.replaceAll("'","") + '\')"><i class="fa-solid fa-xmark"></i></a>';
+    if(cartItems[i].sale > 0)
+    {
+      cartItemPrice = '<span><s>$' + cartItems[i].price.toFixed(2) + '</s> -' + cartItems[i].sale + '%</span> '
+      + '<span class="cart-discounted-price">$' + salePrice.toFixed(2) + '  </span>';
+    }
+    else
+    {
+      cartItemPrice = '$' + cartItems[i].price.toFixed(2) + '  ';
+    }
+    var libLine = '<div class="cart-line-wrapper"><div class="cart-line"></div></div>';
+    if(i == cartItems.length -1)
+    {
+      libLine = '';
+    }
+    var divEnd = '</div>';
+
+    document.querySelector('.cart-items').innerHTML +=
+    cartItemClass +
+    cartItemTitleClass +
+    cartItemPriceClass +
+    cartItemPrice +
+    removeButton +
+    divEnd +
+    divEnd +
+    libLine;
   }
 
   document.querySelector('.cart-total').innerHTML = '';

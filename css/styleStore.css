@@ -70,7 +70,7 @@ h4 {
   position: relative;
   right: 1.5em;
   border: solid;
-  border-color: #23307c73;
+  border-color: #07145f73;
   background-color: var(--btn_blue);
 }
 
@@ -84,7 +84,7 @@ h4 {
   position: relative;
   right: 1em;
   border: solid;
-  border-color: #23307c73;
+  border-color: #07145f73;
   background-color: var(--btn_blue);
 }
 
@@ -242,7 +242,7 @@ h4 {
 }
 
 .wish-cart {
-  display:inline;
+  display: inline;
   position: sticky;
   top: 1.5em;
   left: 100%;
