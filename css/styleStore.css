@@ -69,6 +69,8 @@ h4 {
   display: inline;
   position: relative;
   right: 1.5em;
+  border: solid;
+  border-color: #07145f73;
   background-color: var(--btn_blue);
 }
 
@@ -77,16 +79,28 @@ h4 {
   color: var(--card_bg);
 }
 
+#wish-btn:hover .wish-num
+{
+  background:rgb(255, 55, 55);;
+}
+
 #cart-btn {
   display: inline;
   position: relative;
   right: 1em;
+  border: solid;
+  border-color: #07145f73;
   background-color: var(--btn_blue);
 }
 
 #cart-btn:hover {
   background-color: #5c7ff1;
   color: var(--card_bg);
+}
+
+#cart-btn:hover .cart-num
+{
+  background:rgb(255, 55, 55);
 }
 
 .clicked {
@@ -238,11 +252,51 @@ h4 {
 }
 
 .wish-cart {
-  display:inline;
+  display: inline;
   position: sticky;
   top: 1.5em;
   left: 100%;
-  z-index: 9998;
+  z-index: 99;
+}
+
+.wish-num
+{
+  visibility: hidden;
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  top: -10px;
+  right: -10px;
+  background: red;
+  outline-style: solid;
+  outline-color: rgba(255, 0, 0, 0.575);
+}
+
+.wish-num-show
+{
+  visibility: visible;
+}
+
+.cart-num
+{
+  visibility: hidden;
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  top: -10px;
+  right: -10px;
+  background: red;
+  outline-style: solid;
+  outline-color: rgba(255, 0, 0, 0.575);
+}
+
+.cart-num-show
+{
+  visibility: visible;
 }
 
 .navbar {

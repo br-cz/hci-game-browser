@@ -11,7 +11,7 @@
       .fadeIn(400, 'swing');
   };
 
-  $('#all-container .next').click(function () {
+  $('#all-container:nth-child(1) .next').click(function () {
     return rotate();
   });
 }.call(this));

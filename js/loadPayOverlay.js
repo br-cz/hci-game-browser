@@ -1,11 +1,12 @@
 var overlay = document.getElementById('payGameOverlay');
 
 function openStoreGame(title) {
-  var currentGame = 10;
+  var currentGame = findGame(title);
   //console.log(title);
+  /*
   for (var i = 0; i < games.length; i++) {
     for (var j = 0; j < games[i].length; j++) {
-      if (games[i][j].title.replaceAll("'") === title) {
+      if (games[i][j].title.replaceAll("'", "") === title) {
         currentGame = games[i][j];
         break;
       }
@@ -14,6 +15,7 @@ function openStoreGame(title) {
       break;
     }
   }
+  */
   //console.log(currentGame);
 
   overlay.className = 'container-popup .is-visible';
@@ -49,12 +51,35 @@ function openStoreGame(title) {
     '</textarea>';
 
   salePrice = (1 - (currentGame.sale/100)) * currentGame.price; 
-   const priceRow =
-    '<div id="buttonRowOuterPrice">' +
-    '<div class="buttonRowPayOverlay"><button class="addCartWishlist" onclick="addToCart(\'' + passTitle + '\')">Add to Cart</button></div>' +
-    '<div class="gamePrice">Price: $' + salePrice.toFixed(2) + '</div>' +
-    '<div class="buttonRowPayOverlay"><button class="addCartWishlist" onclick="addToWish(\'' + passTitle + '\')">Add to Wishlist</button></div>' +
+   var priceRow;
+   
+   if(!currentGame.cart)
+   {
+    console.log(passTitle);
+      priceRow = '<div id="buttonRowOuterPrice">' +
+                '<div class="buttonRowPayOverlay"><button class="addCartWishlist" onclick="addToCart(\'' + passTitle + '\');openStoreGame(\'' + passTitle + '\')")>Add to Cart</button></div>' +
+                '<div class="gamePrice">Price: $' + salePrice.toFixed(2) + '</div>';
+   } 
+   else
+   {
+    priceRow = '<div id="buttonRowOuterPrice">' +
+    '<div class="buttonRowPayOverlay"><button class="addCartWishlist" onclick="removeFromCart(\'' + passTitle + '\');openStoreGame(\'' + passTitle + '\')")>Remove from Cart</button></div>' +
+    '<div class="gamePrice">Price: $' + salePrice.toFixed(2) + '</div>';
+   }
+
+   var wishlistButton;
+
+   if(!currentGame.wishlist)
+   {
+    priceRow += '<div class="buttonRowPayOverlay"><button class="addCartWishlist" onclick="addToWish(\'' + passTitle + '\');openStoreGame(\'' + passTitle + '\')">Add to Wishlist</button></div>' +
     '</div>';
+   }
+   else
+   {
+    priceRow += '<div class="buttonRowPayOverlay"><button class="addCartWishlist" onclick="removeFromWish(\'' + passTitle + '\');openStoreGame(\'' + passTitle + '\')">Remove from Wishlist</button></div>' +
+    '</div>';
+   }
+   
 
   var inCart = '';
 
@@ -71,7 +96,7 @@ function openStoreGame(title) {
     inCart +
      gameTitle +
      gameImage +
-     priceRow + 
+     priceRow +
      gameDescription +
      buttonRow;
     // buttonRow +

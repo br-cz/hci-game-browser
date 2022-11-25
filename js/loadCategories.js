@@ -1,10 +1,11 @@
 // var actionGames = JSON.parse(localStorage.getItem('actionDB'));
 // var adventureGames = JSON.parse(localStorage.getItem('adventureDB'));
-
-for (var i = 0; i < 5; i++) {
-  for (var j = 0; j < 5; j++) {
+console.log(games[0].length);
+for (var i = 0; i < games.length; i++) {
+  for (var j = 0; j < games[i].length; j++) {
     if (games[i][j].owned) {
       createContainer(games[i][j], '#all-container');
+      //console.log(games[i][j].title);
     }
   }
 }

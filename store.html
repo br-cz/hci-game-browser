@@ -169,7 +169,7 @@
             src="./images/averagehcistudent.jpeg"
             alt="Chad"
             style="width: 100%"
-          />/
+          />
           <h2>Average HCI Student</h2>
           <p class="popup-title">CEO & Founder, Udder Group</p>
           <p>University of Manitoba</p>
@@ -239,7 +239,24 @@
     </div>
 
     <!-- Carousel Code-->
-
+    <div class="notification" id="notif-text"></div>
+    <div class="prompt" id="prompt-text">
+      <div id="prompt-text">
+        Are you sure want to purchase Dishonored?
+      </div>
+      <div class="purchase-btns">
+        <div class="confirm-purchase">
+          <a href="#" class="btn btn-primary" id="confirm-purchase">
+            <i class="fa-solid fa-check"></i>
+          </a>
+        </div>
+        <div class="decline-purchase">
+          <a href="#" class="btn btn-primary" id="confirm-purchase">
+            <i class="fa-solid fa-x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
     <div class="category-top">
       <h4 id="top">
         Categories
@@ -260,9 +277,15 @@
     <div class="wish-cart">
       <button id="wish-btn" class="btn btn-light btn-lg">
         Wishlist
+        <span id="wish-amount" class="wish-num">
+          
+        </span>
       </button>
       <button id="cart-btn" class="btn btn-light btn-lg" onclick="loadCart()">
         Cart
+        <span id="cart-amount" class="cart-num">
+          
+        </span>
       </button>
     </div>
 
@@ -316,26 +339,6 @@
           <a href="#" class="btn btn-light btn-lg" id="store-simulator"
             >Simulator</a
           >
-        </div>
-      </div>
-
-      <div class="notification" id="notif-text"></div>
-
-      <div class="prompt" id="prompt-text">
-        <div id="prompt-text">
-          Are you sure want to purchase Dishonored?
-        </div>
-        <div class="purchase-btns">
-          <div class="confirm-purchase">
-            <a href="#" class="btn btn-primary" id="confirm-purchase">
-              <i class="fa-solid fa-check"></i>
-            </a>
-          </div>
-          <div class="decline-purchase">
-            <a href="#" class="btn btn-primary" id="confirm-purchase">
-              <i class="fa-solid fa-x"></i>
-            </a>
-          </div>
         </div>
       </div>
 

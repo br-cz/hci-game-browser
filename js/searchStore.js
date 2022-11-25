@@ -183,16 +183,38 @@ function loadSearches() {
     console.log(searchResults[i]);
     title = searchResults[i].title;
     image = searchResults[i].image;
-    const passTitle = "'" + title.replaceAll("'") + "'";
+    price = searchResults[i].price;
+    sale = searchResults[i].sale;
+    rating = searchResults[i].ratings;
+    const passTitle = "'" + title.replaceAll("'","") + "'";
     const card =
       '<div class="card" onclick="openStoreGame(' + passTitle + ')">';
+    //const card = '<div class="card" onclick="addToCart(\'' + passTitle +'\')">'; //for testing cart function
+
     const imgWrapper = '<div class="img-wrapper">';
     const imgSrc = '<img src="' + image + '" class="d-block w-100"/>';
     const divEnd = '</div>';
     const cardBody = '<div class="card-body">';
-    const cardTitle = '<h5 class="card-title">' + title + '</h5>';
+    const cardTitle = '<h5 class="card-title">' + title + '<br>Average User Rating: ' + rating + '/100</br></h5>';
+    cardPrice = '';
+    //Adrian: I don't know how to format this better
+    if (sale > 0) {
+      salePrice = ((100 - sale) / 100) * price;
+      cardPrice =
+        '<h5 class="card-price-number card-price"><s>$' +
+        price.toFixed(2) +
+        '</s> -' +
+        sale +
+        '%</h5>' +
+        '<h5 class="card-sale-price card-price">$' +
+        salePrice.toFixed(2) +
+        '</h5>';
+    } else {
+      cardPrice =
+        '<h5 class="card-price-number card-price">$' + price.toFixed(2) + '</h5>';
+    }
     const aBtn =
-      '<a href="#" class="btn btn-success" onclick="playGame(' +
+      '<a class="btn confirm-btn" onclick="addToCart(' +
       passTitle +
       ')">';
     const iClass = '<i class="fa-solid fa-cart-shopping"></i>';
@@ -204,6 +226,7 @@ function loadSearches() {
       divEnd +
       cardBody +
       cardTitle +
+      cardPrice +
       aBtn +
       iClass +
       aEND +
