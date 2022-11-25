@@ -238,7 +238,7 @@ function loadGames() {
     const imgSrc = '<img src="' + image + '" class="d-block w-100"/>';
     const divEnd = '</div>';
     const cardBody = '<div class="card-body">';
-    const cardTitle = '<h5 class="card-title">' + title + '<br>Average User Rating: ' + rating + '%</br></h5>';
+    const cardTitle = '<h5 class="card-title">' + title + '<br>Average User Rating: ' + rating + '/100</br></h5>';
     cardPrice = '';
     //Adrian: I don't know how to format this better
     if (sale > 0) {

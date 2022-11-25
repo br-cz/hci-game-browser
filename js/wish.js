@@ -40,6 +40,7 @@ function addToWish (gameTitle)
     }
     notifText.className = "notification show-notif";
     //setTimeout(function(){ notifText.className = "notification"}, 3000);
+    clearTimeout(notifTime);
     notifTime = setTimeout(clearNotif, 3500);
 }
 

@@ -67,14 +67,6 @@
     text-align: center;
 }
 
-.wish-total
-{
-    display: block;
-    position: relative;
-    text-align: right;
-    font-size: 25px;
-}
-
 .wish-items
 {
     position: relative;
