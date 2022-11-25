@@ -91,8 +91,9 @@ function addToCart(gameTitle)
   */
   clearTimeout(notifTime);
   notifTime = setTimeout(clearNotif, 3500)
+  loadCart();
 }
-number = 0;
+
 function clearNotif()
 {
   var notifText = document.getElementById('notif-text');
@@ -101,6 +102,7 @@ function clearNotif()
 
 function removeFromCart(gameTitle)
 {
+  window.event.stopPropagation();
   var notifText = document.getElementById('notif-text');
   notifText.innerHTML = findGame(gameTitle).title + " was removed from the cart";
   notifText.className = "notification show-notif";
@@ -268,13 +270,13 @@ function loadCart()
       }
     }
   }
-  console.log(cartItems);
+  //console.log(cartItems);
   for(let i = 0; i < cartItems.length; i++)
   {
     var salePrice = (1 - (cartItems[i].sale/100)) * cartItems[i].price;
     cartTotal += salePrice;
-    let passTitle = '\'' + cartItems[i] + '\'';
-    var cartItemClass = '<div class="cart-item">'; 
+    let passTitle = '\'' + cartItems[i].title + '\'';
+    var cartItemClass = '<div class="cart-item" onclick="openStoreGame(' + passTitle + ')">'; 
     var cartItemTitleClass = '<div class="cart-item-title">' + cartItems[i].title + '</div>';
     var cartItemPriceClass = '<div class="cart-item-price">';
     var cartItemPrice;  
@@ -295,20 +297,29 @@ function loadCart()
     }
     var divEnd = '</div>';
 
-    document.querySelector('.cart-items').innerHTML +=
-    cartItemClass +
-    cartItemTitleClass +
-    cartItemPriceClass +
-    cartItemPrice +
-    removeButton +
-    divEnd +
-    divEnd +
-    libLine;
+    document.querySelector('.cart-items').innerHTML += cartItemClass +
+                                                       cartItemTitleClass +
+                                                       cartItemPriceClass +
+                                                       cartItemPrice +
+                                                       removeButton +
+                                                       divEnd +
+                                                       divEnd +
+                                                       libLine;
   }
 
   document.querySelector('.cart-total').innerHTML = '';
   document.querySelector('.cart-total').innerHTML = 'Total: $' + cartTotal.toFixed(2);
-  
+  var cartAmount = document.getElementById('cart-amount');
+  cartAmount.innerHTML = cartItems.length;
+    //console.log(wishItems.length);
+    if(cartItems.length == 0)
+    {
+      cartAmount.className = 'cart-num';
+    }
+    else
+    {
+      cartAmount.className = 'cart-num cart-num-show';
+    }
   /*
   <div class="cart-item"> 
     <div class="cart-item-title">Apple</div>
@@ -322,3 +333,5 @@ function loadCart()
   </div>
   */
 }
+
+loadCart();
