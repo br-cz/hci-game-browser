@@ -16,7 +16,7 @@ function openBoughtGame(title) {
     }
   }
   //   console.log(currentGame);
-  const passTitle = "'" + currentGame.title.replaceAll("'") + "'";
+  const passTitle = "'" + currentGame.title.replaceAll("'","") + "'";
 
   overlay.className = 'container-popup .is-visible';
   setTimeout(function () {

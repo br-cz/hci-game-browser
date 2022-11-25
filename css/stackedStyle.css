@@ -105,6 +105,16 @@
   opacity: 0.7;
 }
 
+
+.stacked-card:nth-child(1n+5) {
+  z-index: 7;
+  top: -45px;
+  transform-origin: top;
+  transform: scale(0.7);
+  opacity: 0.7;
+  visibility: hidden;
+}
+
 /* .stacked-card:nth-child(5) {
   z-index: 6;
   top: -60px;

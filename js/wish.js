@@ -46,6 +46,11 @@ function addToWish (gameTitle)
 
 function removeFromWish(gameTitle)
 {
+    var notifText = document.getElementById('notif-text');
+    notifText.innerHTML = findGame(gameTitle).title + " was removed from the wishlist";
+    notifText.className = "notification show-notif";
+    clearTimeout(notifTime);
+    notifTime = setTimeout(clearNotif, 3500);
     changeValue(gameTitle, 'wishlist', false);
     loadWish();
 }
