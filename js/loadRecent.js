@@ -43,7 +43,7 @@ for (var i = 0; i < 10; i++) {
     title = recent[i].title;
     image = recent[i].image;
     const carouselItem = '<div class="carousel-item">';
-    const passTitle = "'" + title.replaceAll("'") + "'";
+    const passTitle = "'" + title.replaceAll("'","") + "'";
     const card =
       '<div class="card" onclick="openBoughtGame(' + passTitle + ')">';
     const imgWrapper = '<div class="img-wrapper">';

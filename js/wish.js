@@ -38,10 +38,13 @@ function addToWish (gameTitle)
         //window.alert(currWishItem.title + " is already in the wishlist");
         notifText.innerHTML = currWishItem.title + " is already in the wishlist";
     }
-    notifText.className = "notification show-notif";
-    //setTimeout(function(){ notifText.className = "notification"}, 3000);
+    clearNotif();
+    setTimeout(function()
+    { 
+        notifText.className = "notification show-notif";
+    }, 0);
     clearTimeout(notifTime);
-    notifTime = setTimeout(clearNotif, 3500);
+    notifTime = setTimeout(clearNotif, 3000)
     loadWish();
 }
 
@@ -50,9 +53,13 @@ function removeFromWish(gameTitle)
     window.event.stopPropagation();
     var notifText = document.getElementById('notif-text');
     notifText.innerHTML = findGame(gameTitle).title + " was removed from the wishlist";
-    notifText.className = "notification show-notif";
+    clearNotif();
+    setTimeout(function()
+    { 
+        notifText.className = "notification show-notif";
+    }, 0);
     clearTimeout(notifTime);
-    notifTime = setTimeout(clearNotif, 3500);
+    notifTime = setTimeout(clearNotif, 3000)
     changeValue(gameTitle, 'wishlist', false);
     loadWish();
 }

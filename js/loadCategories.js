@@ -39,7 +39,7 @@ for (var i = 0; i < games.length; i++) {
 }
 
 function createContainer(game, container) {
-  const passTitle = "'" + game.title.replaceAll("'") + "'";
+  const passTitle = "'" + game.title.replaceAll("'","") + "'";
 
   const stackedCard =
     '<div data-stacked-card="1" class="stacked-card" onclick="openBoughtGame(' +

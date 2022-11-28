@@ -6,7 +6,7 @@ function openBoughtGame(title) {
   //   console.log(title);
   for (var i = 0; i < games.length; i++) {
     for (var j = 0; j < games[i].length; j++) {
-      if (games[i][j].title.replaceAll("'") === title) {
+      if (games[i][j].title.replaceAll("'","") === title) {
         currentGame = games[i][j];
         break;
       }

@@ -183,7 +183,7 @@ function loadSearches() {
     // console.log(searchResults[i]);
     title = searchResults[i].title;
     image = searchResults[i].image;
-    const passTitle = "'" + title.replaceAll("'") + "'";
+    const passTitle = "'" + title.replaceAll("'","") + "'";
     const card =
       '<div class="card" onclick="openBoughtGame(' + passTitle + ')">';
     const imgWrapper = '<div class="img-wrapper">';

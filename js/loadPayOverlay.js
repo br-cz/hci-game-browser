@@ -55,7 +55,6 @@ function openStoreGame(title) {
    
    if(!currentGame.cart)
    {
-    console.log(passTitle);
       priceRow = '<div id="buttonRowOuterPrice">' +
                 '<div class="buttonRowPayOverlay"><button class="addCartWishlist" onclick="addToCart(\'' + passTitle + '\');openStoreGame(\'' + passTitle + '\')")>Add to Cart</button></div>' +
                 '<div class="gamePrice">Price: $' + salePrice.toFixed(2) + '</div>';
