@@ -81,16 +81,13 @@ function addToCart(gameTitle)
     //window.alert(currCartItem.title + " is already in the cart.");
     notifText.innerHTML = currCartItem.title + " is already in the cart.";
   }
-  notifText.className = "notification show-notif";
-  /*
+  clearNotif();
   setTimeout(function()
   { 
-    notifText.className = "notification";
-    console.log("Closing notif " + number++);
-  }, 3000);
-  */
+    notifText.className = "notification show-notif";
+  }, 0);
   clearTimeout(notifTime);
-  notifTime = setTimeout(clearNotif, 3500)
+  notifTime = setTimeout(clearNotif, 3000)
   loadCart();
 }
 
@@ -106,8 +103,13 @@ function removeFromCart(gameTitle)
   var notifText = document.getElementById('notif-text');
   notifText.innerHTML = findGame(gameTitle).title + " was removed from the cart";
   notifText.className = "notification show-notif";
+  clearNotif();
+  setTimeout(function()
+  { 
+    notifText.className = "notification show-notif";
+  }, 0);
   clearTimeout(notifTime);
-  notifTime = setTimeout(clearNotif, 3500);
+  notifTime = setTimeout(clearNotif, 3000);
   changeValue(gameTitle, 'cart', false);
   loadCart();
 }
@@ -125,7 +127,7 @@ function purchaseSinglePrompt(gameTitle)
   const confirmClass = '<div class="confirm-purchase">';
   const confirmBtn = '<a href="#" class="btn confirm-btn" id="confirm-purchase" onclick="purchaseSingle(' + passTitle + ')"><i class="fa-solid fa-check"></i></a>';
   const declineClass = '<div class="decline-purchase">';
-  const declineBtn = '<a href="#" class="btn decline-btn" id="confirm-purchase" onclick="closePrompt()"><i class="fa-solid fa-x"></i></a>';
+  const declineBtn = '<a class="btn decline-btn" id="confirm-purchase" onclick="closePrompt()"><i class="fa-solid fa-x"></i></a>';
   const divEnd = '</div>';
 
   prompt.innerHTML = 
@@ -178,7 +180,7 @@ function purchaseCartPrompt()
   const promptText = '<div id="prompt-text">Are you sure you want to purchase all items in the cart?</div>';
   const btnClass = '<div class="purchase-btns">';
   const confirmClass = '<div class="confirm-purchase">';
-  const confirmBtn = '<a href="#" class="btn confirm-btn" id="confirm-purchase" onclick="purchaseCart()"><i class="fa-solid fa-check"></i></a>';
+  const confirmBtn = '<a class="btn confirm-btn" id="confirm-purchase" onclick="purchaseCart()"><i class="fa-solid fa-check"></i></a>';
   const declineClass = '<div class="decline-purchase">';
   const declineBtn = '<a class="btn decline-btn" id="confirm-purchase" onclick="closePrompt()"><i class="fa-solid fa-x"></i></a>'
   const divEnd = '</div>'

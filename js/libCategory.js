@@ -154,7 +154,7 @@ function loadLibList(categoryName)
     document.querySelector('.lib-items').innerHTML = "";
     for(let i = 0; i < categoryItems.length; i++)
     {   
-        let passTitle = '\'' + categoryItems[i].title + '\'';
+        let passTitle = '\'' + categoryItems[i].title.replaceAll("'","") + '\'';
         const libItem = '<div class="lib-item" onclick="openBoughtGame(' + passTitle + ')">';
         const libItemTitle = '<div class="lib-item-title">'+ categoryItems[i].title + '</div>'
         const libItemPlay = '<div class="lib-item-play">';
