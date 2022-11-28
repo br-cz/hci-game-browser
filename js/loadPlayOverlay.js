@@ -16,7 +16,9 @@ function openBoughtGame(title) {
     }
   }
   //   console.log(currentGame);
-  const passTitle = "'" + currentGame.title.replaceAll("'","") + "'";
+  const passTitle = "'" + currentGame.title.replaceAll("'", '') + "'";
+
+  const settingsAlert = "'Game settings feature soon available'";
 
   overlay.className = 'container-popup .is-visible';
   setTimeout(function () {
@@ -39,7 +41,9 @@ function openBoughtGame(title) {
 
   const buttonRow =
     '<div id="buttonRowOuter">' +
-    '<div class="buttonRowInner"><button class="playSettingsButton" >Settings</button></div>' +
+    '<div class="buttonRowInner"><button class="playSettingsButton" onclick="alert(' +
+    settingsAlert +
+    ')">Settings</button></div>' +
     '<div class="buttonRowInner"><button class="playGameButton"  onclick="playGame(' +
     passTitle +
     ')">PLAY</button></div>' +
